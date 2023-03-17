@@ -1,5 +1,3 @@
-import javax.sound.sampled.SourceDataLine;
-
 class Parent {
     String p = "부모";
     void viewParent() {
