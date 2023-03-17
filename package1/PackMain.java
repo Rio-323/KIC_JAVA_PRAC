@@ -4,5 +4,6 @@ package package1;
 public class PackMain {
     public static void main(String[] args) {
         PackA a = new PackA();
+        PackB b = new PackB();
     }
 }
