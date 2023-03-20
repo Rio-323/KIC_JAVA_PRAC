@@ -13,6 +13,10 @@ public class MainEx02 {
 		
 		Child c1 = new Child();
 		c1.viewParent();
+		
+		for(int i = 0; i < args.length; i++) {
+			System.out.println(args[i]);
+		}
 	}
 
 }
