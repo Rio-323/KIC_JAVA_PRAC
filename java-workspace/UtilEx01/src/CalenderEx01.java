@@ -12,6 +12,11 @@ public class CalenderEx01 {
 		
 		// 일요일 : 1
 		System.out.println(calender1.get(calender1.DAY_OF_WEEK));
+		
+		System.out.println(calender1.getTime());
+		System.out.println(calender1.getTimeInMillis());
+		
+		System.out.println(calender1.getActualMaximum(calender1.DATE));
 	}
 
 }
