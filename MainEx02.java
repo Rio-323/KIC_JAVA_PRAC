@@ -4,7 +4,7 @@ interface InterA {
 
     // abstract method
     public abstract void methodA();
-    void methodB();
+    void methodB(); // - abstract 생략 선언도 가능
 }
 
 class ClassA implements InterA {
