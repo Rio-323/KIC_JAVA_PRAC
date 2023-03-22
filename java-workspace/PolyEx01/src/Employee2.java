@@ -6,4 +6,7 @@ public class Employee2 extends Person {
 		System.out.println("Employee2 salary() 호출");
 	}
 	
+	public void viewEmployee() {
+		System.out.println("viewEmployee 호출");
+	}
 }
