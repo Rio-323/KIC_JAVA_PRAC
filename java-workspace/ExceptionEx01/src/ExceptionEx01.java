@@ -5,7 +5,7 @@ public class ExceptionEx01 {
 		System.out.println("시작");
 		
 		// int num1 = 10;
-		int num1 = 10;
+		int num1 = 0;
 		int num2 = 20;
 		
 		try {
@@ -13,6 +13,8 @@ public class ExceptionEx01 {
 			System.out.println(result);
 		} catch (ArithmeticException e) {
 			System.out.println("0으로 나눌 수 없습니다.");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		
 		
