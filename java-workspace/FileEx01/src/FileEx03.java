@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 public class FileEx03 {
 
@@ -18,6 +19,15 @@ public class FileEx03 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		// 생성(수정) 일자
+		// 파일 크기
+		System.out.println(file.length());
+		// timeStamp
+		System.out.println(file.lastModified());
+		
+		Date data = new Date(file.lastModified());
+		System.out.println(data.toLocaleString());
 	}
 
 }
