@@ -18,8 +18,8 @@ public class ZipcodeEx01 {
 			String str = "";
 			while ((str = br.readLine()) != null) {
                 if (str.contains("서초구")) {
-                	bw.write(str);
-                	bw.newLine();
+                	str = str.replace(",", " ");
+                	bw.write(str + System.lineSeparator());
                 }
             }
 			
