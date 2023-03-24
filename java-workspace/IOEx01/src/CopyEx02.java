@@ -9,6 +9,7 @@ public class CopyEx02 {
 
 	public static void main(String[] args) {
 		
+		// 속도를 향상시키기 위해 사용
 		BufferedInputStream bis = null;
 		BufferedOutputStream bos = null;
 		
