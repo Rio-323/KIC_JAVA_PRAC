@@ -8,7 +8,7 @@ public class OutPutStreamEx01 {
 		FileOutputStream fos = null;
 		
 		try {
-			fos = new FileOutputStream("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/test2.txt");
+			fos = new FileOutputStream("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/test2.txt", true);
 			
 			
 			fos.write('a');
