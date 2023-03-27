@@ -15,9 +15,11 @@ public class SystemEx03 {
 			// isr = new InputStreamReader(System.in);
 			br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("데이터 입력 : ");
-			System.out.println((char)br.read());
-			System.out.println((char)br.read());
-			System.out.println((char)br.read());
+//			System.out.println((char)br.read());
+//			System.out.println((char)br.read());
+//			System.out.println((char)br.read());
+			
+			System.out.println(br.readLine());
 			
 			System.out.println("입력완료");
 		} catch (IOException e) {
