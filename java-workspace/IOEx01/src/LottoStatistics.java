@@ -39,14 +39,7 @@ public class LottoStatistics {
 			System.err.println("Error: file not found");
 		} catch (IOException e) {
 			System.err.println("Error: could not read/write file");
-		} finally {
-			try {
-				if (br != null) br.close();
-				if (bw != null) bw.close();
-			} catch (IOException e) {
-				System.err.println("Error: could not close file");
-			}
-		}
+		} finally { try { if (br != null) br.close(); if (bw != null) bw.close(); } catch (IOException e) { System.err.println("Error: could not close file"); } }
 	}
 
 }
