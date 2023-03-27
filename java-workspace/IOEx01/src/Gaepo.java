@@ -28,7 +28,7 @@ public class Gaepo {
 		
 		try {
 			br = new BufferedReader(new FileReader("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/subject.csv"));
-			bw = new BufferedWriter(new FileWriter("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/donName.txt"));
+			bw = new BufferedWriter(new FileWriter("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/dongName.txt"));
 			
 			String str = "";
 			while ((str = br.readLine()) != null) {
