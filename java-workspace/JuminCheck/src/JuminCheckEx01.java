@@ -4,7 +4,7 @@ public class JuminCheckEx01 {
 	public static void main(String[] args) {
 		
 		
-		String str = "980323-1621716";
+		String str = "주민번호";
 		int[] number = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
 		int tot = 0;
 		
