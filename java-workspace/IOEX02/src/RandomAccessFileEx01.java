@@ -1,3 +1,4 @@
+import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -19,9 +20,18 @@ public class RandomAccessFileEx01 {
 			
 			for (int i = 0; i < scores.length; i++) {
 				raf.writeInt(scores[i]);
+				System.out.println("파일 포인터 : " + raf.getFilePointer());
 			}
 			
 			System.out.println("저장 완료");
+			
+			raf.seek(0);
+			
+			while(true) {
+				System.out.println(raf.readInt());
+			}
+		} catch (EOFException e) {
+			System.out.println("읽기 종료");
 		} catch (FileNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (IOException e) {
