@@ -13,7 +13,7 @@ public class Gaepo {
 		BufferedWriter bw = null;
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("입력하실 동 이름을 작성해주세요 : ");
+		System.out.print("입력하실 동,  이름을 작성해주세요 : ");
 		String dongName = sc.nextLine();
 		
 		if(dongName.length() < 2) {
