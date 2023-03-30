@@ -1,20 +1,16 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class LottoStatistics {
 
 	public static void main(String[] args) {
 		BufferedReader br = null;
-		BufferedWriter bw = null;
 		int[] counts = new int[45];
 		
 		try {
 			br = new BufferedReader(new FileReader("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/lotto(1~1059).csv"));
-			bw = new BufferedWriter(new FileWriter("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/IOEx01/src/lottostatistics.txt"));
 			
 			String str = "";
 			while ((str = br.readLine()) != null) {
@@ -30,16 +26,16 @@ public class LottoStatistics {
 			}
 			
 			for(int i = 0; i < counts.length; i++) {
-				bw.write((i+1) + ": " + counts[i] + "\n");
+				System.out.println((i+1) + ": " + counts[i] + "\n");
 			}
 			
-			System.out.println("Statistics generated successfully");
+			System.out.println("출력완료");
 			
 		} catch (FileNotFoundException e) {
-			System.err.println("Error: file not found");
+			System.out.println("[Error] : " + e.getMessage());
 		} catch (IOException e) {
-			System.err.println("Error: could not read/write file");
-		} finally { try { if (br != null) br.close(); if (bw != null) bw.close(); } catch (IOException e) { System.err.println("Error: could not close file"); } }
+			System.out.println("[Error] : " + e.getMessage());
+		} finally { try { if (br != null) br.close(); } catch (IOException e) {System.out.println("[Error] : " + e.getMessage());} }
 	}
 
 }
