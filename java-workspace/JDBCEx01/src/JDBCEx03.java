@@ -14,7 +14,7 @@ public class JDBCEx03 {
 		
 	
 		try {
-			// 처리로
+			// 처리로직
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			System.out.println("드라이버 로딩 완료");

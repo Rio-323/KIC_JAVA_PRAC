@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCEx08 {
+public class DumpEx01 {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/sample";
@@ -15,7 +15,8 @@ public class JDBCEx08 {
 		
 		Statement stmt = null;
 		
-	
+		ResultSet rs = null;
+		
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
@@ -26,24 +27,24 @@ public class JDBCEx08 {
 			
 			stmt = conn.createStatement();
 			
-			// DDL
-			// String sql = "create table dept3 ( deptno int(2), dname varchar(14), loc varchar(13))";
+			String tableName = "sample.emp";
 			
-			StringBuilder sbSQL = new StringBuilder();
-			sbSQL.append("create table dept3 (" );
-			sbSQL.append("deptno int(2)," );
-			sbSQL.append("dname varchar(14)," );
-			sbSQL.append("loc varchar(13)" );
-			sbSQL.append(")");
+			String sql = String.format("select * from %s", tableName);
 			
-			int result = stmt.executeUpdate(sbSQL.toString());
+			rs = stmt.executeQuery(sql);
 			
-			System.out.println("실행결과 : " + result);
+			while (rs.next()) {
+				System.out.printf("%s, '%s', '%s', %s, '%s', %s, %s, %s%n,",
+						rs.getString("empno"), rs.getNString("ename"), rs.getNString("job"), 
+						rs.getNString("mgr"), rs.getNString("hiredate"), rs.getNString("sal"),
+						rs.getNString("comm"), rs.getNString("deptno"));
+			}
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
-		} finally { if(conn != null) if(stmt != null) try {conn.close(); stmt.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+		} finally { if(conn != null) if(stmt != null) if(rs != null) try {conn.close(); stmt.close(); rs.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+	
 
 	}
 
