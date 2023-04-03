@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DumpEx01 {
+public class DumpEx02 {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/sample";
@@ -29,15 +29,12 @@ public class DumpEx01 {
 			
 			stmt = conn.createStatement();
 			
-			String sql = String.format("select * from %s", tableName);
+			String sql = String.format("desc %s", tableName);
 			
 			rs = stmt.executeQuery(sql);
 			
 			while (rs.next()) {
-				System.out.printf("%s, '%s', '%s', %s, '%s', %s, %s, %s,%n",
-						rs.getString("empno"), rs.getNString("ename"), rs.getNString("job"), 
-						rs.getNString("mgr"), rs.getNString("hiredate"), rs.getNString("sal"),
-						rs.getNString("comm"), rs.getNString("deptno"));
+				System.out.printf("%s%n", rs.getString("Field"));
 			}
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
