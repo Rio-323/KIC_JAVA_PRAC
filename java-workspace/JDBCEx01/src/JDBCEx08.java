@@ -32,11 +32,23 @@ public class JDBCEx08 {
 			String sql = "select * from dept2";
 			rs = stmt.executeQuery(sql);
 			
-			rs.next(); // 처음에는 빈칸을 가리키고 있기 때문에 다음 줄 부터 데이터를 가리키기 위함.
+//			rs.next(); // 처음에는 빈칸을 가리키고 있기 때문에 다음 줄 부터 데이터를 가리키기 위함.
+//			
+//			System.out.println(rs.getString("deptno"));
+//			System.out.println(rs.getString("dname"));
+//			System.out.println(rs.getString("loc"));
+//			
+//			rs.next(); 
+//			
+//			System.out.println(rs.getString("deptno"));
+//			System.out.println(rs.getString("dname"));
+//			System.out.println(rs.getString("loc"));
 			
-			System.out.println(rs.getString("deptno"));
-			System.out.println(rs.getString("dname"));
-			System.out.println(rs.getString("loc"));
+			while (rs.next()) {
+				System.out.println(rs.getString("deptno"));
+				System.out.println(rs.getString("dname"));
+				System.out.println(rs.getString("loc"));
+			}
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
