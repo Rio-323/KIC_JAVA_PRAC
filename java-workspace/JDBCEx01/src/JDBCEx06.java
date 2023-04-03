@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCEx04 {
+public class JDBCEx06 {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/sample";
@@ -26,12 +26,9 @@ public class JDBCEx04 {
 			
 			stmt = conn.createStatement();
 			
-			String deptno = "20";
-			String dname = "개발";
-			String loc = "대전";
+			String deptno = "10";
 			
-			// String sql = "insert into dept2 values(" + deptno + ", '" + dname + "', '" + loc + "')";
-			String sql = String.format("insert into dept2 values(%s, '%s', '%s'", deptno, dname, loc);
+			String sql = String.format("delete from dept2 where deptno = %s", deptno);
 			int result = stmt.executeUpdate(sql);
 			
 			System.out.println("실행결과 : " + result);
@@ -40,6 +37,7 @@ public class JDBCEx04 {
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} finally { if(conn != null) if(stmt != null) try {conn.close(); stmt.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+
 	}
 
 }

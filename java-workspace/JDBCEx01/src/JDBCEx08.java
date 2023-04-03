@@ -1,9 +1,10 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCEx04 {
+public class JDBCEx08 {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/sample";
@@ -13,6 +14,8 @@ public class JDBCEx04 {
 		Connection conn = null;
 		
 		Statement stmt = null;
+		
+		ResultSet rs = null;
 		
 	
 		try {
@@ -26,20 +29,20 @@ public class JDBCEx04 {
 			
 			stmt = conn.createStatement();
 			
-			String deptno = "20";
-			String dname = "개발";
-			String loc = "대전";
+			String sql = "select * from dept2";
+			rs = stmt.executeQuery(sql);
 			
-			// String sql = "insert into dept2 values(" + deptno + ", '" + dname + "', '" + loc + "')";
-			String sql = String.format("insert into dept2 values(%s, '%s', '%s'", deptno, dname, loc);
-			int result = stmt.executeUpdate(sql);
+			rs.next(); // 처음에는 빈칸을 가리키고 있기 때문에 다음 줄 부터 데이터를 가리키기 위함.
 			
-			System.out.println("실행결과 : " + result);
+			System.out.println(rs.getString("deptno"));
+			System.out.println(rs.getString("dname"));
+			System.out.println(rs.getString("loc"));
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
-		} finally { if(conn != null) if(stmt != null) try {conn.close(); stmt.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+		} finally { if(conn != null) if(stmt != null) if(rs != null) try {conn.close(); stmt.close(); rs.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+
 	}
 
 }
