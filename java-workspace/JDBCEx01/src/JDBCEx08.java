@@ -15,8 +15,6 @@ public class JDBCEx08 {
 		
 		Statement stmt = null;
 		
-		ResultSet rs = null;
-		
 	
 		try {
 			// 처리로
@@ -29,31 +27,24 @@ public class JDBCEx08 {
 			
 			stmt = conn.createStatement();
 			
-			String sql = "select * from dept2";
-			rs = stmt.executeQuery(sql);
+			// DDL
+			// String sql = "create table dept3 ( deptno int(2), dname varchar(14), loc varchar(13))";
 			
-//			rs.next(); // 처음에는 빈칸을 가리키고 있기 때문에 다음 줄 부터 데이터를 가리키기 위함.
-//			
-//			System.out.println(rs.getString("deptno"));
-//			System.out.println(rs.getString("dname"));
-//			System.out.println(rs.getString("loc"));
-//			
-//			rs.next(); 
-//			
-//			System.out.println(rs.getString("deptno"));
-//			System.out.println(rs.getString("dname"));
-//			System.out.println(rs.getString("loc"));
+			StringBuilder sbSQL = new StringBuilder();
+			sbSQL.append("create table dept3 (" );
+			sbSQL.append("deptno int(2)," );
+			sbSQL.append("dname varchar(14)," );
+			sbSQL.append("loc varchar(13)" );
+			sbSQL.append(")");
 			
-			while (rs.next()) {
-				System.out.println(rs.getString("deptno"));
-				System.out.println(rs.getString("dname"));
-				System.out.println(rs.getString("loc"));
-			}
+			int result = stmt.executeUpdate(sbSQL.toString());
+			
+			System.out.println("실행결과 : " + result);
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
-		} finally { if(conn != null) if(stmt != null) if(rs != null) try {conn.close(); stmt.close(); rs.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+		} finally { if(conn != null) if(stmt != null) try {conn.close(); stmt.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
 
 	}
 

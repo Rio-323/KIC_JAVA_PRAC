@@ -4,8 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCEx09 {
+public class JDBCEx11 {
 	public static void main(String[] args) {
+		
+		// 10번 부서의 사원번호, 사원이름, 급여, 연봉을 출력하는 프로그램 작
 		String url = "jdbc:mysql://localhost:3306/sample";
 		String user = "root";
 		String password = "123456";
@@ -28,25 +30,20 @@ public class JDBCEx09 {
 			
 			stmt = conn.createStatement();
 			
-			String sql = "select * from dept2";
+			String sql = "select empno, ename, sal, sal * 12 + ifnull(comm, 0) annsal from emp";
 			rs = stmt.executeQuery(sql);
 			
-//			rs.next(); // 처음에는 빈칸을 가리키고 있기 때문에 다음 줄 부터 데이터를 가리키기 위함.
-//			
-//			System.out.println(rs.getString("deptno"));
-//			System.out.println(rs.getString("dname"));
-//			System.out.println(rs.getString("loc"));
-//			
-//			rs.next(); 
-//			
-//			System.out.println(rs.getString("deptno"));
-//			System.out.println(rs.getString("dname"));
-//			System.out.println(rs.getString("loc"));
-			
 			while (rs.next()) {
-				System.out.println(rs.getString("deptno"));
-				System.out.println(rs.getString("dname"));
-				System.out.println(rs.getString("loc"));
+				// System.out.println(rs.getShort(1));
+				// System.out.println(rs.getShort(2));
+				// System.out.println(rs.getShort(3));
+				// System.out.println(rs.getShort(4));
+				
+				System.out.println(rs.getString("empno"));
+				System.out.println(rs.getString("ename"));
+				System.out.println(rs.getString("sal"));
+				System.out.println(rs.getString("annsal"));
+				System.out.println();
 			}
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
