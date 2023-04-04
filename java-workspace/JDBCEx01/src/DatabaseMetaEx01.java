@@ -1,7 +1,6 @@
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DatabaseMetaEx01 {
@@ -13,60 +12,25 @@ public class DatabaseMetaEx01 {
 		
 		Connection conn = null;
 		
-		PreparedStatement pstmt = null;
-		
-		ResultSet rs = null;
-
+		// 사용 DB이름과 버전 알아내는 코드
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
-			System.out.println("드라이버 로딩 완료");
-			
 			conn = DriverManager.getConnection(url, user, password);
-			System.out.println("연결 성공");
 			
-			String sql = "select * from emp";
-			pstmt = conn.prepareStatement(sql);
-			rs = pstmt.executeQuery();
+			DatabaseMetaData dmd = conn.getMetaData();
 			
-//			while(rs.next()) {
-//				System.out.printf("%s %s %s %s %s %s %s%n",
-//						rs.getString("empno"), rs.getString("ename"),
-//						rs.getString("sal"), rs.getString("job")
-//						);
-//			}
+			System.out.println(dmd.getDatabaseProductName());
+			System.out.println(dmd.getDatabaseProductVersion());
 			
-			rs.absolute(1);
-			System.out.printf("%s %s %s %s%n", rs.getString("empno"), rs.getString("ename"),
-					rs.getString("sal"), rs.getString("job"));
-			
-			System.out.println("행 번호 : " + rs.getRow());
-			
-			rs.absolute(10);
-			System.out.printf("%s %s %s %s%n", rs.getString("empno"), rs.getString("ename"),
-					rs.getString("sal"), rs.getString("job"));
-			
-			System.out.println("행 번호 : " + rs.getRow());
-			
-			// select count(*) from emp
-			rs.next();
-			System.out.println("행 번호 : " + rs.getRow());
-			
-			// 커서의 초기화 상태
-			rs.beforeFirst();
-			
-		
+			System.out.println(dmd.getDriverName());
+			System.out.println(dmd.getDriverMinorVersion());
+			System.out.println(dmd.getJDBCMajorVersion() + " : " + dmd.getJDBCMinorVersion());
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
-		} finally { 
-			if (conn != null) { try { conn.close();} catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());}}
-		    if (pstmt != null) { try { pstmt.close();} catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());}}
-		    if (rs != null) { try { rs.close();} catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());}}
-		}
-
-
+		} finally { if (conn != null) { try { conn.close(); } catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());  }}}
 	}
 }
 
