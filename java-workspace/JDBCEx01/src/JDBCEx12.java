@@ -1,24 +1,22 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DumpEx03 {
-
+public class JDBCEx12 {
 	public static void main(String[] args) {
+		
 		String url = "jdbc:mariadb://localhost:3306/sample";
 		String user = "root";
 		String password = "123456";
 		
 		Connection conn = null;
 		
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		
-		ResultSet rs = null;
-		
-		String tableName = "emp";
-		
+
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
@@ -27,22 +25,29 @@ public class DumpEx03 {
 			conn = DriverManager.getConnection(url, user, password);
 			System.out.println("연결 성공");
 			
-			stmt = conn.createStatement();
 			
-			String sql = String.format("desc %s", tableName);
+			String sql = "update dept2 set loc = ? where deptno = ?";
+			pstmt = conn.prepareStatement(sql);
 			
-			rs = stmt.executeQuery(sql);
+			pstmt.setString(1, "부산");
+			pstmt.setString(2, "10");
 			
-			while (rs.next()) {
-				System.out.printf("%s%n", rs.getString("Field"));
-			}
+			int result = pstmt.executeUpdate();
+			System.out.println("실행 완료 : " + result);
+			
+		
 		} catch (ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
-		} finally { if(conn != null) if(stmt != null) if(rs != null) try {conn.close(); stmt.close(); rs.close();} catch(SQLException e) {System.out.println("[Error] : " + e.getMessage());}}
+		} finally { 
+			if (conn != null) { try { conn.close();} catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());}}
+		    if (pstmt != null) { try { pstmt.close();} catch (SQLException e) { System.out.println("[Error] : " + e.getMessage());}}
+		}
 	
 
 	}
-
 }
+
+
+
