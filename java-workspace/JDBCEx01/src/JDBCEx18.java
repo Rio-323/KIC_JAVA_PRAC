@@ -43,7 +43,6 @@ public class JDBCEx18 {
 			while ((str = br.readLine()) != null) {
 				
 				if (str.contains(dongName)) {
-					String[] arrZipcode = str.split(",");
 					
 					String sql = "select zipcode, sido, gugun, dong, ri, bunji, seq from zipcode where dong like ?";
 					pstmt = conn.prepareStatement(sql);
