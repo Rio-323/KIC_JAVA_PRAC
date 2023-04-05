@@ -3,9 +3,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
+import javax.swing.JLabel;
 
-public class JFrameEx01 extends JFrame {
+public class JFrameEx02 extends JFrame {
 
 	private JPanel contentPane;
 
@@ -13,12 +13,10 @@ public class JFrameEx01 extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		
-		// 스레드
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JFrameEx01 frame = new JFrameEx01();
+					JFrameEx02 frame = new JFrameEx02();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,9 +28,8 @@ public class JFrameEx01 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JFrameEx01() {
+	public JFrameEx02() {
 		setResizable(false);
-		setTitle("난 타이틀");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -40,6 +37,13 @@ public class JFrameEx01 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lbl1 = new JLabel("New label");
+		lbl1.setBounds(6, 6, 156, 16);
+		contentPane.add(lbl1);
+		
+		JLabel lbl2 = new JLabel("New label");
+		lbl2.setBounds(6, 34, 156, 16);
+		contentPane.add(lbl2);
 	}
-
 }
