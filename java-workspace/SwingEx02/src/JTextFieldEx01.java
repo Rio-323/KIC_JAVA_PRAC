@@ -4,6 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class JTextFieldEx01 extends JFrame {
 
@@ -43,5 +46,15 @@ public class JTextFieldEx01 extends JFrame {
 		textField.setBounds(6, 6, 344, 26);
 		contentPane.add(textField);
 		textField.setColumns(10);
+		
+		JButton btn = new JButton("New button");
+		btn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println(textField.getText());
+			}
+		});
+		btn.setBounds(362, 6, 117, 29);
+		contentPane.add(btn);
 	}
 }
