@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 public class JButtonEx02 extends JFrame {
 
 	private JPanel contentPane;
+	private JLabel lbl;
 
 	/**
 	 * Launch the application.
@@ -46,6 +47,7 @@ public class JButtonEx02 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println("버튼 1 클릭");
+				lbl.setText("결과 : 버튼1 클릭");
 			}
 		});
 		btn1.setBounds(6, 6, 117, 29);
@@ -56,6 +58,7 @@ public class JButtonEx02 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println("버튼 2 클릭");
+				lbl.setText("결과 : 버튼2 클릭");
 			}
 		});
 		btn2.setBounds(152, 6, 117, 29);
@@ -66,12 +69,13 @@ public class JButtonEx02 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println("버튼 3 클릭");
+				lbl.setText("결과 : 버튼3 클릭");
 			}
 		});
 		btn3.setBounds(310, 6, 117, 29);
 		contentPane.add(btn3);
 		
-		JLabel lbl = new JLabel("결과");
+		lbl = new JLabel("결과");
 		lbl.setBounds(16, 57, 411, 16);
 		contentPane.add(lbl);
 	}
