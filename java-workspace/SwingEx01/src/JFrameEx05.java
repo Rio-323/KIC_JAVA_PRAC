@@ -16,12 +16,20 @@ public class JFrameEx05 extends JFrame {
 		
 		contentPane = new JPanel();
 		
-		contentPane.setBackground(Color.red);
+		contentPane.setBackground(Color.gray);
 		
-		JButton btn1 = new JButton("난 버튼");
+		JButton btn1 = new JButton("난 버튼 1");
 		btn1.setBounds(10, 10, 100, 25);
 		
+		JButton btn2 = new JButton("난 버튼2");
+		btn2.setBounds(10, 40, 100, 25);
+		
+		// 레이아웃(배치 관리자)
+		// null - null layout / absolute layout
+		contentPane.setLayout(null); // 내가 원하는대로 배치할 수 있게 해줌.
+		
 		contentPane.add(btn1);
+		contentPane.add(btn2);
 		
 		this.setContentPane(contentPane);
 	}
