@@ -7,11 +7,13 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JPasswordField;
 
 public class JTextFieldEx01 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -52,9 +54,18 @@ public class JTextFieldEx01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println(textField.getText());
+				
+				// System.out.println(passwordField.getText());
+				
+				System.out.println(new String(passwordField.getPassword()));
 			}
 		});
 		btn.setBounds(362, 6, 117, 29);
 		contentPane.add(btn);
+		
+		passwordField = new JPasswordField();
+		passwordField.setEchoChar('*');
+		passwordField.setBounds(6, 36, 344, 26);
+		contentPane.add(passwordField);
 	}
 }
