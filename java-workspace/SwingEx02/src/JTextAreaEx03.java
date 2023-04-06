@@ -83,11 +83,17 @@ public class JTextAreaEx03 extends JFrame {
 					int startDan = Integer.parseInt(textField1.getText());
 					int endDan = Integer.parseInt(textField2.getText());
 					
-					for(int i = startDan; i <= endDan; i++) {
-						for(int j = 1; j < 10; j++) {
-							textArea.append(String.format("%d X %d = %d\t", i, j, i * j)); 
+					textArea.setText("");
+					
+					if(startDan >= endDan ) {
+						textArea.append("입력 형식을 다시 확인해주세요.");
+					} else {
+						for(int i = startDan; i <= endDan; i++) {
+							for(int j = 1; j < 10; j++) {
+								textArea.append(String.format("%d X %d = %d\t", i, j, i * j)); 
+							}
+							textArea.append("\n");
 						}
-						textArea.append("\n");
 					}
 				} else {
 					textArea.append("입력 형식을 다시 확인해주세요.");
