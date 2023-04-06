@@ -67,27 +67,33 @@ public class JuminCheckEx01 extends JFrame {
 				int[] number = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
 				int tot = 0;
 				
-				if(strJumin.length() == 0 || str1.length() == 0 || str2.length() == 0) {
-					lbl.setText("형식을 다시 확인해주세요");
-					textField1.setText("");
-					textField2.setText("");
-				} else {
+				// 입력 값 검사 -> 정규표현식
+				if (str1.matches("[0-9]+") && str2.matches("[0-9]+")) {
 					
-					for (int i = 0; i < strJumin.length() - 1; i++) {
-						tot += Integer.parseInt(strJumin.substring(i, i + 1)) * number[i];
-					}
-
-					int lastNum = Integer.parseInt(strJumin.substring(12, 13));
-					
-					int resultNum = (11 - (tot % 11)) % 10;
-					
-					if(lastNum == resultNum) {
-						lbl.setText("주민등록 형식이 맞음");
+					if(strJumin.length() == 0 || str1.length() == 0 || str2.length() == 0) {
+						lbl.setText("형식을 다시 확인해주세요");
+						textField1.setText("");
+						textField2.setText("");
+						
 					} else {
-						lbl.setText("주민등록 형식이 아님");
-					}	
-				}
-				
+						
+						for (int i = 0; i < strJumin.length() - 1; i++) {
+							tot += Integer.parseInt(strJumin.substring(i, i + 1)) * number[i];
+						}
+
+						int lastNum = Integer.parseInt(strJumin.substring(12, 13));
+						
+						int resultNum = (11 - (tot % 11)) % 10;
+						
+						if(lastNum == resultNum) {
+							lbl.setText("주민등록 형식이 맞음");
+						} else {
+							lbl.setText("주민등록 형식이 아님");
+						}	
+					}
+					} else {
+						lbl.setText("숫자 형식이 아님");
+					}
 			}
 		});
 		btn.setBounds(304, 6, 117, 29);
