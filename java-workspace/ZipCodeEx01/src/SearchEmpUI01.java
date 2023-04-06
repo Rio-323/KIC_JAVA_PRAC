@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-public class SearchZipcodeUI01 extends JFrame {
+public class SearchEmpUI01 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -27,7 +27,7 @@ public class SearchZipcodeUI01 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SearchZipcodeUI01 frame = new SearchZipcodeUI01();
+					SearchEmpUI01 frame = new SearchEmpUI01();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class SearchZipcodeUI01 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SearchZipcodeUI01() {
+	public SearchEmpUI01() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
@@ -50,7 +50,7 @@ public class SearchZipcodeUI01 extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), "\uC6B0\uD3B8\uBC88\uD638 \uAC80\uC0C9\uAE30", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), "\uBD80\uC11C \uC774\uB984 \uAC80\uC0C9", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(19, 33, 584, 53);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -66,27 +66,26 @@ public class SearchZipcodeUI01 extends JFrame {
 		panel.add(textField);
 		textField.setColumns(10);
 		
-		JButton btn = new JButton("우편번호 검색");
+		JButton btn = new JButton("부서 이름 검색");
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
 				if(textField.getText().trim().length() < 2) {
-					textArea.setText("동 이름을 두자 이상 입력하셔야 합니다.");
+					textArea.setText("부서 이름을 두자 이상 입력하셔야 합니다.");
 					textField.setText("");
 				} else {
-					// textArea.setText("정상");
 					textArea.setText("");
 					
-					String strDong = textField.getText().trim();
+					String strDname = textField.getText().trim();
 					
-					ZipcodeDao dao = new ZipcodeDao();
-					ArrayList<ZipcodeDto> addresses = dao.searchZipcode(strDong);
+					EmpDao dao = new EmpDao();
+					ArrayList<EmpDto> employees = dao.searchEmpcode(strDname);
 					
-					for(ZipcodeDto to : addresses) {
-						String address = String.format("[%s] %s %s %s %s %s", to.getZipCode(), to.getSido(), to.getGugun(), to.getDong(), to.getRi(), to.getBunji());
+					for(EmpDto to : employees) {
+						String employee = String.format("%s %s %s %s %s %s", to.getDeptno(), to.getLoc(), to.getEmpno(), to.getEname(), to.getJob(), to.getSal());
 						
-						textArea.append(address + System.lineSeparator());
+						textArea.append(employee + System.lineSeparator());
 					}
 			        
 			        
