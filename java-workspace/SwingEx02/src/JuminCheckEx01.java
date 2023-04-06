@@ -69,6 +69,8 @@ public class JuminCheckEx01 extends JFrame {
 				
 				if(strJumin.length() == 0 || str1.length() == 0 || str2.length() == 0) {
 					lbl.setText("형식을 다시 확인해주세요");
+					textField1.setText("");
+					textField2.setText("");
 				} else {
 					
 					for (int i = 0; i < strJumin.length() - 1; i++) {
