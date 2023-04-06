@@ -12,18 +12,14 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ZipCodeEx01 extends JFrame {
+public class ZipCodeEx02 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -36,7 +32,7 @@ public class ZipCodeEx01 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ZipCodeEx01 frame = new ZipCodeEx01();
+					ZipCodeEx02 frame = new ZipCodeEx02();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +44,7 @@ public class ZipCodeEx01 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ZipCodeEx01() {
+	public ZipCodeEx02() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
@@ -65,6 +61,12 @@ public class ZipCodeEx01 extends JFrame {
 		panel.setLayout(null);
 		
 		textField = new JTextField();
+		textField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				textField.setText("");
+			}
+		});
 		textField.setBounds(6, 18, 420, 26);
 		panel.add(textField);
 		textField.setColumns(10);
@@ -74,70 +76,55 @@ public class ZipCodeEx01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				String url = "jdbc:mariadb://localhost:3306/project";
-				String user = "project";
-				String password = "1234";
-				
-				Connection conn = null;
-				
-				PreparedStatement pstmt = null;
-				
-				ResultSet rs = null;
-				
-				BufferedReader br = null;
-
-				
+				if(textField.getText().trim().length() < 2) {
+					textArea.setText("동 이름을 두자 이상 입력하셔야 합니다.");
+					textField.setText("");
+				} else {
+					// textArea.setText("정상");
+					textArea.setText("");
+					
+					String strDong = textField.getText().trim();
+					
+					String url = "jdbc:mariadb://localhost:3306/project";
+					String user = "project";
+					String password = "1234";
+					
+					Connection conn = null;
+					PreparedStatement pstmt = null;
+					ResultSet rs = null;
+					
 					try {
-						
 						Class.forName("org.mariadb.jdbc.Driver");
-						
 						conn = DriverManager.getConnection(url, user, password);
 						
-						br = new BufferedReader(new FileReader("/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/JDBCEx01/src/subject.csv"));
+						String sql = "select zipcode, sido, gugun, dong, ri, bunji from zipcode where dong like ?";
+						pstmt = conn.prepareStatement(sql);
+						pstmt.setString(1, "%" + strDong + "%");
+						rs = pstmt.executeQuery();
 						
-						textArea.setText("");
-						
-						String dongName = textField.getText();
-						
-						String str = "";
-						while ((str = br.readLine()) != null) {
-						    if (str.contains(dongName)) {
-						        String sql = "select zipcode, sido, gugun, dong, ri, bunji, seq from zipcode where dong like ?";
-						        pstmt = conn.prepareStatement(sql);
-						        pstmt.setString(1, "%" + dongName + "%");
-						        rs = pstmt.executeQuery();
-
-						        while (rs.next()) {
-						            textArea.append(String.format("%s %s %s %s %s %s %s%n",
-						                    rs.getString("zipcode"), rs.getString("sido"),
-						                    rs.getString("gugun"), rs.getString("dong"),
-						                    rs.getString("ri"), rs.getString("bunji"),
-						                    rs.getString("seq")));
-						        }
-						        
-						        break; // 동명이 있는 경우 찾았으면 루프 중단
-						        
-						    } else if (dongName.equals("exit")) {
-						        System.exit(0);
-						    }
+						while (rs.next()) {
+						    textArea.append(String.format("%s %s %s %s %s %s%n",
+						            rs.getString("zipcode"), rs.getString("sido"),
+						            rs.getString("gugun"), rs.getString("dong"),
+						            rs.getString("ri"), rs.getString("bunji")));
 						}
+						
 					} catch (ClassNotFoundException e1) {
 						System.out.println("[Error] : " + e1.getMessage());
-					} catch (FileNotFoundException e1) {
-						System.out.println("[Error] : " + e1.getMessage());
 					} catch (SQLException e1) {
-						System.out.println("[Error] : " + e1.getMessage());
-					} catch (IOException e1) {
 						System.out.println("[Error] : " + e1.getMessage());
 					} finally { 
 						if (conn != null) { try { conn.close();} catch (SQLException e1) { System.out.println("[Error] : " + e1.getMessage());}}
 					    if (pstmt != null) { try { pstmt.close();} catch (SQLException e1) { System.out.println("[Error] : " + e1.getMessage());}}
-					    if (br != null) { try { br.close();} catch (IOException e1) { System.out.println("[Error] : " + e1.getMessage());}}
 					    if (rs != null) { try { rs.close();} catch (SQLException e1) { System.out.println("[Error] : " + e1.getMessage());}}
 					}
-				
-				
+			        
+			        
+				}
+			
 			}
+
+				
 		});
 		btn.setBounds(461, 18, 117, 29);
 		panel.add(btn);
