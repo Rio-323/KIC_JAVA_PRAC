@@ -9,6 +9,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 public class JComboBoxEx01 extends JFrame {
 
@@ -46,7 +48,18 @@ public class JComboBoxEx01 extends JFrame {
 		contentPane.setLayout(null);
 		
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"사과", "참외", "수박", "딸기"}));
+		comboBox.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				// select / deselect
+				if(e.getStateChange() == ItemEvent.SELECTED) {
+					System.out.println((String)comboBox.getSelectedItem());
+				}
+				
+			}
+		});
+		// comboBox.setModel(new DefaultComboBoxModel(new String[] {"사과", "참외", "수박", "딸기"}));
+		// comboBox.setModel(new CustomComboBox());
+		comboBox.setModel(new CustomComboBoxModel());
 		comboBox.setBounds(6, 6, 182, 27);
 		contentPane.add(comboBox);
 		
