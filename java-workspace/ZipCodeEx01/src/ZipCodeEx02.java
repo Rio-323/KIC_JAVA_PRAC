@@ -1,6 +1,7 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
@@ -77,8 +78,10 @@ public class ZipCodeEx02 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				
 				if(textField.getText().trim().length() < 2) {
-					textArea.setText("동 이름을 두자 이상 입력하셔야 합니다.");
-					textField.setText("");
+					// textArea.setText("동 이름을 두자 이상 입력하셔야 합니다.");
+					// textField.setText("");
+					
+					JOptionPane.showMessageDialog(ZipCodeEx02.this, "동 이름을 두자 이상 입력하셔야 합니다.", "Error", JOptionPane.ERROR_MESSAGE);
 				} else {
 					// textArea.setText("정상");
 					textArea.setText("");
