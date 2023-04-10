@@ -1,4 +1,4 @@
-package model1;
+package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ZipcodeDAO {
+public class EmpDAO {
 	private Connection conn = null;
 	
-	public ZipcodeDAO() {
-		String url = "jdbc:mariadb://localhost:3306/project";
-		String user = "project";
-		String password = "1234";
+	public EmpDAO() {
+		String url = "jdbc:mariadb://localhost:3306/sample";
+		String user = "root";
+		String password = "123456";
 		
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
@@ -25,30 +25,31 @@ public class ZipcodeDAO {
 		}
 	}
 	
-	public ArrayList<ZipcodeDTO> searchZipcode(String strDong) {
+	public ArrayList<EmpDTO> searchEmp(String eName) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		ArrayList<ZipcodeDTO> addresses = new ArrayList<>();
+		ArrayList<EmpDTO> employeees = new ArrayList<>();
 		
 		try {
-			String sql = "select zipcode, sido, gugun, dong, ri, bunji from zipcode where dong like ?";
+			String sql = "select e.empno, e.ename, e.deptno, e.sal, e.hiredate, ifnull(m.ename, '관리자') from emp e left outer join emp m on(e.mgr = m.empno) where e.ename like ?;";
+			
+			
 			pstmt = this.conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + strDong + "%");
+			pstmt.setString(1, "%" + eName + "%");
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-			    ZipcodeDTO to = new ZipcodeDTO();
-
-			    to.setZipcode(rs.getString("zipcode"));
-			    to.setSido(rs.getString("sido"));
-			    to.setGugun(rs.getString("gugun"));
-			    to.setDong(rs.getString("dong"));
-			    to.setRi(rs.getString("ri"));
-			    to.setBunji(rs.getString("bunji"));
-
-			    addresses.add(to);
+			    EmpDTO to = new EmpDTO();
 			    
+			    to.setEmpno(rs.getString("empno"));
+			    to.setEname(rs.getString("ename"));
+			    to.setDeptno("e.deptno");
+			    to.setSal("e.sal");
+			    to.setHiredate("e.hiredate");
+			    to.setMgr("m.ename");
+			    
+			    employeees.add(to);
 			}
 		} catch (SQLException e) {
 			System.out.println("[Error] : " + e.getMessage());
@@ -58,6 +59,6 @@ public class ZipcodeDAO {
 			if(conn != null) { try { conn.close(); } catch(SQLException e) { System.out.println("[Error] : " + e.getMessage()); } }
 		}
 		
-		return addresses;
+		return employeees;
 	}
 }

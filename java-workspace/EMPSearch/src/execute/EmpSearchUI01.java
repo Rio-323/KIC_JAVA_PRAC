@@ -1,34 +1,31 @@
+package execute;
 
-
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.border.TitledBorder;
-
-import model1.ZipcodeListModel;
-import model1.ZipcodeListModel2;
-
-import javax.swing.UIManager;
 import java.awt.Color;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
+import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
-public class ZipcodeSearchUI01 extends JFrame {
+import model.EmpListModel;
+
+import javax.swing.border.EtchedBorder;
+
+public class EmpSearchUI01 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
 	private JList list;
 	private JTextField textField1;
-	private JTextField textField2;
 
 	/**
 	 * Launch the application.
@@ -37,7 +34,7 @@ public class ZipcodeSearchUI01 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ZipcodeSearchUI01 frame = new ZipcodeSearchUI01();
+					EmpSearchUI01 frame = new EmpSearchUI01();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -49,21 +46,22 @@ public class ZipcodeSearchUI01 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ZipcodeSearchUI01() {
+	public EmpSearchUI01() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 540);
+		setBounds(100, 100, 650, 509);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "\uC6B0\uD3B8\uBC88\uD638\uAC80\uC0C9\uAE30", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\uC0AC\uC6D0\uC774\uB984 \uAC80\uC0C9\uAE30", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(6, 21, 616, 73);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lbl = new JLabel("동이름");
+		JLabel lbl = new JLabel("사원이름");
 		lbl.setBounds(12, 41, 57, 15);
 		panel.add(lbl);
 		
@@ -76,18 +74,13 @@ public class ZipcodeSearchUI01 extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// 데이터 베이스 접속
-				// model -> List
-				// list.setModel(new ZipcodeListModel("동 이름"));
 				
-				String strDong = textField.getText().trim();
-				if(strDong.length() < 2) {
-					JOptionPane.showMessageDialog(ZipcodeSearchUI01.this, "동 이름을 2자이상 입력.", "입력 경고", JOptionPane.WARNING_MESSAGE);
+				String eName = textField.getText().trim();
+				if(eName.length() < 2) {
+					JOptionPane.showMessageDialog(EmpSearchUI01.this, "이름을 2자이상 입력.", "입력 경고", JOptionPane.WARNING_MESSAGE);
 				} else {
-					list.setModel(new ZipcodeListModel2(strDong));
+					list.setModel(new EmpListModel(eName));
 				}
-				
-				
 			}
 		});
 		btn.setBounds(507, 37, 97, 23);
@@ -109,15 +102,9 @@ public class ZipcodeSearchUI01 extends JFrame {
 		
 		textField1 = new JTextField();
 		textField1.setEditable(false);
-		textField1.setText("기본주소");
+		textField1.setText("사원정보");
 		textField1.setBounds(6, 439, 616, 21);
 		contentPane.add(textField1);
 		textField1.setColumns(10);
-		
-		textField2 = new JTextField();
-		textField2.setText("상세주소");
-		textField2.setBounds(6, 470, 616, 21);
-		contentPane.add(textField2);
-		textField2.setColumns(10);
 	}
 }
