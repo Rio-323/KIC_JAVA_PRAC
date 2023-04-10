@@ -67,7 +67,7 @@ public class JTableEx01 extends JFrame {
 //				
 //		});
 		
-		table.setModel(new CustomTableModel1());
+		table.setModel(new CustomTableModel3());
 		table.getColumnModel().getColumn(0).setResizable(false);
 		table.getColumnModel().getColumn(1).setResizable(false);
 		table.getColumnModel().getColumn(2).setResizable(false);

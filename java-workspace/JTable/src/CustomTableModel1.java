@@ -1,6 +1,8 @@
 import javax.swing.table.AbstractTableModel;
 
 public class CustomTableModel1 extends AbstractTableModel {
+	// ArrayList<ArrayList<String>>
+	// ArrayList<XXXTo>
 	private String[][] items = new String[][] {
 		{"11", "12", "13", "14", "15"},
 		{"21", "22", "23", "24", "25"},

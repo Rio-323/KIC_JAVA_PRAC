@@ -28,7 +28,8 @@ public class JDBCEx16 {
 //				dong varchar(26) not null,
 //				ri varchar(45) not null,
 //				bunji varchar(17) not null,
-//				seq int(5) unsigned not null
+//				seq int(5) unsigned not null,
+//		  		PRIMARY KEY (`seq`)
 //				);
 		
 //		LOAD DATA INFILE '/Users/ksy/Desktop/KIC_JAVA_PRAC/java-workspace/JDBCEx01/src/subject.csv'
