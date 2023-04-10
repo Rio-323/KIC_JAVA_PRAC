@@ -10,9 +10,12 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.TitledBorder;
 
+import model1.ZipcodeListModel;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import java.awt.event.MouseAdapter;
@@ -72,6 +75,18 @@ public class ZipcodeSearchUI01 extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				// 데이터 베이스 접속
+				// model -> List
+				// list.setModel(new ZipcodeListModel("동 이름"));
+				
+				String strDong = textField.getText().trim();
+				if(strDong.length() < 2) {
+					JOptionPane.showMessageDialog(ZipcodeSearchUI01.this, "동 이름을 2자이상 입력.", "입력 경고", JOptionPane.WARNING_MESSAGE);
+				} else {
+					list.setModel(new ZipcodeListModel(strDong));
+				}
+				
+				
 			}
 		});
 		btn.setBounds(507, 37, 97, 23);
