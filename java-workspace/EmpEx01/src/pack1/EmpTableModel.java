@@ -6,6 +6,10 @@ import javax.swing.table.AbstractTableModel;
 
 public class EmpTableModel extends AbstractTableModel {
 	private ArrayList<EmpDTO> items;
+	private String[] columnNames = new String[] {
+			"empno", "ename", "job", "mgr", "hiredate", "sal", "comm", "deptno"
+				
+	};
 	
 	public EmpTableModel() {
 		EmpDAO dao = new EmpDAO();
@@ -21,7 +25,12 @@ public class EmpTableModel extends AbstractTableModel {
 	@Override
 	public int getColumnCount() {
 		// TODO Auto-generated method stub
-		return 8;
+		return columnNames.length;
+	}
+	
+	@Override
+	public String getColumnName(int column) {
+		return columnNames[column];
 	}
 
 	@Override
@@ -36,7 +45,7 @@ public class EmpTableModel extends AbstractTableModel {
 		case 4 : result = to.getHiredate(); break;
 		case 5 : result = to.getSal(); break;
 		case 6 : result = to.getComm(); break;
-		case 7 : result = to.getDeptno(); break;
+		default : result = to.getDeptno(); break;
 		}
 		return result;
 	}

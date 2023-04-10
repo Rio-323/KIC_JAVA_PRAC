@@ -58,6 +58,8 @@ public class EmpUI01 extends JFrame {
 		table.getColumnModel().getColumn(6).setResizable(false);
 		table.getColumnModel().getColumn(7).setResizable(false);
 		scrollPane.setViewportView(table);
+		
+		
 	}
 
 }
