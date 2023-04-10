@@ -32,7 +32,7 @@ public class EmpDAO {
 		ArrayList<EmpDTO> items = new ArrayList<>();
 		
 		try {
-			String sql = "select empno, ename, job, mgr, hiredate, sal, comm, deptno from emp;";
+			String sql = "select empno, ename, job, mgr, hiredate, sal, ifnull(comm, 0) as comm, deptno from emp;";
 			pstmt = this.conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			

@@ -5,6 +5,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class JTableEx01 extends JFrame {
 
@@ -45,6 +47,14 @@ public class JTableEx01 extends JFrame {
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println(table.getSelectedRow());
+				System.out.println(table.getSelectedColumn());
+				System.out.println(table.getValueAt(table.getSelectedRow(), table.getSelectedColumn()));
+			}
+		});
 		scrollPane.setViewportView(table);
 //		table.setModel(new DefaultTableModel(
 //				new Object[][] {
