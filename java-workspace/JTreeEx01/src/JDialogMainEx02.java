@@ -53,7 +53,8 @@ public class JDialogMainEx02 extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				JDialogEx02 dialog = new JDialogEx02();
+			
+				JDialogEx02 dialog = new JDialogEx02(textField1.getText());
 				System.out.println("1");
 				
 				dialog.setModal(true);
