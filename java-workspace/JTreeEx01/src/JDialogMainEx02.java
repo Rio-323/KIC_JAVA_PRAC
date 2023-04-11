@@ -66,6 +66,11 @@ public class JDialogMainEx02 extends JFrame {
 				dialog.setVisible(true);
 				System.out.println("4");
 				
+				String data = dialog.getData();
+				System.out.println("결과 : " + data);
+				
+				textField2.setText(data);
+				
 				// JFrame -> JDialog -> 생성자, setter
 				// JDialog -> JFrame -> getter / 멤버 필드
 			}
