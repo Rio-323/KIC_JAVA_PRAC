@@ -9,12 +9,12 @@ import java.util.ArrayList;
 
 import javax.swing.DefaultComboBoxModel;
 
-public class CustomComboBoxGugun extends DefaultComboBoxModel<String> {
+public class CustomComboBoxDong extends DefaultComboBoxModel<String> {
 
     private ArrayList<String> items = new ArrayList<>();
-
-    public CustomComboBoxGugun(String sido) {
-
+    
+    public CustomComboBoxDong(String gugun) {
+    	
     	String url = "jdbc:mariadb://localhost:3306/project";
 		String user = "project";
 		String password = "1234";
@@ -27,12 +27,12 @@ public class CustomComboBoxGugun extends DefaultComboBoxModel<String> {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			conn = DriverManager.getConnection(url, user, password);
-			String sql = "select distinct(gugun) from zipcode where sido like ?;";
+			String sql = "select distinct(dong) from zipcode where gugun like ?;";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + sido + "%");
+			pstmt.setString(1, "%" + gugun + "%");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-			    items.add(rs.getString("gugun"));
+			    items.add(rs.getString("dong"));
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
