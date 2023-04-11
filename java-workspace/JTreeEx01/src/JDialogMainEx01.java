@@ -3,10 +3,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class JDialogMainEx01 extends JFrame {
 
 	private JPanel contentPane;
+	private JButton btn;
 
 	/**
 	 * Launch the application.
@@ -36,6 +42,17 @@ public class JDialogMainEx01 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		btn = new JButton("New button");
+		btn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				JDialogEx01 dialog = new JDialogEx01();
+				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				dialog.setVisible(true);
+			}
+		});
+		btn.setBounds(6, 25, 117, 29);
+		contentPane.add(btn);
 	}
-
 }
