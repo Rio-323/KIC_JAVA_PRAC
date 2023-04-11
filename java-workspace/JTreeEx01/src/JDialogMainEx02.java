@@ -11,11 +11,14 @@ import javax.swing.JDialog;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextField;
 
-public class JDialogMainEx01 extends JFrame {
+public class JDialogMainEx02 extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btn;
+	private JTextField textField1;
+	private JTextField textField2;
 
 	/**
 	 * Launch the application.
@@ -24,7 +27,7 @@ public class JDialogMainEx01 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JDialogMainEx01 frame = new JDialogMainEx01();
+					JDialogMainEx02 frame = new JDialogMainEx02();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +39,7 @@ public class JDialogMainEx01 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JDialogMainEx01() {
+	public JDialogMainEx02() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
@@ -50,34 +53,33 @@ public class JDialogMainEx01 extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				JDialogEx01 dialog = new JDialogEx01();
-				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				JDialogEx02 dialog = new JDialogEx02();
+				System.out.println("1");
 				
 				dialog.setModal(true);
-				// dialog.setLocationRelativeTo(contentPane);
-				Dimension d = JDialogMainEx01.this.getSize();
-				System.out.println(d.toString());
+				System.out.println("2");
 				
-				Point p = JDialogMainEx01.this.getLocation();
-				System.out.println(p.toString());
-				
-				Rectangle r = JDialogMainEx01.this.getBounds();
-				System.out.println(r.toString());
-				
-				int fx = (int)r.getX();
-				int fy = (int)r.getY();
-				int fwidth = (int)r.getWidth();
-				int fheight = (int)r.getHeight();
-				
-				int dwidth = 450;
-				int dheight = 300;
-				
-				dialog.setBounds(fwidth / 2 - dwidth / 2 + fx, fheight / 2 - dheight / 2 + fy, dwidth, dheight);
+				dialog.setLocationRelativeTo(contentPane);
+				System.out.println("3");
 				
 				dialog.setVisible(true);
+				System.out.println("4");
+				
+				// JFrame -> JDialog -> 생성자, setter
+				// JDialog -> JFrame -> getter / 멤버 필드
 			}
 		});
-		btn.setBounds(6, 25, 117, 29);
+		btn.setBounds(381, 20, 117, 29);
 		contentPane.add(btn);
+		
+		textField1 = new JTextField();
+		textField1.setBounds(6, 20, 363, 26);
+		contentPane.add(textField1);
+		textField1.setColumns(10);
+		
+		textField2 = new JTextField();
+		textField2.setBounds(6, 60, 492, 26);
+		contentPane.add(textField2);
+		textField2.setColumns(10);
 	}
 }
