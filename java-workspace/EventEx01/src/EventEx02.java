@@ -43,19 +43,19 @@ public class EventEx02 extends JFrame {
 		
 		JButton btn1 = new JButton("버튼1");
 		btn1.setName("button1");
-		btn1.addMouseListener(new UserMouseEvent2());
+		btn1.addMouseListener(new UserMouseEvent3());
 		btn1.setBounds(6, 6, 117, 29);
 		contentPane.add(btn1);
 		
 		JButton btn2 = new JButton("버튼2");
 		btn2.setName("button2");
-		btn2.addMouseListener(new UserMouseEvent2());
+		btn2.addMouseListener(new UserMouseEvent3());
 		btn2.setBounds(6, 47, 117, 29);
 		contentPane.add(btn2);
 		
 		JButton btn3 = new JButton("버튼3");
 		btn3.setName("button3");
-		btn3.addMouseListener(new UserMouseEvent2());
+		btn3.addMouseListener(new UserMouseEvent3());
 		btn3.setBounds(6, 91, 117, 29);
 		contentPane.add(btn3);
 	}
@@ -90,7 +90,7 @@ public class EventEx02 extends JFrame {
 		
 	}
 	
-	
+	// 내부 클래
 	class UserMouseEvent2 extends MouseAdapter {
 
 		@Override
