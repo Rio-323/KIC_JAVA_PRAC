@@ -1,4 +1,6 @@
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -7,10 +9,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class EventEx01 extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -99,6 +103,28 @@ public class EventEx01 extends JFrame {
 		});
 		btn3.setBounds(6, 72, 117, 29);
 		contentPane.add(btn3);
+		
+		textField = new JTextField();
+		textField.addActionListener(new ActionListener() {
+			
+			// enter누르면 동작실행
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(textField.getText());
+			}
+		});
+		textField.setBounds(6, 114, 231, 26);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JButton btn4 = new JButton("New button");
+		btn4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println(textField.getText());
+			}
+		});
+		btn4.setBounds(249, 114, 117, 29);
+		contentPane.add(btn4);
 	}
-
 }
