@@ -16,6 +16,7 @@ import java.awt.Color;
 import javax.swing.JTable;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import javax.swing.DefaultComboBoxModel;
 
 public class ZipcodeComboEx01 extends JFrame {
 
@@ -68,11 +69,13 @@ public class ZipcodeComboEx01 extends JFrame {
 				}
 			}
 		});
-		comboBox1.setModel(new CustomComboBoxSido());
+		comboBox1.setModel(new DefaultComboBoxModel(new String[] {"[시도]", "서울", "인천", "경기"}));
+		comboBox1.setSelectedIndex(0);
 		comboBox1.setBounds(6, 18, 151, 27);
 		panel.add(comboBox1);
 		
 		comboBox2 = new JComboBox();
+		comboBox2.setModel(new DefaultComboBoxModel(new String[] {"[구군]"}));
 		comboBox2.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if(e.getStateChange() == ItemEvent.SELECTED) {
@@ -86,6 +89,7 @@ public class ZipcodeComboEx01 extends JFrame {
 		panel.add(comboBox2);
 		
 		comboBox3 = new JComboBox();
+		comboBox3.setModel(new DefaultComboBoxModel(new String[] {"[동]"}));
 		comboBox3.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if(e.getStateChange() == ItemEvent.SELECTED) {
