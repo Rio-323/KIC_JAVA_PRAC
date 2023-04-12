@@ -7,8 +7,16 @@ import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.border.TitledBorder;
+
+import model.ZipCodeDAO;
+import model.ZipCodeDTO;
+import zipcodemodel.DongComboBoxModel;
+import zipcodemodel.GugunComboBoxModel;
+import zipcodemodel.SidoComboBoxModel;
+
 import java.awt.Color;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
 import java.awt.event.ItemEvent;
 import javax.swing.border.EtchedBorder;
 
@@ -52,10 +60,17 @@ public class ZipcodeSearchUI01 extends JFrame {
 		panel.setLayout( null );
           
 		combo1 = new JComboBox();
-		combo1.setModel(new DefaultComboBoxModel(new String[] {"시도"}));
+		// combo1.setModel(new DefaultComboBoxModel(new String[] {"시도"}));
+		combo1.setModel(new SidoComboBoxModel());
+		combo1.setSelectedIndex(0);
 		combo1.addItemListener( new ItemListener() {
 			public void itemStateChanged( ItemEvent e ) {
 				if( e.getStateChange() == ItemEvent.SELECTED ) {
+					// System.out.println(combo1.getSelectedItem());
+					if(combo2 != null) {
+						combo2.setModel(new GugunComboBoxModel((String)combo1.getSelectedItem()));
+						combo2.setSelectedIndex(0);
+					}
 				}
 			}
 		} );
@@ -63,10 +78,14 @@ public class ZipcodeSearchUI01 extends JFrame {
 		panel.add( combo1 );
           
 		combo2 = new JComboBox();
-		combo2.setModel(new DefaultComboBoxModel(new String[] {"구군"}));
+		// combo2.setModel(new DefaultComboBoxModel(new String[] {"구군"}));
+		combo2.setModel(new GugunComboBoxModel());
+		combo2.setSelectedIndex(0);
 		combo2.addItemListener( new ItemListener() {
 			public void itemStateChanged( ItemEvent e ) {
 				if( e.getStateChange() == ItemEvent.SELECTED ) {
+					combo3.setModel(new DongComboBoxModel((String)combo1.getSelectedItem(), (String)combo2.getSelectedItem()));
+					combo3.setSelectedIndex(0);
 				}
 			}
 		} );
@@ -74,10 +93,22 @@ public class ZipcodeSearchUI01 extends JFrame {
 		panel.add( combo2 );
           
 		combo3 = new JComboBox();
-		combo3.setModel(new DefaultComboBoxModel(new String[] {"동"}));
+		// combo3.setModel(new DefaultComboBoxModel(new String[] {"동"}));
+		combo3.setModel(new DongComboBoxModel());
+		combo3.setSelectedIndex(0);
 		combo3.addItemListener( new ItemListener() {
 			public void itemStateChanged( ItemEvent e ) {
 				if( e.getStateChange() == ItemEvent.SELECTED ) {
+					textArea.setText("");
+					ZipCodeDAO dao = new ZipCodeDAO();
+					ArrayList<ZipCodeDTO> addresses = dao.listAddress((String)combo1.getSelectedItem(), (String)combo2.getSelectedItem(), (String)combo3.getSelectedItem());
+					
+					for(ZipCodeDTO to : addresses) {
+						String address = String.format("%s [%s] %s %s %s %s %s", 
+								to.getSeq(), to.getZipcode(), to.getSido(), to.getGugun(),
+								to.getDong(), to.getRi(), to.getBunji());
+						textArea.append(address + System.lineSeparator());
+					}
 				}
 			}
 		} );
