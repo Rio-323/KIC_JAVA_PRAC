@@ -41,18 +41,21 @@ public class EventEx02 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btn1 = new JButton("New button");
-		btn1.addMouseListener(new UserMouseEvent1());
+		JButton btn1 = new JButton("버튼1");
+		btn1.setName("button1");
+		btn1.addMouseListener(new UserMouseEvent2());
 		btn1.setBounds(6, 6, 117, 29);
 		contentPane.add(btn1);
 		
-		JButton btn2 = new JButton("New button");
-		btn2.addMouseListener(new UserMouseEvent1());
+		JButton btn2 = new JButton("버튼2");
+		btn2.setName("button2");
+		btn2.addMouseListener(new UserMouseEvent2());
 		btn2.setBounds(6, 47, 117, 29);
 		contentPane.add(btn2);
 		
-		JButton btn3 = new JButton("New button");
-		btn3.addMouseListener(new UserMouseEvent1());
+		JButton btn3 = new JButton("버튼3");
+		btn3.setName("button3");
+		btn3.addMouseListener(new UserMouseEvent2());
 		btn3.setBounds(6, 91, 117, 29);
 		contentPane.add(btn3);
 	}
@@ -83,6 +86,28 @@ public class EventEx02 extends JFrame {
 		@Override
 		public void mouseExited(MouseEvent e) {
 			System.out.println("mouseExited");
+		}
+		
+	}
+	
+	
+	class UserMouseEvent2 extends MouseAdapter {
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			System.out.println("mouseClicked");
+			
+			System.out.println(((JButton)e.getSource()).getText());
+			System.out.println(((JButton)e.getSource()).getName());
+			
+			String name = ((JButton)e.getSource()).getName();
+			
+			switch(name) {
+			case "button1" : System.out.println("btn1 mouseClicked"); break;
+			case "button2" : System.out.println("btn2 mouseClicked"); break;
+			case "button3" : System.out.println("btn3 mouseClicked"); break;
+			default : System.out.println("Error");
+			}
 		}
 		
 	}
