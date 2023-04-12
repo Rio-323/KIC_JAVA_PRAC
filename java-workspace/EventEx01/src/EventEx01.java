@@ -106,6 +106,13 @@ public class EventEx01 extends JFrame {
 		
 		textField = new JTextField();
 		textField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(textField.getText());
+			}
+		});
+		
+		/*
+		textField.addActionListener(new ActionListener() {
 			
 			// enter누르면 동작실행
 			@Override
@@ -113,6 +120,7 @@ public class EventEx01 extends JFrame {
 				System.out.println(textField.getText());
 			}
 		});
+		*/
 		textField.setBounds(6, 114, 231, 26);
 		contentPane.add(textField);
 		textField.setColumns(10);
@@ -122,6 +130,13 @@ public class EventEx01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println(textField.getText());
+				System.out.println(e.getX());
+				System.out.println(e.getY());
+				System.out.println(e.getClickCount());
+				
+				// System.out.println(e.getSource());
+				JButton btn = (JButton)e.getSource();
+				btn.setText("클릭 됨");
 			}
 		});
 		btn4.setBounds(249, 114, 117, 29);
