@@ -90,7 +90,7 @@ public class EventEx02 extends JFrame {
 		
 	}
 	
-	// 내부 클래
+	// 내부 클래스
 	class UserMouseEvent2 extends MouseAdapter {
 
 		@Override
