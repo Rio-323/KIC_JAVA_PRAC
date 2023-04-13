@@ -25,7 +25,7 @@ public class NetworkEx07 {
 			while((data = bis.read()) != -1) {
 				bos.write(data);
 			}
-			
+			System.out.println("다운 완료");
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
