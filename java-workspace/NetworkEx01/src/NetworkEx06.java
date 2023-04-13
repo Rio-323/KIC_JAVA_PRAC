@@ -12,28 +12,35 @@ public class NetworkEx06 {
 		BufferedReader br = null;
 		
 		try {
-			// URLConnection conn = new URL("https://news.daum.net/").openConnection();
+//			URLConnection conn = new URL("https://news.daum.net/").openConnection();
 			
 			HttpURLConnection conn = (HttpURLConnection)new URL("https://news.daum.net/").openConnection();
 			
-			int responseCode = conn.getResponseCode();
-			System.out.println(responseCode);
+//			int responseCode = conn.getResponseCode();
+//			System.out.println(responseCode); // ex) 404오류 코드
 			
-			br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-			String line = null;
-			
-			boolean flag = false;
-			while((line = br.readLine()) != null) {
+			if(conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+				System.out.println(conn.getRequestMethod());
+				System.out.println(conn.getResponseMessage());
 				
-				if(line.contains("class=\"link_txt\" data-tiara-layer=\"article_main\"")) {
-					flag = true;
-				} else if(line.contains("</a>")) {
-					flag = false;
-				}
+				br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+				String line = null;
 				
-				if(flag) {
-					System.out.println(br.readLine().trim() + System.lineSeparator());
+				boolean flag = false;
+				while((line = br.readLine()) != null) {
+					
+					if(line.contains("class=\"link_txt\" data-tiara-layer=\"article_main\"")) {
+						flag = true;
+					} else if(line.contains("</a>")) {
+						flag = false;
+					}
+					
+					if(flag) {
+						System.out.println(br.readLine().trim() + System.lineSeparator());
+					}
 				}
+			} else {
+				System.out.println("접속 에러");
 			}
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
