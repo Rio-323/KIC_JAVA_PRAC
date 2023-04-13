@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -11,7 +12,13 @@ public class NetworkEx06 {
 		BufferedReader br = null;
 		
 		try {
-			URLConnection conn = new URL("https://news.daum.net/").openConnection();
+			// URLConnection conn = new URL("https://news.daum.net/").openConnection();
+			
+			HttpURLConnection conn = (HttpURLConnection)new URL("https://news.daum.net/").openConnection();
+			
+			int responseCode = conn.getResponseCode();
+			System.out.println(responseCode);
+			
 			br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			String line = null;
 			
