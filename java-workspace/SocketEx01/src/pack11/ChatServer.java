@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class ChatServer {
+	// 채팅룸
 	private HashMap<String, OutputStream> clients;
 	
 	public static void main(String args[]) {
@@ -30,6 +31,8 @@ public class ChatServer {
 			while(true) {
 				socket = serverSocket.accept();
 				System.out.println("[" + socket.getInetAddress() + " : " + socket.getPort() + "]" + "에서접속하였습니다.");
+				
+				// 클라이언트 접속되면 소켓을 가진 스레드 생성
 				ServerReceiver thread = new ServerReceiver(socket);
 				thread.start(); 
 			}
