@@ -8,5 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/JAVA/API/jsoup-1.15.4.jar"/>
 	<classpathentry kind="lib" path="C:/JAVA/API/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ksy/Desktop/KIC_JAVA_PRAC/JAVA Library/jsoup-1.15.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
