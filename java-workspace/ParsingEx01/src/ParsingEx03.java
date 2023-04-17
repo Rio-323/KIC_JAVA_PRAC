@@ -14,29 +14,40 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class ParsingEx02 {
+public class ParsingEx03 {
 	
 	public static void main(String[] args) {
 		// parsing - 문서 분석
 		
+		//다시하기
 		BufferedReader br = null;
 		
 		try {
-			URLConnection conn = new URL("https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.xml?key=f5eef3421c602c6cb7ea224104795888&targetDt=20230409").openConnection();
+			URLConnection conn = new URL("http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.xml?key=f5eef3421c602c6cb7ea224104795888&movieCd=20124079").openConnection();
 			br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			
-			String data = br.readLine();
-			
+			String data = br.readLine();			
 			Document doc = Jsoup.parse(data);
-			System.out.println(doc);
+						
+			Elements cdTags = doc.getElementsByTag("movieCd");
+			Elements nmTags = doc.getElementsByTag("movieNm");
+			Elements actorsTags = doc.getElementsByTag("actor");
 			
-			Elements rankTags = doc.getElementsByTag("rank");
-			System.out.println(rankTags);
-			
-			for(int i=0; i<rankTags.size(); i++) {
-				Element rankTag = rankTags.get(i);
-				System.out.println(rankTag.text());
+			for(int i=0; i<cdTags.size(); i++) {
+				Element cdTag = cdTags.get(i);
+				System.out.println(cdTag.text());
 			}
+			
+			for(int i=0; i<nmTags.size(); i++) {
+				Element nmTag = nmTags.get(i);
+				System.out.println(nmTag.text());
+			}
+			
+			for(int i=0; i<actorsTags.size(); i++) {
+				Element actorsTag = actorsTags.get(i);
+				System.out.println(actorsTag.text());			
+			
+			}			
 		 		    
 		   		    
 		} catch (MalformedInputException e) {
