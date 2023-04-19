@@ -22,6 +22,7 @@ public class MailSender {
 	public void sendMail(String toEmail, String toName, String subject, String content) {
 		// Google SMTP서버에 대한 접속 환경 설정
 		try {
+			// SSL방식
 			Properties props = new Properties();
 			props.put("mail.smtp.starttls.enable", "true");
 			props.put("mail.transport.protocol", "smtp");
@@ -37,10 +38,13 @@ public class MailSender {
 			Session session = Session.getDefaultInstance(props, authenticator);
 			
 			MimeMessage msg = new MimeMessage(session);
-			msg.setHeader("Content-type", "text/plain;charset=utf-8");
+			// msg.setHeader("Content-type", "text/plain;charset=utf-8");
+			msg.setHeader("Content-type", "text/html;charset=utf-8");
+			
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail, toName, "utf-8"));
 			msg.setSubject(subject);
-			msg.setContent(content, "text/plain; charset=utf-8");
+			// msg.setContent(content, "text/plain; charset=utf-8");
+			msg.setContent(content, "text/html; charset=utf-8");
 			
 			msg.setSentDate(new java.util.Date());
 			
