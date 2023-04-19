@@ -318,3 +318,15 @@
 2023-04-19 10:47:05,798 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/main/resources
 2023-04-19 10:47:05,799 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-04-19 10:47:05,799 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/test/resources
+2023-04-19 10:49:16,379 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:49:16,379 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/main/resources
+2023-04-19 10:49:16,380 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:49:16,380 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/test/resources
+2023-04-19 10:49:52,921 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:49:52,921 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/main/resources
+2023-04-19 10:49:52,922 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:49:52,922 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/test/resources
+2023-04-19 10:50:12,008 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:50:12,008 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/main/resources
+2023-04-19 10:50:12,009 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-19 10:50:12,009 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/mail/src/test/resources

@@ -18,6 +18,7 @@ public class App
         		+ "<head><meta charset='utf-8'/></head>"
         		+ "<body>"
         		+ "<font color='blue'>내용 테스트</font>"
+        		+"<img src = 'https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png'/>"
         		+ "</body>"
         		+ "</html>";
         
