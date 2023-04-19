@@ -83,25 +83,27 @@ public class LoginDAO {
 		String sqlNum = "select playerNo from player order by playerName desc limit 1";
 		PreparedStatement pstmt = this.conn.prepareStatement(sqlNum);
 		ResultSet rs = pstmt.executeQuery();
-		rs.next();
-		lastNum = rs.getInt(1) + 1;
+		if(rs.next()) {
+			lastNum = rs.getInt(1) + 1;
+		}
+		rs.close();
+		pstmt.close();
+		
 		
 		String sql = "insert into player(playerNo, teamCode, playerName, playerHeight, playerBirth, playerWeight, playerPosition, playerBackNo) values(?, ?, ?, ?, ?, ?, upper(?), ?)";
 		PreparedStatement pstmt1 = this.conn.prepareStatement(sql);
 		pstmt1.setInt(1, lastNum);
-		pstmt.setString(2, teamCode);
-		pstmt.setString(3, playerName);
-		pstmt.setString(4, playerHeight + "cm");
-		pstmt.setString(5, playerBirth);
-		pstmt.setString(6, playerWeight + "kg");
-		pstmt.setString(7, playerPosition);
+		pstmt1.setString(2, teamCode);
+		pstmt1.setString(3, playerName);
+		pstmt1.setString(4, playerHeight + "cm");
+		pstmt1.setString(5, playerBirth);
+		pstmt1.setString(6, playerWeight + "kg");
+		pstmt1.setString(7, playerPosition);
 		pstmt1.setInt(8, Integer.parseInt(playerBackNo));
 		
 		ResultSet rs1 = pstmt1.executeQuery();
 		if( rs1 != null ) rs1.close();
-		if( pstmt1 != null ) pstmt1.close();
-		if( rs != null ) rs.close();
-		if( pstmt != null ) pstmt.close();
+		pstmt1.close();
 		if( conn != null ) conn.close();
 	}
 	

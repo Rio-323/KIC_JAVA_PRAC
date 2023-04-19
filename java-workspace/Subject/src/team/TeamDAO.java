@@ -63,7 +63,7 @@ public class TeamDAO {
 	}
 	
 	public ArrayList<TeamDTO> selectTeam() {
-		String sql = "select teamCode, teamName, teamCoach, teamLoc, teamYear from team order by teamCode asc";
+		String sql = "select teamCode, teamName from team order by teamCode asc";
 		
 		try {
 			PreparedStatement pstmt = this.conn.prepareStatement(sql);
