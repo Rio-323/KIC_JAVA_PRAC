@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ksy
- *
- */
-module Subject {
-}
