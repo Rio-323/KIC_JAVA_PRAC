@@ -1,21 +1,23 @@
 package com.exam.lombok;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 
 // Default 생성자
 @NoArgsConstructor
 @AllArgsConstructor
-
-@ToString(exclude = {"deptno"})
-@EqualsAndHashCode
+//
+//@ToString(exclude = {"deptno"})
+//@EqualsAndHashCode
+@Data
 public class DeptDTO {
 	private String deptno;
 	private String dname;

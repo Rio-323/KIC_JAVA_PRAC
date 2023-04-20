@@ -473,3 +473,11 @@
 2023-04-20 10:13:51,590 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/main/resources
 2023-04-20 10:13:51,591 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-04-20 10:13:51,591 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/test/resources
+2023-04-20 10:14:56,736 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-20 10:14:56,736 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/main/resources
+2023-04-20 10:14:56,737 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-20 10:14:56,737 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/test/resources
+2023-04-20 10:15:19,858 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-20 10:15:19,858 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/main/resources
+2023-04-20 10:15:19,858 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-20 10:15:19,858 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ksy/Desktop/KIC_JAVA_PRAC/maven1/lombok01/src/test/resources
