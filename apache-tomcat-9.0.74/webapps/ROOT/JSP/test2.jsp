@@ -9,23 +9,8 @@
 </head>
 <body>
     <%
-        out.println("<table width='800' border='1'>");
-        for(int i = 0; i < 10; i++) {
-            out.println("<tr>");
-            for(int j = 0; j < 10; j++) {
-                if(i == 0 && j == 0) {
-                    out.println("<td></td>");
-                } else if(i == 0) {
-                    out.println("<td>X" + j + "</td>");
-                } else if(j == 0) {
-                    out.println("<td>" + i + "단</td>");
-                } else {
-                    out.println("<td>" + i + " X " + j + " = " + (i * j) + "</td>");
-                }
-            }
-            out.println("</tr>");
-        }
-        out.println("</table>");
+        out.println("Hello JSP <br>");
+        out.println("Hello JSP <br>");
     %>
 </body>
 </html>

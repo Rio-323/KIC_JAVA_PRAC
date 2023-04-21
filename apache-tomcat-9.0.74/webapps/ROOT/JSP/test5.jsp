@@ -9,8 +9,7 @@
 </head>
 <body>
     <%
-        out.println("Hello JSP <br>");
-        out.println("Hello JSP <br>");
+        
     %>
 </body>
 </html>
