@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%
+    	// 전처리 구문
+    %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,11 +11,14 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		Hello JSP <br>
-		
 		<%
-			System.out.println("Hello JSP <br>");
-			out.println("Hello JSP <br>");
+			// UI와 결합된 데이터 출력
 		%>
+		<%
+			String data = "Hellp JSP <br>";
+			out.println("Hello JSP<br>");
+		%>
+		<%="Hello JSP<br>" %>
+		<%= data %>
 	</body>
 </html>
