@@ -8,12 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    Hello JSP
-    System.out.println("Hello JSP")
-
     <%
-        System.out.println("Hello JSP");
-        out.println("Hello JSP");
+        out.println("Hello JSP <br>");
+        out.println("Hello JSP <br>");
     %>
 </body>
 </html>
