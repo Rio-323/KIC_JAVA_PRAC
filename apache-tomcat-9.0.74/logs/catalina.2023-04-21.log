@@ -131,3 +131,50 @@
 21-Apr-2023 10:45:31.327 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
 21-Apr-2023 10:45:31.335 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
 21-Apr-2023 10:45:31.336 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+21-Apr-2023 12:27:26.985 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+21-Apr-2023 12:27:26.985 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+21-Apr-2023 12:27:26.987 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+21-Apr-2023 12:27:27.001 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+21-Apr-2023 12:27:27.013 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+21-Apr-2023 12:32:34.897 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+21-Apr-2023 12:32:34.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+21-Apr-2023 12:32:34.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+21-Apr-2023 12:32:34.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+21-Apr-2023 12:32:34.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+21-Apr-2023 12:32:34.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+21-Apr-2023 12:32:34.903 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+21-Apr-2023 12:32:34.904 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+21-Apr-2023 12:32:34.907 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+21-Apr-2023 12:32:35.016 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+21-Apr-2023 12:32:35.026 정보 [main] org.apache.catalina.startup.Catalina.load [211] 밀리초 내에 서버가 초기화되었습니다.
+21-Apr-2023 12:32:35.039 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+21-Apr-2023 12:32:35.039 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+21-Apr-2023 12:32:35.042 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+21-Apr-2023 12:32:35.137 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [94] 밀리초에 완료되었습니다.
+21-Apr-2023 12:32:35.137 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+21-Apr-2023 12:32:35.151 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [14] 밀리초에 완료되었습니다.
+21-Apr-2023 12:32:35.152 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+21-Apr-2023 12:32:35.235 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [83] 밀리초에 완료되었습니다.
+21-Apr-2023 12:32:35.236 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+21-Apr-2023 12:32:35.248 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [12] 밀리초에 완료되었습니다.
+21-Apr-2023 12:32:35.248 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+21-Apr-2023 12:32:35.255 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+21-Apr-2023 12:32:35.257 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+21-Apr-2023 12:32:35.262 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [235] 밀리초 내에 시작되었습니다.

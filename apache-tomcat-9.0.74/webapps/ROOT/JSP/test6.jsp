@@ -49,17 +49,23 @@
 
         for( int i=1, n=startDayOfWeek ; i<=endDay ; i++, n++ ) {
             if( n % 7 == 1 ) out.println( "<tr>" );
-
+        
             String tdClass = "";
             if (n % 7 == 1) { // Sunday
                 tdClass = " class='sunday'";
             } else if (n % 7 == 0) { // Saturday
                 tdClass = " class='saturday'";
             }
-            out.println( "<td" + tdClass + ">" + i + "</td>" );
-
+        
+            if (i == nDay.get(Calendar.DATE) && month == nDay.get(Calendar.MONTH) + 1 && year == nDay.get(Calendar.YEAR)) {
+                out.println("<td" + tdClass + "><b>" + i + "</b></td>");
+            } else {
+                out.println("<td" + tdClass + ">" + i + "</td>");
+            }
+        
             if( n % 7 == 0 ) out.println( "</tr>" );
         }
+        
 
         for( int i=endDyaOfWeek ; i<=6 ; i++ ) {
             out.println( "<td></td>" );
