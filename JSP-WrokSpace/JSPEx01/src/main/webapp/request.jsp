@@ -13,5 +13,9 @@
 			<br>
 			<input type="submit" value="전송"/>
 		</form>
+		
+		<br>
+		<!-- a 링크는 get방식 -->
+		<a href="request_ok.jsp?data1=값1&data2=값2">전송</a>
 	</body>
 </html>
