@@ -11,15 +11,23 @@
     
     <%
     	Connection conn = null;
-    
-    	Context initCtx = new InitialContext();
-    	Context envCtx = (Context)initCtx.lookup("java:comp/env");
-    	DataSource dataSource = (DataSource)envCtx.lookup("jdbc/mariadb1");
-    	
-    	conn = dataSource.getConnection();
-    	
-    	System.out.println("데이터 베이스 연결 성공");
-    	conn.close();
+    	try {
+	    	Context initCtx = new InitialContext();
+	    	Context envCtx = (Context)initCtx.lookup("java:comp/env");
+	    	DataSource dataSource = (DataSource)envCtx.lookup("jdbc/mariadb1");
+	    	
+	    	conn = dataSource.getConnection();
+	    	
+	    	System.out.println("데이터 베이스 연결 성공");
+	    	
+    	} catch(NamingException e) {
+    		System.out.println("[Error] : " + e.getMessage());
+    	} catch(SQLException e) {
+    		System.out.println("[Error] : " + e.getMessage());
+    	} finally {
+    		if(conn != null) {conn.close();}
+    	}
+ 
     %>
 <!DOCTYPE html>
 <html>
