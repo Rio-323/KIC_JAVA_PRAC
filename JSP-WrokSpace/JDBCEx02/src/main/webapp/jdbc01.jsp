@@ -9,8 +9,13 @@
     <%@ page import="java.sql.Connection" %>
     <%@ page import="java.sql.SQLException" %>
     
+    <%@page import="java.sql.PreparedStatement"%>
+    <%@page import="java.sql.ResultSet"%>
+    
     <%
     	Connection conn = null;
+    	PreparedStatement pstmt = null;
+    	ResultSet rs = null;
     	try {
 	    	Context initCtx = new InitialContext();
 	    	Context envCtx = (Context)initCtx.lookup("java:comp/env");
@@ -20,12 +25,22 @@
 	    	
 	    	System.out.println("데이터 베이스 연결 성공");
 	    	
+	    	String sql = "select * from dept";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				System.out.println(rs.getString("deptno"));
+			}
+	    	
     	} catch(NamingException e) {
     		System.out.println("[Error] : " + e.getMessage());
     	} catch(SQLException e) {
     		System.out.println("[Error] : " + e.getMessage());
     	} finally {
     		if(conn != null) {conn.close();}
+    		if(pstmt != null) {pstmt.close();}
+    		if(rs != null) {rs.close();}
     	}
  
     %>
