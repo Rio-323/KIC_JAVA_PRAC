@@ -37,7 +37,7 @@
 				sbHtml.append("<td>" + rs.getString("loc") + "</td>");
 				sbHtml.append("</tr>");
 			}
-			out.println("</table>");
+			sbHtml.append("</table>");
 			
 		} catch(ClassNotFoundException e) {
 			System.out.println("[Error] : " + e.getMessage());
