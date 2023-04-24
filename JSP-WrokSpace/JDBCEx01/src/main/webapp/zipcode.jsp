@@ -78,6 +78,7 @@
 				<input type="button" id="btn" value="우편번호 검색">
 			</fieldset>
 		</form>
+		<br><hr><br>
 		<%= sbHtml.toString() %>
 	</body>
 </html>
