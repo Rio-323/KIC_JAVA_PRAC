@@ -50,6 +50,7 @@
 		} finally {
 			if( pstmt != null ) pstmt.close();
 			if( conn != null ) conn.close();
+			if( rs != null ) rs.close();
 		}
 	%>
 <!DOCTYPE html>
@@ -60,6 +61,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../../css/board.css">
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById('dbtn').onclick = function() {
+			if(document.dfrm.password.value.trim() == '') {
+				alert('비밀번호를 입력하셔야 합니다.');
+				return false;
+			}
+			
+			document.dfrm.submit();
+		}
+	}
+</script>
 </head>
 
 <body>
@@ -70,6 +83,7 @@
 </div>
 <div class="con_txt">
 	<form action="board_delete1_ok.jsp" method="post" name="dfrm">
+		<input type="hidden" name="seq" value="<%= seq %>">
 		<div class="contents_sub">	
 			<!--게시판-->
 			<div class="board_write">
@@ -95,7 +109,7 @@
 					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp'" />
 				</div>
 				<div class="align_right">
-					<input type="button" value="삭제" class="btn_write btn_txt01" style="cursor: pointer;" />
+					<input type="button" id="dbtn" value="삭제" class="btn_write btn_txt01" style="cursor: pointer;" />
 				</div>
 			</div>
 			<!--//게시판-->
