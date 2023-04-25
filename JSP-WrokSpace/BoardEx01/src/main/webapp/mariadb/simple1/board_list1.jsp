@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="javax.naming.Context" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.naming.NamingException" %>
+
+<%@ page import="javax.sql.DataSource" %>
+
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.SQLException" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -34,7 +45,8 @@
 				<th width="5%">조회</th>
 				<th width="3%">&nbsp;</th>
 			</tr>
-			<tr>
+			<!-- 내용 시작-->
+			 <tr>
 				<td>&nbsp;</td>
 				<td>1</td>
 				<td class="left"><a href="board_view1.jsp">adfas</a>&nbsp;<img src="../../images/icon_new.gif" alt="NEW"></td>
@@ -42,16 +54,9 @@
 				<td>2017-01-31</td>
 				<td>6</td>
 				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>1</td>
-				<td class="left"><a href="board_view1.jsp">adfas</a>&nbsp;<img src="../../images/icon_new.gif" alt="NEW"></td>
-				<td>asdfa</td>
-				<td>2017-01-31</td>
-				<td>6</td>
-				<td>&nbsp;</td>
-			</tr>
+			</tr> 
+			
+			<!-- 내용 끝 -->
 			</table>
 		</div>	
 
