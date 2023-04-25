@@ -10,12 +10,13 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.SQLException" %>
-
 <%
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	StringBuilder sbHtml = new StringBuilder();
+	
+	int totalRecord = 0;
 	
 	try {
 		Context initCtx = new InitialContext();
@@ -23,10 +24,14 @@
 		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
 		conn = dataSource.getConnection();
 		
-		String sql = "select seq, subject, writer, wdate, hit from board order by seq desc";
+		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit from board order by seq desc";
 		pstmt = conn.prepareStatement( sql );
 		
 		rs = pstmt.executeQuery();
+		
+		rs.last();
+		totalRecord = rs.getRow();
+		rs.beforeFirst();
 		
 		while(rs.next()) {
 			String seq = rs.getString("seq");
@@ -39,7 +44,7 @@
 			 sbHtml.append("<tr>");
 			 sbHtml.append("<td>&nbsp;</td>");
 			 sbHtml.append("<td>" + seq + "</td>");
-			 sbHtml.append("<td class='left'><a href='board_view1.jsp'>" + subject + "</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
+			 sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
 			 sbHtml.append("<td>" + writer + "</td>");
 			 sbHtml.append("<td>" + wdate + "</td>");
 			 sbHtml.append("<td>" + hit + "</td>");
@@ -77,7 +82,7 @@
 <div class="con_txt">
 	<div class="contents_sub">
 		<div class="board_top">
-			<div class="bold">총 <span class="txt_orange">1</span>건</div>
+			<div class="bold">총 <span class="txt_orange"><%= totalRecord %></span>건</div>
 		</div>
 
 		<!--게시판-->
