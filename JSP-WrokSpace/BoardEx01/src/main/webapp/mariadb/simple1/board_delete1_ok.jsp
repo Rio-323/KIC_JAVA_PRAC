@@ -18,6 +18,8 @@
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	
+	int flag = 2;
+	
 	try {
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
@@ -25,12 +27,19 @@
 		
 		conn = dataSource.getConnection();
 		
-		String sql = "select subject, writer from board where seq = ? and password = ?";
+		String sql = "delete from board where seq = ? and password = ?";
 		pstmt = conn.prepareStatement( sql );
 		pstmt.setString(1, seq);
 		pstmt.setString(2, password);
 		
+		// result -> 0 : password wrong / 1 : success
+		int result = pstmt.executeUpdate();
 		
+		if( result == 1) {
+			flag = 0;
+		} else if(result == 0) {
+			flag = 1;
+		}
 		
 	} catch( NamingException e ) {
 		System.out.println( "[에러] " + e.getMessage() );
@@ -40,4 +49,18 @@
 		if( pstmt != null ) pstmt.close();
 		if( conn != null ) conn.close();
 	}
+	
+	
+	out.println("<script type='text/javascript'>");
+	if(flag == 0) {
+		out.println("alert('게시글 삭제 성공');");
+		out.println("location.href='board_list1.jsp';");
+	} else if(flag == 1) {
+		out.println("alert('비밀번호 오류');");
+		out.println("history.back();");
+	} else {
+		out.println("alert('게시글 삭제 실패');");
+		out.println("history.back();");
+	}
+	out.println("</script>");
 %>

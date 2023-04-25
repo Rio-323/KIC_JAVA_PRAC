@@ -1,5 +1,67 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="javax.naming.Context" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.naming.NamingException" %>
+
+<%@ page import="javax.sql.DataSource" %>
+
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.SQLException" %>
+
+<%
+	request.setCharacterEncoding( "utf-8" );
+
+	String seq = request.getParameter( "seq" );
+	//System.out.println( seq );
+	
+	String subject = "";
+	String writer = "";
+	String[] mail = null;
+	String content = "";
+	
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	
+	try {
+		Context initCtx = new InitialContext();
+		Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
+		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
+		
+		conn = dataSource.getConnection();
+		
+		String sql = "select subject, writer, mail, content from board where seq=?";
+		pstmt = conn.prepareStatement( sql );
+		pstmt.setString( 1, seq );
+		
+		rs = pstmt.executeQuery();
+		
+		if( rs.next() ) {
+			subject = rs.getString( "subject" );
+			writer = rs.getString( "writer" );
+
+			if( rs.getString( "mail").equals("") ) {
+				mail = new String[] { "", "" };	
+			} else {
+				mail = rs.getString( "mail" ).split( "@" );
+			}
+
+			content = rs.getString( "content" );
+		}
+		
+	} catch( NamingException e ) {
+		System.out.println( "[에러] " + e.getMessage() );
+	} catch( SQLException e ) {
+		System.out.println( "[에러] " + e.getMessage() );
+	} finally {
+		if( rs != null ) rs.close();
+		if( pstmt != null ) pstmt.close();
+		if( conn != null ) conn.close();
+	}
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,11 +86,11 @@
 				<table>
 				<tr>
 					<th class="top">글쓴이</th>
-					<td class="top"><input type="text" name="writer" value="" class="board_view_input_mail" maxlength="5" readonly/></td>
+					<td class="top"><input type="text" name="writer" value="<%=writer %>" class="board_view_input_mail" maxlength="5" readonly/></td>
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td><input type="text" name="subject" value="" class="board_view_input" /></td>
+					<td><input type="text" name="subject" value="<%=subject %>" class="board_view_input" /></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -36,11 +98,11 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td><textarea name="content" class="board_editor_area"></textarea></td>
+					<td><textarea name="content" class="board_editor_area"><%=content %></textarea></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" name="mail1" value="" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="" class="board_view_input_mail"/></td>
+					<td><input type="text" name="mail1" value="<%= mail[0] %>" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="<%= mail[1] %>" class="board_view_input_mail"/></td>
 				</tr>
 				</table>
 			</div>
