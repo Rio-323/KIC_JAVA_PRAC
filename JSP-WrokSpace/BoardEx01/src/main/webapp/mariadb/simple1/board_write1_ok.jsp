@@ -53,9 +53,10 @@
 		int result = pstmt.executeUpdate();
 		
 		if(result == 1) {
-			System.out.println("성공");
+			// System.out.println("성공");
+			flag = 0;
 		} else {
-			System.out.println("실패");
+			// System.out.println("실패");
 		}
 		
 	} catch( NamingException e ) {
@@ -66,4 +67,14 @@
 		if( pstmt != null ) pstmt.close();
 		if( conn != null ) conn.close();
 	}
+	
+	out.println("<script type='text/javascript'>");
+	if(flag == 0) {
+		out.println("alert('게시글 작성 성공');");
+		out.println("location.href='board_list1.jsp';");
+	} else {
+		out.println("alert('게시글 작성 실패');");
+		out.println("history.back();");
+	}
+	out.println("</script>");
 %>
