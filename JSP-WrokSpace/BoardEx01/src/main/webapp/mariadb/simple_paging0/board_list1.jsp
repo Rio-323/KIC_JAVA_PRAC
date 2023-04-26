@@ -17,6 +17,8 @@
 	int totalRecord = 0;
 	int totalPage = 1;
 	
+	int blockPerPage = 5;
+	
 	if(request.getParameter("cpage") != null && !request.getParameter("cpage").equals("")) {
 		cpage = Integer.parseInt(request.getParameter("cpage"));
 	}
@@ -134,12 +136,22 @@
 			<!--페이지넘버-->
 		<div class="paginate_regular">
 			<div align="absmiddle">
-				<span><a>&lt;&lt;</a></span>
-				&nbsp;
-				
-				
 				
 				<%
+					int startBlock = cpage - (cpage - 1) % blockPerPage;
+					int endBlock = cpage - (cpage - 1) % blockPerPage + blockPerPage - 1;
+					if(endBlock > totalPage) {
+						endBlock = totalPage;
+					}
+					
+					if(startBlock == 1) {
+						out.println("<span><a>&lt;&lt;</a></span>");
+					} else {
+						out.println("<span><a href='board_list1.jsp?cpage=" + (startBlock - blockPerPage) + "'>&lt;&lt;</a></span>");
+					}
+					
+					out.println("&nbsp;");
+					
 					if(cpage == 1) {
 						out.println("<span><a>&lt;</a></span>");
 					} else {
@@ -148,7 +160,7 @@
 				
 					out.println("&nbsp;&nbsp;");
 				
-					for(int i = 1; i <= totalPage; i++) {
+					for(int i = startBlock; i <= endBlock; i++) {
 						if(cpage == i) {
 							out.println("<span><a>[ " + i + " ]</a></span>");
 						} else {
@@ -165,10 +177,15 @@
 						out.println("<span><a href='board_list1.jsp?cpage=" + (cpage + 1) + "'>&gt;</a></span>");
 					}
 					
+					out.println("&nbsp;");
+					if(startBlock == endBlock) {
+						out.println("<span><a>&gt;&gt;</a></span>");
+					} else {
+						out.println("<span><a href='board_list1.jsp?cpage=" + (startBlock + blockPerPage) + "'>&gt;&gt;</a></span>");
+					}
 				%>
 				
-				&nbsp;
-				<span><a>&gt;&gt;</a></span>
+				
 			</div>
 		</div>
 		<!--//페이지넘버-->
