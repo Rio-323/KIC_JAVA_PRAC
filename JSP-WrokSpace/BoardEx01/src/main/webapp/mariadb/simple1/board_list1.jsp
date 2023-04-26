@@ -24,7 +24,7 @@
 		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
 		conn = dataSource.getConnection();
 		
-		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit from board order by seq desc";
+		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board order by seq desc";
 		pstmt = conn.prepareStatement( sql );
 		
 		rs = pstmt.executeQuery();
@@ -39,12 +39,20 @@
 			String writer = rs.getString("writer");
 			String wdate = rs.getString("wdate");
 			String hit = rs.getString("hit");
+			int wgap = rs.getInt("wgap");
 			
 			
 			 sbHtml.append("<tr>");
 			 sbHtml.append("<td>&nbsp;</td>");
 			 sbHtml.append("<td>" + seq + "</td>");
-			 sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
+			 sbHtml.append("<td class='left'>");
+			 sbHtml.append("<a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>");
+			 
+			 if(wgap == 0) {
+				 sbHtml.append("&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>");
+			 }
+			
+			 sbHtml.append("</td>");
 			 sbHtml.append("<td>" + writer + "</td>");
 			 sbHtml.append("<td>" + wdate + "</td>");
 			 sbHtml.append("<td>" + hit + "</td>");

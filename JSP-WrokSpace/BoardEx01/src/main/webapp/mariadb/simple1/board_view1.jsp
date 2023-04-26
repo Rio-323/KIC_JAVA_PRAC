@@ -35,7 +35,14 @@
 			
 			conn = dataSource.getConnection();
 			
-			String sql = "select subject, writer, mail, wip,wdate, hit, content from board where seq = ?";
+			// 조회수 증가
+			String sql = "update board set hit = hit + 1 where seq = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString(1, seq);
+			
+			pstmt.executeUpdate();
+			
+			sql = "select subject, writer, mail, wip,wdate, hit, content from board where seq = ?";
 			pstmt = conn.prepareStatement( sql );
 			pstmt.setString(1, seq);
 			
