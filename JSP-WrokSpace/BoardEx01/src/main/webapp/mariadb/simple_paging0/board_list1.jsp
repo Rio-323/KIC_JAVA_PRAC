@@ -13,19 +13,19 @@
 <%
 
 	int cpage = 1;
+	int recordPerPage = 10;
+	int totalRecord = 0;
+	int totalPage = 1;
+	
 	if(request.getParameter("cpage") != null && !request.getParameter("cpage").equals("")) {
 		cpage = Integer.parseInt(request.getParameter("cpage"));
 	}
-	
-	int recordPerPage = 10;
-	
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	StringBuilder sbHtml = new StringBuilder();
 	
-	int totalRecord = 0;
 	
 	try {
 		Context initCtx = new InitialContext();
@@ -43,6 +43,8 @@
 		rs.beforeFirst();
 		
 		int skip = (cpage - 1) * recordPerPage;
+		
+		totalPage = ((totalRecord - 1) / recordPerPage) + 1;
 		if(skip > 0) { rs.absolute(skip); }
 		
 		for(int i = 0; i < recordPerPage && rs.next(); i++){
@@ -136,9 +138,18 @@
 				&nbsp;
 				<span><a>&lt;</a></span>
 				&nbsp;&nbsp;
-				<span><a>[ 1 ]</a></span>
-				<span><a href="board_list1.jsp">2</a></span>
-				<span><a href="board_list1.jsp">3</a></span>
+				
+				<%
+					for(int i = 1; i <= totalPage; i++) {
+						if(cpage == i) {
+							out.println("<span><a>[ " + i + " ]</a></span>");
+						} else {
+							out.println("<span><a href='board_list1.jsp?cpage=" + i + "'>" + i + "</a></span>");
+						}
+					}
+				%>
+				
+				
 				&nbsp;&nbsp;
 				<span><a>&gt;</a></span>
 				&nbsp;
