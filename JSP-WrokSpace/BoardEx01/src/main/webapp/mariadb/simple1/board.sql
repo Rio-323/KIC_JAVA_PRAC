@@ -10,6 +10,8 @@ mail varchar(50)
 password varchar(12) not null
 내용                      
 content varchar(2000)
+이모티콘
+emot char(2) not null
 조회수                 
 hit int not null
 아이피               
@@ -28,13 +30,14 @@ grant all privileges on board. * to board@localhost;
 // board 계정 로그인 후
 create database board;
 
-create table board (
+create table emot_board (
     seq int not null auto_increment primary key, 
     subject varchar(150) not null,
     writer varchar(12) not null,
     mail varchar(50),
     password varchar(12) not null,
     content varchar(2000),
+    emot char(2) not null,
     hit int not null,
     wip varchar(15) not null,
     wdate datetime not null 
