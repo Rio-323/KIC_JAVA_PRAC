@@ -59,6 +59,24 @@
 			<div class="align_right">
 				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='board_write1.jsp'" />
 			</div>
+			
+			<!--페이지넘버-->
+		<div class="paginate_regular">
+			<div align="absmiddle">
+				<span><a>&lt;&lt;</a></span>
+				&nbsp;
+				<span><a>&lt;</a></span>
+				&nbsp;&nbsp;
+				<span><a>[ 1 ]</a></span>
+				<span><a href="board_list1.jsp">2</a></span>
+				<span><a href="board_list1.jsp">3</a></span>
+				&nbsp;&nbsp;
+				<span><a>&gt;</a></span>
+				&nbsp;
+				<span><a>&gt;&gt;</a></span>
+			</div>
+		</div>
+		<!--//페이지넘버-->
 		</div>
 		<!--//게시판-->
 	</div>

@@ -11,6 +11,15 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.SQLException" %>
 <%
+
+	int cpage = 1;
+	if(request.getParameter("cpage") != null && !request.getParameter("cpage").equals("")) {
+		cpage = Integer.parseInt(request.getParameter("cpage"));
+	}
+	
+	int recordPerPage = 10;
+	
+	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -33,7 +42,10 @@
 		totalRecord = rs.getRow();
 		rs.beforeFirst();
 		
-		while(rs.next()) {
+		int skip = (cpage - 1) * recordPerPage;
+		if(skip > 0) { rs.absolute(skip); }
+		
+		for(int i = 0; i < recordPerPage && rs.next(); i++){
 			String seq = rs.getString("seq");
 			String subject = rs.getString("subject");
 			String writer = rs.getString("writer");
