@@ -155,11 +155,18 @@
 							out.println("<span><a href='board_list1.jsp?cpage=" + i + "'>" + i + "</a></span>");
 						}
 					}
+					
+				
+					out.println("&nbsp;&nbsp;");
+					
+					if(cpage == totalPage) {
+						out.println("<span><a>&gt;</a></span>");
+					} else {
+						out.println("<span><a href='board_list1.jsp?cpage=" + (cpage + 1) + "'>&gt;</a></span>");
+					}
+					
 				%>
 				
-				
-				&nbsp;&nbsp;
-				<span><a>&gt;</a></span>
 				&nbsp;
 				<span><a>&gt;&gt;</a></span>
 			</div>
