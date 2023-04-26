@@ -136,10 +136,18 @@
 			<div align="absmiddle">
 				<span><a>&lt;&lt;</a></span>
 				&nbsp;
-				<span><a>&lt;</a></span>
-				&nbsp;&nbsp;
+				
+				
 				
 				<%
+					if(cpage == 1) {
+						out.println("<span><a>&lt;</a></span>");
+					} else {
+						out.println("<span><a href='board_list1.jsp?cpage=" + (cpage - 1) + "'>&lt;</a></span>");
+					}
+				
+					out.println("&nbsp;&nbsp;");
+				
 					for(int i = 1; i <= totalPage; i++) {
 						if(cpage == i) {
 							out.println("<span><a>[ " + i + " ]</a></span>");
