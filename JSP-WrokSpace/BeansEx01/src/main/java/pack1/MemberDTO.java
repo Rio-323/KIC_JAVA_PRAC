@@ -5,6 +5,7 @@ public class MemberDTO {
 	private String password;
 	
 	public String getId() {
+		System.out.println("getId() 호출");
 		return id;
 	}
 	
@@ -13,6 +14,7 @@ public class MemberDTO {
 	}
 	
 	public String getPassword() {
+		System.out.println("getPassword() 호출");
 		return password;
 	}
 	
