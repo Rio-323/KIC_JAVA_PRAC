@@ -8,7 +8,13 @@
 	</head>
 	<body>
 			-- include 이전<br>
-			<jsp:include page="./include1/include2.jsp"></jsp:include>
+			<%
+				int i = 2;
+			%>
+			<jsp:include page="./include1/include2.jsp">
+				<jsp:param value="value1" name="data1"/>
+				<jsp:param value="<%= i %>" name="data2"/>
+			</jsp:include>
 			-- include 이후<br>
 	</body>
 </html>
