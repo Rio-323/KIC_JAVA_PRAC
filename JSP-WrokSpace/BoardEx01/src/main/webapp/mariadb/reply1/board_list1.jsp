@@ -35,7 +35,7 @@
 		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
 		conn = dataSource.getConnection();
 		
-		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from rep_board order by grp desc, grps asc";
+		String sql = "select seq, grpl, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from rep_board order by grp desc, grps asc";
 		pstmt = conn.prepareStatement( sql );
 		
 		rs = pstmt.executeQuery();
@@ -51,6 +51,15 @@
 		
 		for(int i = 0; i < recordPerPage && rs.next(); i++){
 			String seq = rs.getString("seq");
+			
+			int grpl = rs.getInt("grpl");
+			String strGrpl = "";
+			
+			for(int j = 1; j <= grpl; j++) {
+				strGrpl += "&nbsp;&nbsp;";
+			}
+			
+			
 			String subject = rs.getString("subject");
 			String writer = rs.getString("writer");
 			String wdate = rs.getString("wdate");
@@ -62,6 +71,10 @@
 			 sbHtml.append("<td>&nbsp;</td>");
 			 sbHtml.append("<td>" + seq + "</td>");
 			 sbHtml.append("<td class='left'>");
+			 
+			 if(grpl != 0) {
+				 sbHtml.append(strGrpl + "<img src='../../images/icon_re1.gif'/>&nbsp;");
+			 }
 			 sbHtml.append("<a href='board_view1.jsp?cpage=" + cpage + "&seq=" + seq + "'>" + subject + "</a>");
 			 
 			 if(wgap == 0) {
