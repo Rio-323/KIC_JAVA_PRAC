@@ -8,6 +8,7 @@
 
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.SQLException" %>
 
 <%
@@ -15,6 +16,9 @@
 	String subject = request.getParameter("subject");
 	String writer = request.getParameter("writer");
 	String cpage = request.getParameter("cpage");
+	
+	// 부모글의 seq
+	String seq = request.getParameter("seq");
 	String mail = "";
 	
 	if(!request.getParameter("mail1").equals("") && !request.getParameter("mail2").equals("")) {
@@ -27,6 +31,7 @@
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
+	ResultSet rs = null;
 	
 	// flag -> 0 : 정상 /  1 -> 비정상
 	int flag = 1;
@@ -37,15 +42,41 @@
 		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
 		
 		conn = dataSource.getConnection();
-	
-		String sql = "INSERT INTO board VALUES (0, ?, ?, ?, ?, ?, 0, ?, now())";
+		
+		// 부모 글에 대한 정보
+		String sql = "select grp, grps, grpl from rep_board where seq = ?";
 		pstmt = conn.prepareStatement( sql );
-		pstmt.setString(1, subject);
-		pstmt.setString(2, writer);
-		pstmt.setString(3, mail);
-		pstmt.setString(4, password);
-		pstmt.setString(5, content);
-		pstmt.setString(6, wip);
+		pstmt.setString(1, seq);
+		rs = pstmt.executeQuery();
+		
+		int grp = 0;
+		int grps = 0;
+		int grpl = 0;
+		
+		if(rs.next()) {
+			grp = rs.getInt("grp");
+			grps = rs.getInt("grps");
+			grpl = rs.getInt("grpl");
+		}
+		
+		sql = "update rep_board set grps = grps + 1 where grp = ? and grps > ?";
+		pstmt = conn.prepareStatement( sql );
+		pstmt.setInt(1, grp);
+		pstmt.setInt(2, grps);
+		pstmt.executeUpdate();
+	
+		sql = "INSERT INTO rep_board VALUES (0, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, now())";
+		pstmt = conn.prepareStatement( sql );
+		pstmt.setInt(1, grp);
+		pstmt.setInt(2, grps + 1);
+		pstmt.setInt(3, grpl + 1);
+		
+		pstmt.setString(4, subject);
+		pstmt.setString(5, writer);
+		pstmt.setString(6, mail);
+		pstmt.setString(7, password);
+		pstmt.setString(8, content);
+		pstmt.setString(9, wip);
 		
 		int result = pstmt.executeUpdate();
 		
@@ -63,12 +94,13 @@
 	} finally {
 		if( pstmt != null ) pstmt.close();
 		if( conn != null ) conn.close();
+		if( rs != null ) rs.close();
 	}
 	
 	out.println("<script type='text/javascript'>");
 	if(flag == 0) {
 		out.println("alert('게시글 작성 성공');");
-		out.println("location.href='board_list1.jsp';");
+		out.println("location.href='board_list1.jsp?';");
 	} else {
 		out.println("alert('게시글 작성 실패');");
 		out.println("history.back();");

@@ -38,7 +38,7 @@
 		
 		conn = dataSource.getConnection();
 	
-		String sql = "INSERT INTO board VALUES (0, ?, ?, ?, ?, ?, 0, ?, now())";
+		String sql = "INSERT INTO rep_board VALUES (0, last_insert_id() + 1, 0, 0, ?, ?, ?, ?, ?, 0, ?, now())";
 		pstmt = conn.prepareStatement( sql );
 		pstmt.setString(1, subject);
 		pstmt.setString(2, writer);
@@ -68,7 +68,7 @@
 	out.println("<script type='text/javascript'>");
 	if(flag == 0) {
 		out.println("alert('게시글 작성 성공');");
-		out.println("location.href='board_list1.jsp?cpage=" + cpage + "';");
+		out.println("location.href='board_list1.jsp?';");
 	} else {
 		out.println("alert('게시글 작성 실패');");
 		out.println("history.back();");
