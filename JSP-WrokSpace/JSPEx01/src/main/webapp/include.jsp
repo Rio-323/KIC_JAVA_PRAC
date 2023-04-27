@@ -8,7 +8,7 @@
 	</head>
 	<body>
 			-- include 이전<br>
-			<jsp:include page="./include1/include.jsp"></jsp:include>
+			<jsp:include page="./include1/include2.jsp"></jsp:include>
 			-- include 이후<br>
 	</body>
 </html>
