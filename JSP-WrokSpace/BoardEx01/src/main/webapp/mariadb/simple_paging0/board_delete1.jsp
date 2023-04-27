@@ -16,6 +16,7 @@
 		request.setCharacterEncoding("utf-8");
 	
 		String seq = request.getParameter("seq");
+		String cpage = request.getParameter("cpage");
 		System.out.println(seq);
 		
 		String subject = "";
@@ -84,6 +85,7 @@
 <div class="con_txt">
 	<form action="board_delete1_ok.jsp" method="post" name="dfrm">
 		<input type="hidden" name="seq" value="<%= seq %>">
+		<input type="hidden" name="cpage" value="<%= cpage %>">
 		<div class="contents_sub">	
 			<!--게시판-->
 			<div class="board_write">
@@ -105,7 +107,7 @@
 			
 			<div class="btn_area">
 				<div class="align_left">
-					<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
+					<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp?cpage=<%= cpage %>'" />
 					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp'" />
 				</div>
 				<div class="align_right">

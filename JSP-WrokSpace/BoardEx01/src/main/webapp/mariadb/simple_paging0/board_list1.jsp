@@ -62,7 +62,7 @@
 			 sbHtml.append("<td>&nbsp;</td>");
 			 sbHtml.append("<td>" + seq + "</td>");
 			 sbHtml.append("<td class='left'>");
-			 sbHtml.append("<a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>");
+			 sbHtml.append("<a href='board_view1.jsp?cpage=" + cpage + "&seq=" + seq + "'>" + subject + "</a>");
 			 
 			 if(wgap == 0) {
 				 sbHtml.append("&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>");
@@ -130,7 +130,7 @@
 
 		<div class="btn_area">
 			<div class="align_right">
-				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='board_write1.jsp'" />
+				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='board_write1.jsp?cpage=<%= cpage %>'" />
 			</div>
 			
 			<!--페이지넘버-->

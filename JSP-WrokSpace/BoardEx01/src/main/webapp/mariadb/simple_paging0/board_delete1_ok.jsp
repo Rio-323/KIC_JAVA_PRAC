@@ -14,6 +14,7 @@
 	request.setCharacterEncoding("utf-8");
 	String seq = request.getParameter("seq");
 	String password = request.getParameter("password");
+	String cpage = request.getParameter("cpage");
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -54,7 +55,7 @@
 	out.println("<script type='text/javascript'>");
 	if(flag == 0) {
 		out.println("alert('게시글 삭제 성공');");
-		out.println("location.href='board_list1.jsp';");
+		out.println("location.href='board_list1.jsp?cpage=" + cpage + "';");
 	} else if(flag == 1) {
 		out.println("alert('비밀번호 오류');");
 		out.println("history.back();");

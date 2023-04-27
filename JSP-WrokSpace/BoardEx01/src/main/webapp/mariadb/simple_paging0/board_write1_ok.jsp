@@ -14,6 +14,7 @@
 	request.setCharacterEncoding("utf-8");
 	String subject = request.getParameter("subject");
 	String writer = request.getParameter("writer");
+	String cpage = request.getParameter("cpage");
 	String mail = "";
 	
 	if(!request.getParameter("mail1").equals("") && !request.getParameter("mail2").equals("")) {
@@ -67,7 +68,7 @@
 	out.println("<script type='text/javascript'>");
 	if(flag == 0) {
 		out.println("alert('게시글 작성 성공');");
-		out.println("location.href='board_list1.jsp';");
+		out.println("location.href='board_list1.jsp?cpage=" + cpage + "';");
 	} else {
 		out.println("alert('게시글 작성 실패');");
 		out.println("history.back();");

@@ -15,6 +15,7 @@
 	request.setCharacterEncoding( "utf-8" );
 
 	String seq = request.getParameter( "seq" );
+	String cpage = request.getParameter("cpage");
 	//System.out.println( seq );
 	
 	String subject = "";
@@ -128,7 +129,7 @@
 				
 				<div class="btn_area">
 					<div class="align_left">
-						<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
+						<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp?cpage=<%= cpage %>'" />
 						<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp'" />
 					</div>
 					<div class="align_right">

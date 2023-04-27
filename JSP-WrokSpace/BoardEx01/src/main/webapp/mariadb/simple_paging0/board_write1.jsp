@@ -1,5 +1,8 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+		String cpage = request.getParameter("cpage");
+	%>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -96,7 +99,7 @@
 					
 					<div class="btn_area">
 						<div class="align_left">
-							<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
+							<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp?cpage=<%= cpage %>'" />
 						</div>
 						<div class="align_right">
 							<input type="button" id="wbtn" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" />
