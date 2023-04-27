@@ -7,9 +7,11 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
+		-- before forward
 		<%
 			RequestDispatcher dispatcher = request.getRequestDispatcher("./forward1/forward.jsp");
 			dispatcher.forward(request, response);
 		%>
+		-- after forward
 	</body>
 </html>
