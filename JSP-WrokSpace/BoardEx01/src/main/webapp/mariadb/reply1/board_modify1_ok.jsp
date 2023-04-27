@@ -38,7 +38,7 @@
 		
 		conn = dataSource.getConnection();
 	
-		String sql = "update board set subject = ?, mail =?, content = ? where seq = ? and password = ?";
+		String sql = "update rep_board set subject = ?, mail =?, content = ? where seq = ? and password = ?";
 		pstmt = conn.prepareStatement( sql );
 		pstmt.setString(1, subject);
 		pstmt.setString(2, mail);
