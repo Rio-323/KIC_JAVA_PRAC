@@ -184,8 +184,40 @@ public class BoardDAO {
 		return dto;
 	}
 	
-	public void boardModifyOk() {
+	public int boardModifyOk(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 		
+		// flag -> 0 : 정상 /  1 -> 비정상
+		int flag = 2;
+		
+		try {
+			conn = this.dataSource.getConnection();
+		
+			String sql = "update board set subject = ?, mail =?, content = ? where seq = ? and password = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString(1, dto.getSubject());
+			pstmt.setString(2, dto.getMail());
+			pstmt.setString(3, dto.getContent());
+			pstmt.setString(4, dto.getSeq());
+			pstmt.setString(5, dto.getPasword());
+			
+			int result = pstmt.executeUpdate();
+			
+			if(result == 1) {
+				flag = 0;
+			} else if(result == 0) {
+				flag = 1;
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( pstmt != null ) try { pstmt.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( conn != null ) try { conn.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+		}
+		
+		return flag;
 	}
 	
 	public BoardDTO boardDelete(BoardDTO dto) {
