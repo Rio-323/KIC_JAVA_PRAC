@@ -2,7 +2,9 @@ package model1;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -68,12 +70,86 @@ public class BoardDAO {
 		return flag;
 	}
 	
-	public void boardList() {
+	public ArrayList<BoardDTO> boardList() {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		
+		ArrayList<BoardDTO> datas = new ArrayList<>();
+		
+		
+		try {
+			conn = this.dataSource.getConnection();
+			
+			String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board order by seq desc";
+			pstmt = conn.prepareStatement( sql );
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				BoardDTO dto = new BoardDTO();
+				
+				dto.setSeq(rs.getString("seq"));
+				dto.setSubject(rs.getString("subject"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setWdate(rs.getString("wdate"));
+				dto.setHit(rs.getString("hit"));
+				dto.setWgap(rs.getInt("wgap"));
+				
+				datas.add(dto);
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( pstmt != null ) try {pstmt.close(); } catch(SQLException e) {}
+			if( conn != null ) try {conn.close(); } catch(SQLException e) {}
+			if( rs != null ) try{rs.close();}  catch(SQLException e) {}
+		}
+		
+		return datas;
 	}
 	
-	public void boardView() {
+	public BoardDTO boardView(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		
+		try {
+			
+			conn = this.dataSource.getConnection();
+			
+			// 조회수 증가
+			String sql = "update board set hit = hit + 1 where seq = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString(1, dto.getSeq());
+			
+			pstmt.executeUpdate();
+			
+			sql = "select subject, writer, mail, wip,wdate, hit, content from board where seq = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString(1, dto.getSeq());
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dto.setSubject(rs.getString("subject"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setMail(rs.getString("mail"));
+				dto.setWip(rs.getString("wip"));
+				dto.setWdate(rs.getString("wdate"));
+				dto.setHit(rs.getString("hit"));
+				dto.setContent(rs.getString("content"));
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( pstmt != null ) try {pstmt.close();} catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( conn != null ) try {conn.close();} catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+		}
+		
+		return dto;
 	}
 	
 	public void boardModify() {

@@ -1,72 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="javax.naming.NamingException" %>
+<%@ page import="model1.BoardDTO" %>
+<%@ page import="model1.BoardDAO" %>
 
-<%@ page import="javax.sql.DataSource" %>
-
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.SQLException" %>
 
 	<%
 		request.setCharacterEncoding("utf-8");
-		String seq = request.getParameter("seq");
-		// System.out.println(seq);
+		BoardDTO dto = new BoardDTO();
+		dto.setSeq(request.getParameter("seq"));
 		
-		String subject = "";
-		String writer = "";
-		String mail = "";
-		String wip = "";
-		String wdate = "";
-		String hit = "";
-		String content = "";
+		BoardDAO dao = new BoardDAO();
+		dto = dao.boardView(dto);
 		
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		
-		try {
-			Context initCtx = new InitialContext();
-			Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
-			DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
-			
-			conn = dataSource.getConnection();
-			
-			// 조회수 증가
-			String sql = "update board set hit = hit + 1 where seq = ?";
-			pstmt = conn.prepareStatement( sql );
-			pstmt.setString(1, seq);
-			
-			pstmt.executeUpdate();
-			
-			sql = "select subject, writer, mail, wip,wdate, hit, content from board where seq = ?";
-			pstmt = conn.prepareStatement( sql );
-			pstmt.setString(1, seq);
-			
-			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				subject = rs.getString("subject");
-				writer = rs.getString("writer");
-				mail = rs.getString("mail");
-				wip = rs.getString("wip");
-				wdate = rs.getString("wdate");
-				hit = rs.getString("hit");
-				content = rs.getString("content").replaceAll("\n", "<br>");
-			}
-			
-		} catch( NamingException e ) {
-			System.out.println( "[에러] " + e.getMessage() );
-		} catch( SQLException e ) {
-			System.out.println( "[에러] " + e.getMessage() );
-		} finally {
-			if( pstmt != null ) pstmt.close();
-			if( conn != null ) conn.close();
-		}
-		
+		String seq = dto.getSeq();
+		String subject = dto.getSubject();
+		String writer = dto.getWriter();
+		String mail = dto.getMail();
+		String wip = dto.getWip();
+		String wdate = dto.getWdate();
+		String hit = dto.getHit();
+		String content = dto.getContent().replaceAll("\n", "<br>");
 	%>
 <!DOCTYPE html>
 <html lang="ko">
