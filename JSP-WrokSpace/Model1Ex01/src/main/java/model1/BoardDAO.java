@@ -152,16 +152,70 @@ public class BoardDAO {
 		return dto;
 	}
 	
-	public void boardModify() {
+	public BoardDTO boardModify(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		
+		try {
+			conn = this.dataSource.getConnection();
+			
+			String sql = "select subject, writer, mail, content from board where seq=?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, dto.getSeq() );
+			
+			rs = pstmt.executeQuery();
+			
+			if( rs.next() ) {
+				dto.setSubject( rs.getString( "subject" ) );
+				dto.setWriter( rs.getString( "writer" ) );
+				dto.setMail( rs.getString( "mail" ) );
+				dto.setContent( rs.getString( "content" ) );
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( rs != null ) try { rs.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( pstmt != null ) try { pstmt.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( conn != null ) try { conn.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+		}
+		
+		return dto;
 	}
 	
 	public void boardModifyOk() {
 		
 	}
 	
-	public void boardDelete() {
+	public BoardDTO boardDelete(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		
+		try {
+			conn = this.dataSource.getConnection();
+			
+			String sql = "select subject, writer from board where seq=?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, dto.getSeq() );
+			
+			rs = pstmt.executeQuery();
+			
+			if( rs.next() ) {
+				dto.setSubject( rs.getString( "subject" ) );
+				dto.setWriter( rs.getString( "writer" ) );
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( rs != null ) try { rs.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( pstmt != null ) try { pstmt.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( conn != null ) try { conn.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+		}
+		
+		return dto;
 	}
 	
 	public void boardDeleteOk() {

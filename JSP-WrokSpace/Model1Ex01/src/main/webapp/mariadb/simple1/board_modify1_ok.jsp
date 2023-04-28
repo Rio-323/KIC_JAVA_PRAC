@@ -12,9 +12,7 @@
 <%@ page import="java.sql.SQLException" %>
 
 <%
-
 	request.setCharacterEncoding("utf-8");
-
 	String subject = request.getParameter("subject");
 	String seq = request.getParameter( "seq" );
 	String mail = "";
