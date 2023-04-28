@@ -1,55 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="javax.naming.NamingException" %>
-
-<%@ page import="javax.sql.DataSource" %>
-
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.SQLException" %>
+<%@page import="model1.BoardDTO"%>
+<%@page import="model1.BoardDAO"%>
 <%
 	request.setCharacterEncoding("utf-8");
-	String seq = request.getParameter("seq");
-	String password = request.getParameter("password");
+	BoardDTO dto = new BoardDTO();
 	
-	Connection conn = null;
-	PreparedStatement pstmt = null;
+	dto.setSeq(request.getParameter("seq"));
+	dto.setPasword(request.getParameter("password"));
 	
-	int flag = 2;
-	
-	try {
-		Context initCtx = new InitialContext();
-		Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
-		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
-		
-		conn = dataSource.getConnection();
-		
-		String sql = "delete from board where seq = ? and password = ?";
-		pstmt = conn.prepareStatement( sql );
-		pstmt.setString(1, seq);
-		pstmt.setString(2, password);
-		
-		// result -> 0 : password wrong / 1 : success
-		int result = pstmt.executeUpdate();
-		
-		if( result == 1) {
-			flag = 0;
-		} else if(result == 0) {
-			flag = 1;
-		}
-		
-	} catch( NamingException e ) {
-		System.out.println( "[에러] " + e.getMessage() );
-	} catch( SQLException e ) {
-		System.out.println( "[에러] " + e.getMessage() );
-	} finally {
-		if( pstmt != null ) pstmt.close();
-		if( conn != null ) conn.close();
-	}
-	
+	BoardDAO dao = new BoardDAO();
+	int flag = dao.boardDeleteOk(dto);
 	
 	out.println("<script type='text/javascript'>");
 	if(flag == 0) {

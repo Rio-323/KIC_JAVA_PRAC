@@ -218,7 +218,37 @@ public class BoardDAO {
 		return dto;
 	}
 	
-	public void boardDeleteOk() {
+	public int boardDeleteOk(BoardDTO dto) {
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 		
+		int flag = 2;
+		
+		try {
+			conn = this.dataSource.getConnection();
+			
+			String sql = "delete from board where seq = ? and password = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString(1, dto.getSeq());
+			pstmt.setString(2, dto.getPasword());
+			
+			int result = pstmt.executeUpdate();
+			
+			if( result == 1) {
+				flag = 0;
+			} else if(result == 0) {
+				flag = 1;
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( "[에러] " + e.getMessage() );
+		} finally {
+			if( pstmt != null ) try { pstmt.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+			if( conn != null ) try { conn.close(); } catch(SQLException e) {System.out.println( "[에러] " + e.getMessage() );}
+		}
+		
+		return flag;
 	}
+
 }
