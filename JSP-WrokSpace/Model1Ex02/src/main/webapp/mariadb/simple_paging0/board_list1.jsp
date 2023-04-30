@@ -1,89 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="javax.naming.NamingException" %>
+<%@ page import="model1.BoardDTO" %>
+<%@ page import="model1.BoardDAO" %>
+<%@ page import="model1.BoardListDTO" %>
+<%@ page import="java.util.ArrayList" %>
 
-<%@ page import="javax.sql.DataSource" %>
-
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.SQLException" %>
 <%
 
 	int cpage = 1;
-	int recordPerPage = 10;
-	int totalRecord = 0;
-	int totalPage = 1;
-	
-	int blockPerPage = 5;
-	
+
 	if(request.getParameter("cpage") != null && !request.getParameter("cpage").equals("")) {
 		cpage = Integer.parseInt(request.getParameter("cpage"));
 	}
 	
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
+	BoardListDTO boardListDTO = new BoardListDTO();
+	boardListDTO.setCpage(cpage);
+	
+	BoardDAO dao = new BoardDAO();
+	// select query
+	boardListDTO = dao.boardListDTO(boardListDTO);
+	
+	// 페이지 구성요소
+	int recordPerPage = boardListDTO.getRecordPerPage();
+	int totalRecord = boardListDTO.getTotalRecord();
+	int totalPage = boardListDTO.getTotalPage();
+	int blockPerPage = boardListDTO.getBlockPerPage();
+	int startBlock = boardListDTO.getStartBlock();
+	int endBlock = boardListDTO.getEndBlock();
+	
+	ArrayList<BoardDTO> boardLists = boardListDTO.getBoardLists();
+	
 	StringBuilder sbHtml = new StringBuilder();
 	
-	
-	try {
-		Context initCtx = new InitialContext();
-		Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
-		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
-		conn = dataSource.getConnection();
+	for(BoardDTO dto : boardLists){
+		String seq = dto.getSeq();
+		String subject = dto.getSubject();
+		String writer = dto.getWriter();
+		String wdate = dto.getWdate();
+		String hit = dto.getHit();
+		int wgap = dto.getWgap();
 		
-		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board order by seq desc";
-		pstmt = conn.prepareStatement( sql );
+		 sbHtml.append("<tr>");
+		 sbHtml.append("<td>&nbsp;</td>");
+		 sbHtml.append("<td>" + seq + "</td>");
+		 sbHtml.append("<td class='left'>");
+		 sbHtml.append("<a href='board_view1.jsp?cpage=" + cpage + "&seq=" + seq + "'>" + subject + "</a>");
+		 
+		 if(wgap == 0) {
+			 sbHtml.append("&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>");
+		 }
 		
-		rs = pstmt.executeQuery();
-		
-		rs.last();
-		totalRecord = rs.getRow();
-		rs.beforeFirst();
-		
-		int skip = (cpage - 1) * recordPerPage;
-		
-		totalPage = ((totalRecord - 1) / recordPerPage) + 1;
-		if(skip > 0) { rs.absolute(skip); }
-		
-		for(int i = 0; i < recordPerPage && rs.next(); i++){
-			String seq = rs.getString("seq");
-			String subject = rs.getString("subject");
-			String writer = rs.getString("writer");
-			String wdate = rs.getString("wdate");
-			String hit = rs.getString("hit");
-			int wgap = rs.getInt("wgap");
-			
-			
-			 sbHtml.append("<tr>");
-			 sbHtml.append("<td>&nbsp;</td>");
-			 sbHtml.append("<td>" + seq + "</td>");
-			 sbHtml.append("<td class='left'>");
-			 sbHtml.append("<a href='board_view1.jsp?cpage=" + cpage + "&seq=" + seq + "'>" + subject + "</a>");
-			 
-			 if(wgap == 0) {
-				 sbHtml.append("&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>");
-			 }
-			
-			 sbHtml.append("</td>");
-			 sbHtml.append("<td>" + writer + "</td>");
-			 sbHtml.append("<td>" + wdate + "</td>");
-			 sbHtml.append("<td>" + hit + "</td>");
-			 sbHtml.append("<td>&nbsp;</td>");
-			 sbHtml.append("</tr>");
-		}
-		
-	} catch( NamingException e ) {
-		System.out.println( "[에러] " + e.getMessage() );
-	} catch( SQLException e ) {
-		System.out.println( "[에러] " + e.getMessage() );
-	} finally {
-		if( pstmt != null ) pstmt.close();
-		if( conn != null ) conn.close();
-		if( rs != null ) rs.close();
+		 sbHtml.append("</td>");
+		 sbHtml.append("<td>" + writer + "</td>");
+		 sbHtml.append("<td>" + wdate + "</td>");
+		 sbHtml.append("<td>" + hit + "</td>");
+		 sbHtml.append("<td>&nbsp;</td>");
+		 sbHtml.append("</tr>");
 	}
 %>
 
@@ -138,12 +110,6 @@
 			<div align="absmiddle">
 				
 				<%
-					int startBlock = cpage - (cpage - 1) % blockPerPage;
-					int endBlock = cpage - (cpage - 1) % blockPerPage + blockPerPage - 1;
-					if(endBlock > totalPage) {
-						endBlock = totalPage;
-					}
-					
 					if(startBlock == 1) {
 						out.println("<span><a>&lt;&lt;</a></span>");
 					} else {
