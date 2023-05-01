@@ -65,9 +65,9 @@
 			}
 			
 			if(fileSize != 0) {
-				sbHtml.append("<td>" + "<a href='../upload/" + fileName +"'>" + fileName + "</a>" +  " ( " + fileSize / 1024 + " Kbyte )</td> ");
+				sbHtml.append("<td>" + "<a href='../upload/" + fileName +"'>" + fileName + "</a>" +  " ( " + fileSize / 1024 + " Kbyte )</td>");
 			} else {
-				sbHtml.append("<td></td> ");
+				sbHtml.append("<td></td>");
 			}
 			
 			
@@ -122,7 +122,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td colspan="4" height="200" valign="top" style="padding: 20px; line-height: 160%">내용입니다.</td>
+					<td colspan="4" height="200" valign="top" style="padding: 20px; line-height: 160%"><%= content %></td>
 				</tr>
 				</table>
 			</div>
