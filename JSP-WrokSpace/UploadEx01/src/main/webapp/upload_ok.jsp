@@ -12,4 +12,6 @@
 	String encodingType = "utf-8";
 	
 	MultipartRequest multipartRequest = new MultipartRequest(request, uploadPath, maxFileSize, encodingType, new DefaultFileRenamePolicy());
+	
+	out.println("전송 완료");
 %>
