@@ -18,6 +18,6 @@
 	out.println("파일명 : " + multipartRequest.getFilesystemName("upload1") + "<br>");
 	out.println("파일명 : " + multipartRequest.getOriginalFileName("upload1") + "<br>");
 	
-	File file = multipartRequest.getFile("upload1");
-	out.println("File Size : " + file.length() + "<br>"); // byte 단위 return - long
+	out.println("아이디 : " + multipartRequest.getParameter("id") + "<br>");
+	out.println("비밀번호 : " + multipartRequest.getParameter("password") + "<br>");
 %>
