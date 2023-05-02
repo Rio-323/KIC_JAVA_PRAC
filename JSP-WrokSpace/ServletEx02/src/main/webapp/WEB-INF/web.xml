@@ -30,4 +30,22 @@
   	<servlet-name>servlet02</servlet-name>
   	<url-pattern>*.daum</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>form</servlet-name>
+  	<servlet-class>servlet.FormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>form</servlet-name>
+  	<url-pattern>/form.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>form_ok</servlet-name>
+  	<servlet-class>servlet.FormOkServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>form_ok</servlet-name>
+  	<url-pattern>/form_ok.do</url-pattern>
+  </servlet-mapping>
 </web-app>
