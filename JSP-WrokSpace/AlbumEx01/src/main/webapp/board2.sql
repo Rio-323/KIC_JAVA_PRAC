@@ -1,4 +1,4 @@
-create table pds_board (
+create table album_board1 (
     seq int not null auto_increment primary key, 
     subject varchar(150) not null,
     writer varchar(12) not null,
