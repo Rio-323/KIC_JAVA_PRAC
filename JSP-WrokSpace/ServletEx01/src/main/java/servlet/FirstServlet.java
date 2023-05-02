@@ -16,6 +16,7 @@ public class FirstServlet extends HttpServlet {
 		resp.setContentType("text/html; charset=utf-8");
 		
 		PrintWriter out = resp.getWriter();
+		out.println("<!doctype html>");
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<meta charset='utf-8'>");
