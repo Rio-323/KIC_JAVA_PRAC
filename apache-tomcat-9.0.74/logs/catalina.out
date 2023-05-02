@@ -557,3 +557,8 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 02-May-2023 12:11:53.444 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/website1]에 대한 배치가 [29] 밀리초에 완료되었습니다.
 02-May-2023 12:11:53.445 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
 02-May-2023 12:11:53.450 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [415] 밀리초 내에 시작되었습니다.
+02-May-2023 12:16:40.492 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:16:40.492 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:16:40.494 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:16:40.504 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:16:40.506 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
