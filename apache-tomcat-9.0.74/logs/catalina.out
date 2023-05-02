@@ -562,3 +562,1354 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 02-May-2023 12:16:40.494 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
 02-May-2023 12:16:40.504 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
 02-May-2023 12:16:40.506 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:25:00.064 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:25:00.066 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:25:00.071 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:25:00.075 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:25:00.183 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:25:00.194 정보 [main] org.apache.catalina.startup.Catalina.load [224] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:25:00.208 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:25:00.208 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:25:00.211 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:25:00.220 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.220 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.220 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.220 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.221 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.222 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.223 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:25:00.223 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:25:00.224 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [13] 밀리초 내에 완료되었습니다.
+02-May-2023 12:25:00.225 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:25:00.322 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [97] 밀리초에 완료되었습니다.
+02-May-2023 12:25:00.322 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:25:00.336 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [14] 밀리초에 완료되었습니다.
+02-May-2023 12:25:00.336 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:25:00.425 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [89] 밀리초에 완료되었습니다.
+02-May-2023 12:25:00.425 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:25:00.431 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:25:00.431 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:25:00.439 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+02-May-2023 12:25:00.440 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:25:00.445 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [250] 밀리초 내에 시작되었습니다.
+02-May-2023 12:28:40.618 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:28:40.621 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.627 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.628 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.629 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.630 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.631 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.631 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.631 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.631 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.633 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.633 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.633 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.634 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:40.635 심각 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:28:40.637 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [15] 밀리초 내에 완료되었습니다.
+02-May-2023 12:28:44.532 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:28:44.532 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:28:44.534 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:28:44.542 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:28:44.544 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:28:46.718 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:28:46.720 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:28:46.721 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:28:46.721 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:28:46.721 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:28:46.725 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:28:46.726 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:28:46.726 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:28:46.729 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:28:46.838 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:28:46.849 정보 [main] org.apache.catalina.startup.Catalina.load [215] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:28:46.863 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:28:46.863 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:28:46.865 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.875 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.876 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.877 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:28:46.878 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:28:46.879 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [13] 밀리초 내에 완료되었습니다.
+02-May-2023 12:28:46.879 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:28:46.973 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [94] 밀리초에 완료되었습니다.
+02-May-2023 12:28:46.974 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:28:46.991 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+02-May-2023 12:28:46.991 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:28:47.075 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [84] 밀리초에 완료되었습니다.
+02-May-2023 12:28:47.075 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:28:47.080 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [5] 밀리초에 완료되었습니다.
+02-May-2023 12:28:47.080 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:28:47.086 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:28:47.087 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:28:47.093 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [244] 밀리초 내에 시작되었습니다.
+02-May-2023 12:29:47.137 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:29:47.141 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:29:47.147 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.147 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.147 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.147 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.148 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.149 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.150 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.151 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.152 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.152 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.152 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:29:47.152 심각 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:29:47.154 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [12] 밀리초 내에 완료되었습니다.
+02-May-2023 12:30:02.230 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:30:02.230 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:30:02.232 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:30:02.240 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:30:02.242 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:30:05.264 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:05.266 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:05.270 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:05.271 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:30:05.275 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:30:05.383 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:30:05.394 정보 [main] org.apache.catalina.startup.Catalina.load [212] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:30:05.408 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:30:05.408 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:30:05.410 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.420 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.421 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:05.422 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:30:05.424 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [13] 밀리초 내에 완료되었습니다.
+02-May-2023 12:30:05.424 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:30:05.521 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [97] 밀리초에 완료되었습니다.
+02-May-2023 12:30:05.521 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:30:05.537 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+02-May-2023 12:30:05.537 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:30:05.619 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [82] 밀리초에 완료되었습니다.
+02-May-2023 12:30:05.619 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:30:05.626 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+02-May-2023 12:30:05.626 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:30:05.633 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:30:05.634 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:30:05.639 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [244] 밀리초 내에 시작되었습니다.
+02-May-2023 12:30:53.485 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:30:53.486 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:30:53.487 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:30:53.496 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:30:53.497 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:30:55.569 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:30:55.571 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:30:55.571 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:30:55.571 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:30:55.571 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:30:55.571 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:30:55.572 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:30:55.572 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:30:55.572 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:30:55.572 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:55.572 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:30:55.576 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:30:55.577 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:30:55.581 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:30:55.695 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:30:55.706 정보 [main] org.apache.catalina.startup.Catalina.load [221] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:30:55.720 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:30:55.720 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:30:55.722 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.732 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.733 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.734 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:30:55.735 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:30:55.736 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [14] 밀리초 내에 완료되었습니다.
+02-May-2023 12:30:55.737 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:30:55.832 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [95] 밀리초에 완료되었습니다.
+02-May-2023 12:30:55.832 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:30:55.848 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+02-May-2023 12:30:55.848 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:30:55.931 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [83] 밀리초에 완료되었습니다.
+02-May-2023 12:30:55.931 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:30:55.937 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:30:55.937 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:30:55.945 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+02-May-2023 12:30:55.946 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:30:55.951 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [244] 밀리초 내에 시작되었습니다.
+02-May-2023 12:33:25.163 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:33:25.163 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:33:25.165 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:33:25.174 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:33:25.176 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:33:27.648 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:33:27.650 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:33:27.655 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:33:27.656 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:33:27.656 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:33:27.659 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:33:27.768 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:33:27.779 정보 [main] org.apache.catalina.startup.Catalina.load [217] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:33:27.793 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:33:27.793 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:33:27.795 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.805 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.806 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:33:27.807 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:33:27.809 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [13] 밀리초 내에 완료되었습니다.
+02-May-2023 12:33:27.809 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:33:27.905 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [96] 밀리초에 완료되었습니다.
+02-May-2023 12:33:27.905 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:33:27.921 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+02-May-2023 12:33:27.921 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:33:28.001 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [80] 밀리초에 완료되었습니다.
+02-May-2023 12:33:28.001 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:33:28.007 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:33:28.007 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:33:28.014 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+02-May-2023 12:33:28.015 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:33:28.021 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [241] 밀리초 내에 시작되었습니다.
+02-May-2023 12:36:48.188 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:36:48.192 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:36:48.195 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.196 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.197 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.198 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.199 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:48.200 심각 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:36:48.201 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [10] 밀리초 내에 완료되었습니다.
+02-May-2023 12:36:48.575 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:36:48.576 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:36:48.577 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:36:48.585 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:36:48.587 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:36:50.334 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:36:50.335 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:36:50.335 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:36:50.336 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:36:50.340 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:36:50.341 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:36:50.345 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:36:50.455 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:36:50.466 정보 [main] org.apache.catalina.startup.Catalina.load [216] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:36:50.480 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:36:50.480 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:36:50.483 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.492 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.493 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:36:50.494 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:36:50.496 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [12] 밀리초 내에 완료되었습니다.
+02-May-2023 12:36:50.496 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:36:50.593 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [97] 밀리초에 완료되었습니다.
+02-May-2023 12:36:50.593 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:36:50.609 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+02-May-2023 12:36:50.612 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:36:50.704 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [92] 밀리초에 완료되었습니다.
+02-May-2023 12:36:50.704 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:36:50.710 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:36:50.711 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:36:50.719 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+02-May-2023 12:36:50.720 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:36:50.725 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [259] 밀리초 내에 시작되었습니다.
+02-May-2023 12:37:50.761 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:37:50.765 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:37:50.770 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.771 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.772 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.773 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.774 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.775 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:37:50.776 심각 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:37:50.777 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [12] 밀리초 내에 완료되었습니다.
+02-May-2023 12:38:20.802 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:38:20.804 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:38:20.811 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.811 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.811 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.812 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.812 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.812 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.812 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.813 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.814 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.814 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.814 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.814 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.814 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.815 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.816 경고 [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:38:20.817 심각 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:38:20.819 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [14] 밀리초 내에 완료되었습니다.
+02-May-2023 12:44:01.006 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/website1]의 배치를 제거합니다.
+02-May-2023 12:44:01.009 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:44:01.014 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.014 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.014 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.015 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.016 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.017 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.018 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.019 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.019 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.019 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.019 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.022 경고 [Catalina-utility-2] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:44:01.022 심각 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1666)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1102)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 24 more
+02-May-2023 12:44:01.023 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [14] 밀리초 내에 완료되었습니다.
+02-May-2023 12:46:36.133 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+02-May-2023 12:46:36.133 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+02-May-2023 12:46:36.135 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+02-May-2023 12:46:36.143 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+02-May-2023 12:46:36.145 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:46:39.445 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.74
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Apr 13 2023 08:10:39 UTC
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.74.0
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.3.1
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          17.0.6+10-LTS
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Azul Systems, Inc.
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:46:39.447 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/logging.properties
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74
+02-May-2023 12:46:39.452 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/temp
+02-May-2023 12:46:39.456 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ksy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+02-May-2023 12:46:39.566 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+02-May-2023 12:46:39.577 정보 [main] org.apache.catalina.startup.Catalina.load [222] 밀리초 내에 서버가 초기화되었습니다.
+02-May-2023 12:46:39.591 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+02-May-2023 12:46:39.592 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.74]
+02-May-2023 12:46:39.594 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치합니다.
+02-May-2023 12:46:39.603 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/o:DocumentProperties]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts/w:defaultFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:fonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:docPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.604 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:pPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:rFonts]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/wx:font]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr/w:sz-cs]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:rPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.605 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r/w:t]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p/w:r]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:p]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgSz]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr/w:pgMar]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect/w:sectPr]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body/wx:sect]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument/w:body]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 경고 [main] org.apache.tomcat.util.digester.Digester.endElement [w:wordDocument]와(과) 부합하는 rule들을 찾을 수 없습니다.
+02-May-2023 12:46:39.606 심각 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]을(를) 배치하는 중 오류 발생
+	java.lang.IllegalStateException: 자식 컨테이너를 시작하는 중 오류 발생
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: 글로벌, 또는 호스트 별, 또는 해당 컨텍스트의 context.xml 파일을 처리하지 못하였으므로, 컨텍스트 [/website1]은(는) 시작될 수 없습니다.
+		at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:200)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+02-May-2023 12:46:39.608 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/conf/Catalina/localhost/website1.xml]의 배치가 [13] 밀리초 내에 완료되었습니다.
+02-May-2023 12:46:39.608 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]을(를) 배치합니다.
+02-May-2023 12:46:39.707 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/docs]에 대한 배치가 [99] 밀리초에 완료되었습니다.
+02-May-2023 12:46:39.708 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]을(를) 배치합니다.
+02-May-2023 12:46:39.725 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+02-May-2023 12:46:39.725 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]을(를) 배치합니다.
+02-May-2023 12:46:39.808 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/examples]에 대한 배치가 [83] 밀리초에 완료되었습니다.
+02-May-2023 12:46:39.808 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]을(를) 배치합니다.
+02-May-2023 12:46:39.814 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+02-May-2023 12:46:39.815 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]을(를) 배치합니다.
+02-May-2023 12:46:39.822 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Users/ksy/Desktop/KIC_JAVA_PRAC/apache-tomcat-9.0.74/webapps/host-manager]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+02-May-2023 12:46:39.823 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+02-May-2023 12:46:39.828 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [250] 밀리초 내에 시작되었습니다.
