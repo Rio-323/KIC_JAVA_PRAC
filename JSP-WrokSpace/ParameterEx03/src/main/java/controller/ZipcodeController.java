@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,26 +30,37 @@ public class ZipcodeController extends HttpServlet {
 	
 	private void doProcess(HttpServletRequest request, HttpServletResponse response) {
 		
-		try {
-			request.setCharacterEncoding("utf-8");
-			String path = request.getParameter( "path" );
-			
-			String url = "/WEB-INF/views/error.jsp";
-			Action action = null;
-			
-			if(path == null || path.equals("") || path.equals("zipcode")) {
-				action = new ZipcodeAction();
-				action.execute(request, response);
+		
+			try {
+				request.setCharacterEncoding("utf-8");
+				String path = request.getParameter( "path" );
 				
-				url = "/WEB-INF/views/zipcode.jsp";
-			} else if(path.equals("zipcode_ok")) {
-				action = new ZipcodeOkAction();
-				action.execute(request, response);
+				String url = "/WEB-INF/views/error.jsp";
+				Action action = null;
 				
-				url = "/WEB-INF/views/zipcode_ok.jsp";
+				if(path == null || path.equals("") || path.equals("zipcode")) {
+					action = new ZipcodeAction();
+					action.execute(request, response);
+					
+					url = "/WEB-INF/views/zipcode.jsp";
+				} else if(path.equals("zipcode_ok")) {
+					action = new ZipcodeOkAction();
+					action.execute(request, response);
+					
+					url = "/WEB-INF/views/zipcode_ok.jsp";
+				}
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher( url );
+				dispatcher.forward(request, response);
+				
+				
+			} catch (UnsupportedEncodingException e) {
+				System.out.println( "[에러] " + e.getMessage() );
+			} catch (ServletException e) {
+				System.out.println( "[에러] " + e.getMessage() );
+			} catch (IOException e) {
+				System.out.println( "[에러] " + e.getMessage() );
 			}
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+		
 	}
 }
