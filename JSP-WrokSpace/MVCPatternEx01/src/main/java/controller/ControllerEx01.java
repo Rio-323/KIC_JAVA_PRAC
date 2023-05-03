@@ -10,15 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model2.View1Action;
-import model2.View2Action;
-import model2.ViewAction;
+import model2.Action;
+import model2.FormAction;
+import model2.FormOkAction;
 
-
+/**
+ * Servlet implementation class ControllerEx01
+ */
 @WebServlet("/controller")
 public class ControllerEx01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doProcess(request, response);
 	}
@@ -35,27 +37,23 @@ public class ControllerEx01 extends HttpServlet {
 			
 			request.setCharacterEncoding("utf-8");
 			
-			String action = request.getParameter("action");
+			String path = request.getParameter("path");
 			
 			String url = "/WEB-INF/views/error.jsp";
 			
-			ViewAction model = null;
+			Action model = null;
 			
-			if(action == null || action.equals("") || action.equals("view1")) {
+			if(path == null || path.equals("") || path.equals("form")) {
 				// 모델 호출	
-				model = new View1Action();
+				model = new FormAction();
 				model.execute(request, response);
 				
-				url = "/WEB-INF/views/view1.jsp";
-			} else if(action.equals("view2")) {
-				// 모델 호출	
-				model = new View2Action();
-				model.execute(request, response);
-				
-				url = "/WEB-INF/views/view2.jsp";
-			} else if(action.equals("form")) {
 				url = "/WEB-INF/views/form.jsp";
-			} else if(action.equals("form_ok")) {
+			} else if(path.equals("form_ok")) {
+				// 모델 호출	
+				model = new FormOkAction();
+				model.execute(request, response);
+				
 				url = "/WEB-INF/views/form_ok.jsp";
 			}
 			
@@ -71,4 +69,5 @@ public class ControllerEx01 extends HttpServlet {
 		}
 		
 	}
+
 }
