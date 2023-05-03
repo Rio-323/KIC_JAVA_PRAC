@@ -7,6 +7,11 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		Hello form_ok.jsp
+		Hello form_ok.jsp<br><br>
+		
+		<%
+			String data = request.getParameter("data");
+			out.println("data : " + data);
+		%>
 	</body>
 </html>
