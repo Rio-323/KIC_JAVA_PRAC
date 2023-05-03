@@ -86,7 +86,7 @@
 
 		<div class="btn_area">
 			<div class="align_right">
-				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='board_write1.jsp'" />
+				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='./controller?path=write'" />
 			</div>
 		</div>
 		<!--//게시판-->

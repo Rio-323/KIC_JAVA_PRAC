@@ -3,6 +3,7 @@ package model2;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 public class ModifyOkAction implements BoardAction {
 
 	@Override

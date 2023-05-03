@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Insert title here</title>
-		<link rel="stylesheet" type="text/css" href="../../css/board.css">
+		<link rel="stylesheet" type="text/css" href="./css/board.css">
 		<script type="text/javascript">
 			window.onload = function() {
 				document.getElementById('wbtn').onclick = function() {
@@ -46,7 +46,8 @@
 		</div>
 		<div class="con_menu"></div>
 		<div class="con_txt">
-			<form action="board_write1_ok.jsp" method="post" name="wfrm">
+			<form action="./controller" method="post" name="wfrm">
+			<input type="hidden" name="path" value="write_ok">
 				<div class="contents_sub">	
 					<!--게시판-->
 					<div class="board_write">
@@ -96,7 +97,7 @@
 					
 					<div class="btn_area">
 						<div class="align_left">
-							<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
+							<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='./controller?path=list'" />
 						</div>
 						<div class="align_right">
 							<input type="button" id="wbtn" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" />
