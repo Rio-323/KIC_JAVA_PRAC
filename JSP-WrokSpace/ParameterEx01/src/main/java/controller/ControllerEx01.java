@@ -33,12 +33,16 @@ public class ControllerEx01 extends HttpServlet {
 			
 			String action = request.getParameter("action");
 			
-			String url = "/error.jsp";
+			String url = "/WEB-INF/views/error.jsp";
 			
 			if(action == null || action.equals("") || action.equals("view1")) {
-				url = "/view1.jsp";
+				url = "/WEB-INF/views/view1.jsp";
 			} else if(action.equals("view2")) {
-				url = "/view2.jsp";
+				url = "/WEB-INF/views/view2.jsp";
+			} else if(action.equals("form")) {
+				url = "/WEB-INF/views/form.jsp";
+			} else if(action.equals("form_ok")) {
+				url = "/WEB-INF/views/form_ok.jsp";
 			}
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(url);

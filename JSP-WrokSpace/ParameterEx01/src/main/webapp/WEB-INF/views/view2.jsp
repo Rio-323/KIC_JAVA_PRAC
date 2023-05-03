@@ -9,4 +9,4 @@
 	<body>
 		Hello View2
 	</body>
-</html></html>
+</html>
