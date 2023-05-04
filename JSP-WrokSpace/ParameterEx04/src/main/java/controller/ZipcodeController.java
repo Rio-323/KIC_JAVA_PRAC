@@ -10,9 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model2.Action;
+import model2.ZipcodeAction;
+import model2.ZipcodeOkAction;
+
 @WebServlet("*.do")
-public class ControllerEx01 extends HttpServlet {
+public class ZipcodeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPrcess(request, response);
@@ -35,24 +40,20 @@ public class ControllerEx01 extends HttpServlet {
 			// System.out.println(path);
 			
 			String url = "/WEB-INF/views/error.jsp";
+			Action action = null;
 			
-			if(path.equals("/") || path.equals("/*.do") || path.equals("/view1.do")) {
+			if(path.equals("/") || path.equals("/*.do") || path.equals("/zipcode.do")) {
+				action = new ZipcodeAction();
+				action.execute(request, response);
+				url = "/WEB-INF/views/zipcode.jsp";
 				
-				url = "/WEB-INF/views/view1.jsp";
+			} else if(path.equals("/zipcode_ok.do")) {
+				action = new ZipcodeOkAction();
+				action.execute(request, response);
 				
-			} else if(path.equals("/view2.do")) {
+				url = "/WEB-INF/views/zopcode_ok.jsp";
 				
-				url = "/WEB-INF/views/view2.jsp";
-				
-			} else if(path.equals("/board/view3.do")) {
-				
-				url = "/WEB-INF/views/view3.jsp";
-				
-			} else if(path.equals("/board/view4.do")) {
-				
-				url = "/WEB-INF/views/view4.jsp";
-				
-			}
+			} 
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
@@ -65,4 +66,5 @@ public class ControllerEx01 extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+
 }
