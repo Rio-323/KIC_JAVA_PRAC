@@ -8,7 +8,6 @@
 	</head>
 	<body>
 		<form action="zipcode_ok.do" method="post">
-			<input type="hidden" name="path" value="zipcode_ok">
 			동 이름 : <input type="text" name="dong">
 			<input type="submit" value="동 이름 검색"> 
 		</form>

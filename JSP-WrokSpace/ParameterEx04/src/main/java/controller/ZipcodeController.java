@@ -51,7 +51,7 @@ public class ZipcodeController extends HttpServlet {
 				action = new ZipcodeOkAction();
 				action.execute(request, response);
 				
-				url = "/WEB-INF/views/zopcode_ok.jsp";
+				url = "/WEB-INF/views/zipcode_ok.jsp";
 				
 			} 
 			
