@@ -8,7 +8,12 @@
 	</head>
 	<body>
 		<%
-			out.println("2");
+			out.println("2<br>");
 		%>
+		
+		<%= "2" %><br>
+		
+		<!-- Expression Language -->
+		${ 2 }<br>
 	</body>
 </html>
