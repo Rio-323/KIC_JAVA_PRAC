@@ -8,16 +8,11 @@
 	</head>
 	<body>
 		<%
-			out.println("2<br>");
+			String name1 = "홍길동";
+			pageContext.setAttribute("name2", "홍길동");
 		%>
-		
-		<%= "2" %><br>
-		
-		<!-- Expression Language -->
-		${ 2 }<br>
-		${ 'test' }<br>
-		${ "test" }<br>
-		${ test }<br> <!-- 변수로 인식 -->
-		\${ 'test' }<br> <!-- EL이 아니게 만들기 -->
+		<%= "name1 : " + name1 %><br>
+		${ "name2 : "} ${ name2 }<br>
+		<%= pageContext.getAttribute("name2") %>
 	</body>
 </html>
