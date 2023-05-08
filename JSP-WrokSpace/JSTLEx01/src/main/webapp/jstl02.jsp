@@ -8,14 +8,21 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		${ "browser" }<br>
-		<c:out value="browser"></c:out><br>
-		<%
-			pageContext.setAttribute("data", "browser");
-		%>
+		<c:set var="data1" value="value1"></c:set>
+		<c:set var="data2" value="value2" scope="page"></c:set>
+		<c:set var="data3">value3</c:set>
 		
-		EL : ${ data }<br>
-		JSTL : <c:out value="${ data }"></c:out><br>
-		JSTL : <c:out value="${ data1 }" default="nobrowser"></c:out> 
+		data1 : <c:out value="${ data1 }"></c:out><br>
+		data2 : <c:out value="${ data2 }"></c:out><br>
+		data3 : <c:out value="${ data3 }"></c:out><br>
+		data1 : <c:out value="data1"></c:out><br>
+		
+		<c:set var="data" value="value1" scope="page"></c:set>
+		<c:set var="data" value="value2" scope="request"></c:set>
+		<c:set var="data" value="value3" scope="session"></c:set>
+		
+		${ pageScope.data }<br>
+		${ requestScope.data }<br>
+		${ sessionScope.data }<br>
 	</body>
 </html>
