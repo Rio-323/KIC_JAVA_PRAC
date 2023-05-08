@@ -13,6 +13,7 @@
 		<!-- request_ok.jsp -->
 		<%
 			out.println(request.getParameter("data") + "<br>");
+			request.setAttribute("data3", "value3");
 		%>
 		
 		<jsp:include page="request_ok_sub.jsp">
