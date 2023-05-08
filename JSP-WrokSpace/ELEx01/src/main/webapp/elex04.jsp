@@ -13,6 +13,9 @@
 		%>
 		<%= "name1 : " + name1 %><br>
 		${ "name2 : "} ${ name2 }<br>
-		<%= pageContext.getAttribute("name2") %>
+		<%= pageContext.getAttribute("name2") %> <br>
+		${ pageScope.name2 }<br>
+		${ pageScope['name2'] }<br>
+		${ name2 }<br>
 	</body>
 </html>
