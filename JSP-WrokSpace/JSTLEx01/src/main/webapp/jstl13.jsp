@@ -22,11 +22,22 @@ ${ ds }<br>
 	insert into dept2 values(20, '연구부', '대전')
 </s:update> --%>
 
-<s:update var="result" dataSource="${ ds }">
+<%-- <s:update var="result" dataSource="${ ds }">
 	insert into dept2 values(?, ?, ?)
 	<s:param value="30"></s:param>
 	<s:param value="생산부"></s:param>
 	<s:param value="대전"></s:param>
-</s:update> 
+</s:update>  --%>
+
+<c:set var="deptno" value="50"></c:set>
+<c:set var="dname" value="홍보부"></c:set>
+<c:set var="loc" value="인천"></c:set>
+
+<s:update var="result" dataSource="${ ds }">
+	insert into dept2 values(?, ?, ?)
+	<s:param value="${ deptno }"></s:param>
+	<s:param value="${ dname }"></s:param>
+	<s:param value="${ loc }"></s:param>
+</s:update>
 
 ${ result } <br>
