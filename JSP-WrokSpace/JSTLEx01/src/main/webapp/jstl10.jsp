@@ -20,5 +20,7 @@
 		</c:url>
 		
 		${ url2 }<br>
+		
+		<c:redirect url="${ url2 }"></c:redirect>
 	</body>
 </html>
