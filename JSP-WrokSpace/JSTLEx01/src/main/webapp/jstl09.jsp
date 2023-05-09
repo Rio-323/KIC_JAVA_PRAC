@@ -4,20 +4,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Insert title here</title>
-	</head>
-	<body>
-		<c:forTokens var="token" items="1,2,3,4,5" delims=",">
-			${ token }<br>
-		</c:forTokens>
-		
-		
-		<c:forTokens var="token" items="홍길동, 고길동, 김길동" delims=",">
-			${ token }<br>
-		</c:forTokens>
-	</body>
-</html>
+<%-- <c:redirect url="https://search.naver.com/search.naver?query=covid"></c:redirect> --%>
+
+<c:redirect url="https://search.daum.net/search">
+	<c:param name="w" value="tot"></c:param>
+	<c:param name="q" value="카타르 월드컵"></c:param>
+</c:redirect>
