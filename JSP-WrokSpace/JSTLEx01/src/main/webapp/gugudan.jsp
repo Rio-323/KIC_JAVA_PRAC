@@ -25,7 +25,7 @@
 		</style>
 	</head>
 	<body>
-		<table width="800" border="1">
+		<table>
 		  <tr>
 		    <th> </th>
 		    <c:forEach var="i" begin="1" end="9">
