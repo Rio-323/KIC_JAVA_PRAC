@@ -7,11 +7,12 @@
      <c:set target="${ to }" property="writer" value="작성자"></c:set>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		제목 : ${ to.subject }<br>
+		작성자 : ${ to.writer }<br>
+	</body>
 </html>

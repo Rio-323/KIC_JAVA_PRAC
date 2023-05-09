@@ -9,6 +9,7 @@ public class BoardTo {
 	}
 	
 	public void setSubject(String subject) {
+		System.out.println("setSubject");
 		this.subject = subject;
 	}
 	
@@ -17,6 +18,7 @@ public class BoardTo {
 	}
 	
 	public void setWriter(String writer) {
+		System.out.println("setWriter");
 		this.writer = writer;
 	}
 }
