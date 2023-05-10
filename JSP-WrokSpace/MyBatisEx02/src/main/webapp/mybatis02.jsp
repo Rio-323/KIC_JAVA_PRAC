@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.io.InputStream" %>
 
@@ -26,19 +27,21 @@
 		sqlSession = sqlSessionFactory.openSession();
 		
 		
-		EmpTO to = (EmpTO)sqlSession.selectOne("selectparamone1", "scott");
+		List<EmpTO> lists = sqlSession.selectList("selectparamone2", "s%");
 		
 		sbHtml.append("<table border='1'>");
-		sbHtml.append("<tr>");
-		sbHtml.append("<td>" + to.getEmpno() + "</td>");
-		sbHtml.append("<td>" + to.getEname() + "</td>");
-		sbHtml.append("<td>" + to.getJob() + "</td>");
-		sbHtml.append("<td>" + to.getMgr() + "</td>");
-		sbHtml.append("<td>" + to.getHiredate() + "</td>");
-		sbHtml.append("<td>" + to.getSal() + "</td>");
-		sbHtml.append("<td>" + to.getComm() + "</td>");
-		sbHtml.append("<td>" + to.getDeptno() + "</td>");
-		sbHtml.append("</tr>");
+		for(EmpTO to : lists) {
+			sbHtml.append("<tr>");
+			sbHtml.append("<td>" + to.getEmpno() + "</td>");
+			sbHtml.append("<td>" + to.getEname() + "</td>");
+			sbHtml.append("<td>" + to.getJob() + "</td>");
+			sbHtml.append("<td>" + to.getMgr() + "</td>");
+			sbHtml.append("<td>" + to.getHiredate() + "</td>");
+			sbHtml.append("<td>" + to.getSal() + "</td>");
+			sbHtml.append("<td>" + to.getComm() + "</td>");
+			sbHtml.append("<td>" + to.getDeptno() + "</td>");
+			sbHtml.append("</tr>");
+		}
 		sbHtml.append("</table>");
 		
 	} catch(IOException e) {
