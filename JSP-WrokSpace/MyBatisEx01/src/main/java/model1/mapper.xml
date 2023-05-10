@@ -6,6 +6,10 @@
 		select deptno, dname, loc from dept where deptno = 10
 	</select>
 	
+	<select id="selectlist" resultType="model1.DeptTO">
+		select deptno, dname, loc from dept
+	</select>
+	
 	<select id="selectparamone1" parameterType="String" resultType="model1.DeptTO">
 		select deptno, dname, loc from dept where deptno = #{deptno}
 	</select>
@@ -21,4 +25,12 @@
 	<insert id="insert1" parameterType="model1.DeptTO">
 		insert into dept2(deptno, dname, loc) values(${deptno}, #{dname}, #{loc})
 	</insert>
+	
+	<update id="update1" parameterType="model1.DeptTO">
+		update dept2 set dname = #{dname} where deptno = #{deptno}
+	</update>
+	
+	<delete id="delete1" parameterType="model1.DeptTO">
+		delete from dept2 where deptno = #{deptno}
+	</delete>
 </mapper>
