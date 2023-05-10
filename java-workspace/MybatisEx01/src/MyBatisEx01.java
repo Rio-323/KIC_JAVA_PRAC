@@ -30,6 +30,9 @@ public class MyBatisEx01 {
 			// 한줄의 데이터 : selectOne
 			// 여러줄의 데이터 : selectList
 			DeptTO to = (DeptTO)sqlSession.selectOne("deptlist");
+			System.out.println(to.getDeptno());
+			System.out.println(to.getDname());
+			System.out.println(to.getLoc());
 			
 		} catch (IOException e) {
 			System.out.println("[Error] : " + e.getMessage());
