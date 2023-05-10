@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -32,11 +33,19 @@ public class MyBatisEx03 {
 			// 한줄의 데이터 : selectOne
 			// 여러줄의 데이터 : selectList
 			// 자바 코드 내에서 SQL구문이 사라짐.
-			List<DeptTO> lists = sqlSession.selectList("selectall");
-			for(DeptTO to : lists) {
-				System.out.println(to.getDeptno());
-				System.out.println(to.getDname());
-				System.out.println(to.getLoc());
+//			List<DeptTO> lists = sqlSession.selectList("selectall");
+//			for(DeptTO to : lists) {
+//				System.out.println(to.getDeptno());
+//				System.out.println(to.getDname());
+//				System.out.println(to.getLoc());
+//			}
+			
+			ArrayList<DeptTO> lists = (ArrayList)sqlSession.selectList("selectall");
+			for(int i = 0; i < lists.size(); i++) {
+			    DeptTO to = lists.get(i);
+			    System.out.println(to.getDeptno());
+			    System.out.println(to.getDname());
+			    System.out.println(to.getLoc());
 			}
 			
 			
