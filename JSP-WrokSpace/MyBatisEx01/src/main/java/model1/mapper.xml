@@ -6,7 +6,7 @@
 		select deptno, dname, loc from dept where deptno = 10
 	</select>
 	
-	<select id="selectall" resultType="model1.DeptTO">
-		select deptno, dname, loc from dept
+	<select id="selectparamone1" parameterType="String" resultType="model1.DeptTO">
+		select deptno, dname, loc from dept where deptno = #{deptno}
 	</select>
 </mapper>
