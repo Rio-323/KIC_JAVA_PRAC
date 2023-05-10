@@ -29,6 +29,7 @@ public class MyBatisEx01 {
 			
 			// 한줄의 데이터 : selectOne
 			// 여러줄의 데이터 : selectList
+			// 자바 코드 내에서 SQL구문이 사라짐.
 			DeptTO to = (DeptTO)sqlSession.selectOne("deptlist");
 			System.out.println(to.getDeptno());
 			System.out.println(to.getDname());
