@@ -24,9 +24,23 @@
 		is = Resources.getResourceAsStream(resource);
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 		
-		sqlSession = sqlSessionFactory.openSession();
+		sqlSession = sqlSessionFactory.openSession(true); // auto commit
 		
+		DeptTO to = new DeptTO();
+		to.setDeptno("90");
+		to.setDname("총무부");
+		to.setLoc("서울");
 		
+		int result = sqlSession.insert("insert1", to);
+		
+		// 즉시 update 되지 않음
+		// transaction을 해야함
+		// 		commit - 인정
+		//		rollback - 되돌림
+		if(result == 1) {
+			// sqlSession.commit();
+			sbHtml.append("입력 성공 : " + result);
+		}
 		
 		
 	} catch(IOException e) {
