@@ -6,4 +6,8 @@
                <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p](%-35c{1}:%-3L) %m%n" />
           </layout>
      </appender>
+     <root>
+     	<level value="DEBUG"></level>
+     	<appender-ref ref="console"></appender-ref>
+     </root>
 </log4j:configuration>
