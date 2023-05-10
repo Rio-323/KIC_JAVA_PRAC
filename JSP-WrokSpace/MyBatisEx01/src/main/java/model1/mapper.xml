@@ -17,4 +17,8 @@
 	<select id="selectparamone3" parameterType="model1.DeptTO" resultType="model1.DeptTO">
 		select deptno, dname, loc from dept where deptno = #{deptno} and dname = #{dname}
 	</select>
+	
+	<insert id="insert1" parameterType="mode1.DeptTO">
+		insert into dept2(deptno, dname, loc) values(${deptno}, #{dname}, #{loc})
+	</insert>
 </mapper>
