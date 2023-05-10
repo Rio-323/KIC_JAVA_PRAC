@@ -6,10 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import model1.DeptTO;
 
-
-public class MyBatisEx01 {
+public class MyBatisEx02 {
 
 	public static void main(String[] args) {
 		String resource = "myBatisConfig.xml";
@@ -27,9 +25,6 @@ public class MyBatisEx01 {
 			sqlSession = sqlSessionFactory.openSession();
 			System.out.println("연결 성공");
 			
-			// 한줄의 데이터 : selectOne
-			// 여러줄의 데이터 : selectList
-			DeptTO to = (DeptTO)sqlSession.selectOne("deptlist");
 			
 		} catch (IOException e) {
 			System.out.println("[Error] : " + e.getMessage());
