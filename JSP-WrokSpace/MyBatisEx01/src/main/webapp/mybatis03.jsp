@@ -25,7 +25,11 @@
 		
 		sqlSession = sqlSessionFactory.openSession();
 		
-		DeptTO to = (DeptTO)sqlSession.selectOne("selectparamone2", "20");
+		DeptTO paramTO = new DeptTO();
+		paramTO.setDeptno("30");
+		paramTO.setDname("SALES");
+		
+		DeptTO to = (DeptTO)sqlSession.selectOne("selectparamone3", paramTO);
 		
 		sbHtml.append("<table border='1'>");
 		sbHtml.append("<tr>");
