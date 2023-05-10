@@ -8,10 +8,9 @@
 <%@ page import="org.apache.ibatis.session.SqlSessionFactory" %>
 <%@ page import="org.apache.ibatis.session.SqlSessionFactoryBuilder" %>
 
-<%@ page import="model1.DeptTO" %>
+<%@ page import="model1.EmpTO" %>
 
 <%
-
 	String resource ="myBatisConfig.xml";
 
 	InputStream is = null;
@@ -26,20 +25,21 @@
 		
 		sqlSession = sqlSessionFactory.openSession();
 		
-		DeptTO paramTO = new DeptTO();
-		paramTO.setDeptno("30");
-		paramTO.setDname("SALES");
 		
-		DeptTO to = (DeptTO)sqlSession.selectOne("selectparamone3", paramTO);
+		EmpTO to = (EmpTO)sqlSession.selectOne("selectparamone1", "SMITH");
 		
 		sbHtml.append("<table border='1'>");
 		sbHtml.append("<tr>");
+		sbHtml.append("<td>" + to.getEmpno() + "</td>");
+		sbHtml.append("<td>" + to.getEname() + "</td>");
+		sbHtml.append("<td>" + to.getJob() + "</td>");
+		sbHtml.append("<td>" + to.getMgr() + "</td>");
+		sbHtml.append("<td>" + to.getHiredate() + "</td>");
+		sbHtml.append("<td>" + to.getSal() + "</td>");
+		sbHtml.append("<td>" + to.getComm() + "</td>");
 		sbHtml.append("<td>" + to.getDeptno() + "</td>");
-		sbHtml.append("<td>" + to.getDname() + "</td>");
-		sbHtml.append("<td>" + to.getLoc() + "</td>");
 		sbHtml.append("</tr>");
 		sbHtml.append("</table>");
-		
 		
 	} catch(IOException e) {
 		System.out.println("[Error] : " + e.getMessage());
