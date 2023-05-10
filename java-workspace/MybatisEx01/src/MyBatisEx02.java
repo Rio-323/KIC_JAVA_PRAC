@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import model1.DeptTO;
+
 
 public class MyBatisEx02 {
 
@@ -25,6 +27,13 @@ public class MyBatisEx02 {
 			sqlSession = sqlSessionFactory.openSession();
 			System.out.println("연결 성공");
 			
+			// 한줄의 데이터 : selectOne
+			// 여러줄의 데이터 : selectList
+			// 자바 코드 내에서 SQL구문이 사라짐.
+			DeptTO to = (DeptTO)sqlSession.selectOne("deptlist");
+			System.out.println(to.getDeptno());
+			System.out.println(to.getDname());
+			System.out.println(to.getLoc());
 			
 		} catch (IOException e) {
 			System.out.println("[Error] : " + e.getMessage());

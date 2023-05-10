@@ -1,13 +1,16 @@
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import model1.DeptTO;
 
-public class MyBatisEx01 {
+
+public class MyBatisEx03 {
 
 	public static void main(String[] args) {
 		String resource = "myBatisConfig.xml";
@@ -24,6 +27,18 @@ public class MyBatisEx01 {
 			// 연결은 session의 개념
 			sqlSession = sqlSessionFactory.openSession();
 			System.out.println("연결 성공");
+			
+
+			// 한줄의 데이터 : selectOne
+			// 여러줄의 데이터 : selectList
+			// 자바 코드 내에서 SQL구문이 사라짐.
+			List<DeptTO> lists = sqlSession.selectList("selectall");
+			for(DeptTO to : lists) {
+				System.out.println(to.getDeptno());
+				System.out.println(to.getDname());
+				System.out.println(to.getLoc());
+			}
+			
 			
 			
 		} catch (IOException e) {
