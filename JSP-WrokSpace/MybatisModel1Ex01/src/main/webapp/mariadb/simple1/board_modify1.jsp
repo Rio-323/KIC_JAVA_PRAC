@@ -1,31 +1,30 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-<%@ page import="model1.BoardDTO" %>
+<%@ page import="model1.BoardTO" %>
 <%@ page import="model1.BoardDAO" %>
 
 <%
-	/* request.setCharacterEncoding( "utf-8" );
+	request.setCharacterEncoding( "utf-8" );
 
-	BoardDTO dto = new BoardDTO();
-	dto.setSeq(request.getParameter("seq"));
+	BoardTO to = new BoardTO();
+	to.setSeq( request.getParameter( "seq" ) );
 
 	BoardDAO dao = new BoardDAO();
-	dto = dao.boardModify(dto);
+	to = dao.boardModify( to );
 	
-	String seq = dto.getSeq();
-	String subject = dto.getSubject();
-	String writer = dto.getWriter();
+	String seq = to.getSeq();
+	String subject = to.getSubject();
+	String writer = to.getWriter();
 	String mail[] = null;
-	if( dto.getMail().equals( "" ) ) {
+	if( to.getMail().equals( "" ) ) {
 		mail = new String[] { "", "" };
 	} else {
-		mail = dto.getMail().split( "@" );
+		mail = to.getMail().split( "@" );
 	}
-	String content = dto.getContent(); */
-	out.println(request.getParameter("seq"));
+	String content = to.getContent();
 %>
-<%-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -58,18 +57,18 @@
 </div>
 <div class="con_txt">
 	<form action="board_modify1_ok.jsp" method="post" name="mfrm">
-		<input type="hidden" name="seq" value="<%= seq %>" />
+		<input type="hidden" name="seq" value="<%=seq %>" />
 		<div class="contents_sub">	
 			<!--게시판-->
 			<div class="board_write">
 				<table>
 				<tr>
 					<th class="top">글쓴이</th>
-					<td class="top"><input type="text" name="writer" value="<%= writer %>" class="board_view_input_mail" maxlength="5" readonly/></td>
+					<td class="top"><input type="text" name="writer" value="<%=writer %>" class="board_view_input_mail" maxlength="5" readonly/></td>
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td><input type="text" name="subject" value="<%= subject %>" class="board_view_input" /></td>
+					<td><input type="text" name="subject" value="<%=subject %>" class="board_view_input" /></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -77,11 +76,11 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td><textarea name="content" class="board_editor_area"><%= content %></textarea></td>
+					<td><textarea name="content" class="board_editor_area"><%=content %></textarea></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" name="mail1" value="<%= mail[0] %>" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="<%= mail[1] %>" class="board_view_input_mail"/></td>
+					<td><input type="text" name="mail1" value="<%=mail[0] %>" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="<%=mail[1] %>" class="board_view_input_mail"/></td>
 				</tr>
 				</table>
 			</div>
@@ -89,7 +88,7 @@
 			<div class="btn_area">
 				<div class="align_left">
 					<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
-					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp'" />
+					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp?seq=<%=seq %>'" />
 				</div>
 				<div class="align_right">
 					<input type="button" id="mbtn" value="수정" class="btn_write btn_txt01" style="cursor: pointer;" />
@@ -103,4 +102,3 @@
 
 </body>
 </html>
- --%>

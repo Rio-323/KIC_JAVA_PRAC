@@ -1,21 +1,21 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-<%@ page import="model1.BoardDTO" %>
+<%@ page import="model1.BoardTO" %>
 <%@ page import="model1.BoardDAO" %>
 
 <%
 	request.setCharacterEncoding( "utf-8" );
 
-	BoardDTO dto = new BoardDTO();
-	dto.setSeq( request.getParameter( "seq" ) );
+	BoardTO to = new BoardTO();
+	to.setSeq( request.getParameter( "seq" ) );
 	
 	BoardDAO dao = new BoardDAO();
-	dto = dao.boardDelete(dto);
+	to = dao.boardDelete( to );
 	
-	String seq = dto.getSeq();
-	String subject = dto.getSubject();
-	String writer = dto.getWriter();
+	String seq = to.getSeq();
+	String subject = to.getSubject();
+	String writer = to.getWriter();
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -69,7 +69,7 @@
 			<div class="btn_area">
 				<div class="align_left">
 					<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
-					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp'" />
+					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp?seq=<%=seq %>'" />
 				</div>
 				<div class="align_right">
 					<input type="button" id="dbtn" value="삭제" class="btn_write btn_txt01" style="cursor: pointer;" />

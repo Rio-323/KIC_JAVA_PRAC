@@ -1,48 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="model1.BoardDTO" %>
+	
+<%@ page import="model1.BoardTO" %>
 <%@ page import="model1.BoardDAO" %>
 <%@ page import="java.util.ArrayList" %>
 
 <%
-
 	BoardDAO dao = new BoardDAO();
-	ArrayList<BoardDTO> datas = dao.boardList();
+	ArrayList<BoardTO> datas = dao.boardList();
+
+	int totalRecord = datas.size();
 	
 	StringBuilder sbHtml = new StringBuilder();
 	
-	int totalRecord = datas.size();
-	
-	
-		
-	for(BoardDTO dto : datas) {
-		String seq = dto.getSeq();
-		String subject = dto.getSubject();
-		String writer = dto.getWriter();
-		String wdate = dto.getWdate();
-		String hit = dto.getHit();
-		int wgap = dto.getWgap();
-		
-		
-		 sbHtml.append("<tr>");
-		 sbHtml.append("<td>&nbsp;</td>");
-		 sbHtml.append("<td>" + seq + "</td>");
-		 sbHtml.append("<td class='left'>");
-		 sbHtml.append("<a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>");
-		 
-		 if(wgap == 0) {
-			 sbHtml.append("&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>");
-		 }
-		
-		 sbHtml.append("</td>");
-		 sbHtml.append("<td>" + writer + "</td>");
-		 sbHtml.append("<td>" + wdate + "</td>");
-		 sbHtml.append("<td>" + hit + "</td>");
-		 sbHtml.append("<td>&nbsp;</td>");
-		 sbHtml.append("</tr>");
+	for( BoardTO to : datas ) {
+		String seq = to.getSeq();
+		String subject = to.getSubject();
+		String writer = to.getWriter();
+		String wdate = to.getWdate();
+		String hit = to.getHit();
+		int wgap = to.getWgap();
+			
+		sbHtml.append( "<tr>" );
+		sbHtml.append( "<td>&nbsp;</td>" );
+		sbHtml.append( "<td>" + seq + "</td>" );
+			
+		sbHtml.append( "<td class='left'>" );
+		sbHtml.append( "<a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>" );
+		if( wgap == 0 ) { 
+			sbHtml.append( "&nbsp;<img src='../../images/icon_new.gif' alt='NEW'>" );
+		}
+		sbHtml.append( "</td>" );
+			
+		sbHtml.append( "<td>" + writer + "</td>" );
+		sbHtml.append( "<td>" + wdate + "</td>" );
+		sbHtml.append( "<td>" + hit + "</td>" );
+		sbHtml.append( "<td>&nbsp;</td>" );
+		sbHtml.append( "</tr>" );
 	}
-		
-	
 %>
 
 <!DOCTYPE html>
@@ -64,7 +59,7 @@
 <div class="con_txt">
 	<div class="contents_sub">
 		<div class="board_top">
-			<div class="bold">총 <span class="txt_orange"><%= totalRecord %></span>건</div>
+			<div class="bold">총 <span class="txt_orange"><%=totalRecord %></span>건</div>
 		</div>
 
 		<!--게시판-->
@@ -79,10 +74,9 @@
 				<th width="5%">조회</th>
 				<th width="3%">&nbsp;</th>
 			</tr>
-			<!-- 내용 시작-->
-			<%= sbHtml %>
-			
-			<!-- 내용 끝 -->
+<!-- 내용 시작 -->
+<%=sbHtml %>
+<!-- 내용 끝 -->
 			</table>
 		</div>	
 

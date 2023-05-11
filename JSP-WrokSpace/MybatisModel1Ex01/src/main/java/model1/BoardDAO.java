@@ -10,94 +10,92 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class BoardDAO {
-	private SqlSession sqlSession = null;
-	
+	private SqlSession sqlSession;
 	
 	public BoardDAO() {
+		// TODO Auto-generated constructor stub
 		String resource = "myBatisConfig.xml";
-		
-		InputStream is = null;
-		
+
+		InputStream is = null ;
+
 		try {
-			
-			is = Resources.getResourceAsStream(resource);
-			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-			
-			this.sqlSession = sqlSessionFactory.openSession(true);
-			
-			
-		} catch (IOException e) {
-			System.out.println("[Error] : " + e.getMessage());
+			is = Resources.getResourceAsStream( resource );
+			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build( is );
+           
+			this.sqlSession = sqlSessionFactory.openSession( true );
+		} catch( IOException e ) {
+			// TODO Auto-generated catch block
+			System.out.println( "[에러] : " + e.getMessage() );
 		} finally {
-			if(is != null) { try { is.close(); } catch (IOException e) { System.out.println("[Error] : " + e.getMessage()); } }
+			if( is != null ) try { is.close(); } catch( IOException e ) {}
 		}
 	}
 	
-	public void boardWrite() {
-		
+	public void boardWrite() {	
 	}
 	
-	public int boardWriteOk(BoardDTO dto) {
-		
-		// flag -> 0 : 정상 /  1 -> 비정상
+	public int boardWriteOk(BoardTO to) {
 		int flag = 1;
 		
-		int result = sqlSession.insert("write_ok", dto);
-		
-		if(result == 1) {
+		int result = sqlSession.insert( "write_ok", to );
+		if( result == 1 ) {
 			flag = 0;
 		}
 		
-		if(sqlSession != null) sqlSession.close();
-		
-		return flag;
+		if( sqlSession != null ) sqlSession.close();
+		return flag;				
 	}
 	
-	public ArrayList<BoardDTO> boardList() {
-		ArrayList<BoardDTO> datas = (ArrayList)sqlSession.selectList("list");
+	public ArrayList<BoardTO> boardList() {
+		ArrayList<BoardTO> datas = (ArrayList)sqlSession.selectList( "list" );
 		
-		if(sqlSession != null) sqlSession.close();
-		
+		if( sqlSession != null ) sqlSession.close();
 		return datas;
 	}
 	
-	public BoardDTO boardView(BoardDTO dto) {
+	public BoardTO boardView(BoardTO to) {
 		
-		sqlSession.update("view_hit", dto);
+		sqlSession.update( "view_hit", to );
 		
-		dto = sqlSession.selectOne("view", dto);
+		to = sqlSession.selectOne( "view", to );
 		
-		if(sqlSession != null) sqlSession.close();
-		
-		return dto;
+		if( sqlSession != null ) sqlSession.close();
+		return to;
 	}
 	
-	public BoardDTO boardModify(BoardDTO dto) {
-		dto = sqlSession.selectOne("modify", dto);
+	public BoardTO boardModify(BoardTO to) {
+		to = sqlSession.selectOne( "modify", to );
 		
-		if(sqlSession != null) sqlSession.close();
-		
-		return dto;
+		if( sqlSession != null ) sqlSession.close();
+		return to;
 	}
-	
-	public int boardModifyOk(BoardDTO dto) {
-		
-		// flag -> 0 : 정상 /  1 -> 비정상
+    
+	public int boardModifyOk(BoardTO to) {
 		int flag = 2;
+		int result = sqlSession.update( "modify_ok", to );
+
+		if( result == 1 ) {
+			flag = 0;
+		} else if( result == 0 ) {
+			flag = 1;               
+		}
 		
+		if( sqlSession != null ) sqlSession.close();
 		return flag;
 	}
 	
-	public BoardDTO boardDelete(BoardDTO dto) {
-		
-		return dto;
+	public BoardTO boardDelete(BoardTO to) {
+		return to;
 	}
 	
-	public int boardDeleteOk(BoardDTO dto) {
-
+	public int boardDeleteOk(BoardTO to) {
 		int flag = 2;
-		
 		return flag;
 	}
-
 }
+
+
+
+
+
+

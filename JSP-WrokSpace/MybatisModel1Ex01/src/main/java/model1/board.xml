@@ -2,24 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis1">
 
-	<select id="list" resultType="model1.BoardDTO">
-		select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board order by seq desc
+	<select id="list" resultType="model1.BoardTO">
+		select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap
+		from board
+		order by seq desc
 	</select>
 	
-	<select id="view" parameterType="model1.BoardDTO" resultType="model1.BoardDTO">
-		select subject, writer, mail, wip, wdate, hit, content from board where seq = #{seq}
+	<select id="view" parameterType="model1.BoardTO" resultType="model1.BoardTO">
+		select seq, subject, writer, mail, wip, wdate, hit, content
+		from board
+		where seq=#{seq}
 	</select>
 	
-	<update id="view_hit" parameterType="model1.BoardDTO">
-		update board set hit = hit + 1 where seq = #{seq}
+	<update id="view_hit" parameterType="model1.BoardTO">
+		update board
+		set hit=hit+1
+		where seq=#{seq}
 	</update>
 	
-	<insert id="write_ok" parameterType="model1.BoardDTO">
-		INSERT INTO board VALUES (0, #{subject}, #{writer}, #{mail}, #{password}, #{content}, 0, #{wip}, now())
+	<insert id="write_ok" parameterType="model1.BoardTO">
+		insert into board
+		values ( 0, #{subject}, #{writer}, #{mail}, #{password}, #{content}, 0, #{wip}, now() )
 	</insert>
 	
-	<select id="modify" parameterType="model1.BoardDTO" resultType="model1.BoardDTO">
-		select subject, writer, mail, content from board where seq = #{seq}
+	<select id="modify" parameterType="model1.BoardTO" resultType="model1.BoardTO">
+		select seq, subject, writer, mail, content
+		from board
+		where seq=#{seq}
 	</select>
-	
+
+	<update id="modify_ok" parameterType="model1.BoardTO">
+		update board
+		set subject=#{subject}, mail=#{mail}, content=#{content}
+		where password=#{password} and seq=#{seq}
+</update >
 </mapper>
+
+
+
