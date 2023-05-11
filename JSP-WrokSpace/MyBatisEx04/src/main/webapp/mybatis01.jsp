@@ -1,4 +1,3 @@
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.IOException" %>
@@ -9,7 +8,8 @@
 <%@ page import="org.apache.ibatis.session.SqlSessionFactory" %>
 <%@ page import="org.apache.ibatis.session.SqlSessionFactoryBuilder" %>
 
-<%@ page import="model1.EmpTO" %>
+<%@ page import="model1.DeptTO" %>
+<%@ page import="mapper.SqlMapperInter" %>
 
 <%
 	String resource ="myBatisConfig.xml";
@@ -27,24 +27,21 @@
 		sqlSession = sqlSessionFactory.openSession();
 		
 		
-		// EmpTO to = (EmpTO)sqlSession.selectOne("selectparamone1", "scott");
-		// List<EmpTO> lists = sqlSession.selectList("mybatis2.selectparamone1", "s%");
-		List<EmpTO> lists = sqlSession.selectList("mybatis1.selectparamone2", "s%");
+		// mapper 연결
+		sqlSession.getConfiguration().addMapper(SqlMapperInter.class);
 		
-		sbHtml.append("<table border='1'>");
-		for(EmpTO to : lists) {
-			sbHtml.append("<tr>");
-			sbHtml.append("<td>" + to.getEmpno() + "</td>");
-			sbHtml.append("<td>" + to.getEname() + "</td>");
-			sbHtml.append("<td>" + to.getJob() + "</td>");
-			sbHtml.append("<td>" + to.getMgr() + "</td>");
-			sbHtml.append("<td>" + to.getHiredate() + "</td>");
-			sbHtml.append("<td>" + to.getSal() + "</td>");
-			sbHtml.append("<td>" + to.getComm() + "</td>");
-			sbHtml.append("<td>" + to.getDeptno() + "</td>");
-			sbHtml.append("</tr>");
-		}
+		SqlMapperInter mapper = (SqlMapperInter)sqlSession.getMapper(SqlMapperInter.class);
+		
+		DeptTO to = mapper.selectByDeptno();
+		
+		sbHtml.append("<table>");
+		sbHtml.append("<tr>");
+		sbHtml.append("<td>" + to.getDeptno() + "</td>");
+		sbHtml.append("<td>" + to.getDname() + "</td>");
+		sbHtml.append("<td>" + to.getLoc() + "</td>");
+		sbHtml.append("</tr>");
 		sbHtml.append("</table>");
+		
 		
 	} catch(IOException e) {
 		System.out.println("[Error] : " + e.getMessage());
@@ -53,7 +50,6 @@
 		if(is != null) is.close();
 	}
 %>
-
 <!DOCTYPE html>
 <html>
 	<head>
