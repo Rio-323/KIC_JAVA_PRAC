@@ -15,34 +15,31 @@
 						
 						if(request.readyState == 4) {
 							if(request.status == 200) {
-								const data = request.responseText.trim();
-								const jsonData = JSON.parse(data);
+								document.getElementById('ta').value = request.responseText;
 								
-								// console.log(jsonData);
-								// console.log(jsonData[0].name);
+								const xmlData = request.responseXML;
+								const ranks = xmlData.getElementsByTagName('rank');
+								const movieNms = xmlData.getElementsByTagName('movieNm');
 								
 								let result = '<table border="1">';
 								
-								for(let i = 0; i < jsonData.length; i++) {
+								for(let i = 0; i < ranks.length; i++) {
 									result += '<tr>';
-									result += '<td>' + jsonData[i].name + '</td>';
-									result += '<td>' + jsonData[i].publisher + '</td>';
-									result += '<td>' + jsonData[i].author + '</td>';
-									result += '<td>' + jsonData[i].price + '</td>';
+									result += '<td>' + ranks[i].innerHTML + '</td>';
+									result += '<td>' + movieNms[i].innerHTML + '</td>';
 									result += '</tr>';
 								}
 								
 								result += "</table>";
 								
 								document.getElementById('result').innerHTML = result;
-								
 							} else {
 								alert('페이지 오류');
 							}
 						}
 					};
 				
-					request.open("get", "json2.jsp", true);
+					request.open("get", "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.xml?key=f5eef3421c602c6cb7ea224104795888&targetDt=20230507", true);
 					request.send();
 				};
 			};
