@@ -10,7 +10,10 @@
 			$(document).ready(function(){
 				$('h1').each(function(index, item) {
 					// console.log(index, ' / ', item);
-					console.log(item.innerHTML);
+					// console.log(item.innerHTML);
+					// console.log(this.innerHTML);
+					
+					this.innerHTML = 'New Text : ' + index;
 				});
 			});
 		</script>
