@@ -7,26 +7,18 @@
 		<title>Insert title here</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script type="text/javascript">
-			// window.jquery -> jQuery -> $
 			$(document).ready(function(){
-				console.log('Hello jQuery1');
+				// $('.c1').css('color', 'blue');
+				// $('h2.c1').css('color', 'blue');
+				$('.c1.c2').css('color', 'blue');
 			});
-			
-			jQuery(document).ready(function(){
-				console.log('Hello jQuery2');
-			});
-			
-			$(function(){
-				console.log('Hello jQuery3');
-			});
-			
-			$(() => {
-				console.log('Hello jQuery4');
-			});
-			
 		</script>
 	</head>
 	<body>
-		Hello jQuery 
+		<h2 class="c1">Header-1</h2>
+		<h3 class="c1 c2">Header-2</h3>
+		
+		<h2 class="c2">Header-3</h2>
+		<h3 class="c2">Header-4</h3>
 	</body>
 </html>
