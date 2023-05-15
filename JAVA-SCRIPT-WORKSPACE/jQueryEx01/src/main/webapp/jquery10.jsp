@@ -11,8 +11,15 @@
 				$('table').css('width', '800');
 				
 				document.getElementById('btn1').onclick = function() {
-					$('tr:odd').css('background-color', 'blue');
+					/* $('tr:odd').css('background-color', 'blue');
 					$('tr:even').css('background-color', 'yellow');
+					
+					$('tr:first').css('background-color', 'red'); */
+					
+					$('tr:nth-child(2n)').css('background-color', 'yellow');
+					$('tr:nth-child(2n+1)').css('background-color', 'blue');
+					
+					$('tr:eq(0)').css('background-color', 'red');
 				};
 				
 				document.getElementById('btn2').onclick = function() {
