@@ -13,7 +13,8 @@
 					// $( ' html 내용 ' ) - 생성
 					
 					// appendTo / prependTo / insertAfter / insertBefore
-					$('<br><i>Hello jQuery</i><br>').appendTo('#result');
+					// $('<br><i>Hello jQuery</i><br>').appendTo('#result');
+					$('<i></i>').html('Hello jQuery').appendTo('#result');
 				};
 			});
 		</script>
