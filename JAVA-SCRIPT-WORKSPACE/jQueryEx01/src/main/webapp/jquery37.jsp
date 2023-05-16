@@ -12,8 +12,8 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				
-				$('#btn1').on('click', function() {
-					alert('btn2 click');
+				/* $('#btn1').on('click', function() {
+					alert('btn1 click');
 				});
 				
 				$('#btn2').on('click', function() {
@@ -22,7 +22,12 @@
 				
 				$('#btn3').on('click', function() {
 					alert('btn3 click');
+				}); */
+				
+				$('button').on('click', function() {
+					alert('button click');
 				});
+				
 			});
 		</script>
 	</head>
