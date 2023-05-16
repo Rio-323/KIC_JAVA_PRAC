@@ -8,9 +8,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('h1').filter(function(index) {
-					return index % 2 == 0;
-				}).css('color', 'blue');
+				/* $('h1').css('background-color', 'orange');
+				$('h1').filter(':even').css('color', 'red');
+				$('h1').filter(':odd').css('color', 'white'); */
+				
+				
+				// end() - filter 적용 취소(초기화)
+				 $('h1').css('background-color', 'orange')
+				 .filter(':even').css('color', 'red')
+				 .end()
+				 .filter(':odd').css('color', 'white');
 			});
 		</script>
 	</head>
