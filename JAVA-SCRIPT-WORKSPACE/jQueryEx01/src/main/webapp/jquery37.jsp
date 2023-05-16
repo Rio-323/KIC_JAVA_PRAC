@@ -25,7 +25,7 @@
 				}); */
 				
 				$('button').on('click', function() {
-					alert('button click');
+					alert('button click : ' + $(this).attr('id'));
 				});
 				
 			});
