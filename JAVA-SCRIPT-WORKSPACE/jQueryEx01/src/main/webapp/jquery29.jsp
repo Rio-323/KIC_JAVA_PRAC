@@ -8,6 +8,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				
+				// 내용 삭제
 				document.getElementById('btn1').onclick = function() {
 					$('#d').html('');
 				};
@@ -16,8 +18,13 @@
 					$('#d').empty();
 				};
 				
+				// div자체가 삭제 -> 태그 삭제
 				document.getElementById('btn3').onclick = function() {
 					$('#d').remove();
+				};
+				
+				document.getElementById('btn4').onclick = function() {
+					$('p').first().remove();
 				};
 			});
 		</script>
@@ -26,6 +33,7 @@
 		<button id="btn1">내용 삭제</button>
 		<button id="btn2">내용 삭제</button>
 		<button id="btn3">내용 삭제</button>
+		<button id="btn4">내용 삭제</button>
 		<br><hr><br>
 		<div id="d">
 			<p>내용 1</p>
