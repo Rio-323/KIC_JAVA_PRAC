@@ -13,14 +13,26 @@
 			// ready = window.onload()
 			$(document).ready(function(){
 				 $('#btn').on('click', function() {
-					// alert('btn click');
+				
 					$.ajax({
-						url : './data/json1.jsp',
+						url : './data/xml1.jsp',
 						type : 'get',
-						dataType : 'json',
-						success : function(csvData) {
-							console.log('success : ', typeof csvData);
-							console.log(csvData);
+						dataType : 'xml',
+						success : function(xmlData) {
+							let html = '<table border="1">';
+							
+							$(xmlData).find('book').each(function() {
+								html += '<tr>';
+								html += '<td>' + $(this).find('name').text() + '</td>';
+								html += '<td>' + $(this).find('publisher').text() + '</td>';
+								html += '<td>' + $(this).find('author').text() + '</td>';
+								html += '<td>' + $(this).find('price').text() + '</td>';
+								html += '</tr>';
+							});
+							
+							html += '</table>';
+							
+							$('#result').html(html);
 						},
 						error : function() {
 							console.log('fail', err.status);
@@ -34,5 +46,6 @@
 	<body>
 		<button id="btn">요청</button>
 		<br><hr><br>
+		<div id="result"></div>
 	</body>
 </html>
