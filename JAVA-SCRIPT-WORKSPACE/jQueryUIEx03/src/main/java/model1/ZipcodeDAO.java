@@ -100,7 +100,7 @@ public class ZipcodeDAO {
 			String sql = "select distinct dong from zipcode where sido = ? and gugun = ?";
 			pstmt = conn.prepareStatement( sql );
 			pstmt.setString( 1, strSido );
-			pstmt.setString( 1, strGugun );
+			pstmt.setString( 2, strGugun );
 	           
 			rs = pstmt.executeQuery();
 			while( rs.next() ) {
@@ -120,7 +120,41 @@ public class ZipcodeDAO {
 	}
 
 	public ArrayList<ZipcodeTO> addressList(String strSido, String strGugun, String strDong) {
-		return null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+	       
+		ArrayList<ZipcodeTO> lists = new ArrayList<>();
+	       
+		try {
+			conn = this.dataSource.getConnection();
+	       
+			String sql = "select zipcode, sido, gugun, dong, ri, bunji from zipcode where sido = ? and gugun = ? and dong = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, strSido );
+			pstmt.setString( 2, strGugun );
+			pstmt.setString( 3, strDong );
+	           
+			rs = pstmt.executeQuery();
+			while( rs.next() ) {
+				ZipcodeTO to = new ZipcodeTO();
+				to.setZipcode( rs.getString( "zipcode" ) );
+				to.setSido( rs.getString( "sido" ) );
+				to.setGugun( rs.getString( "gugun" ) );
+				to.setDong( rs.getString( "dong" ) );
+				to.setRi( rs.getString( "ri" ) );
+				to.setBunji( rs.getString( "bunji" ) );
+	               
+				lists.add( to );
+			}
+		} catch( SQLException e ) {
+			System.out.println( e.getMessage() );
+		} finally {
+			if( rs != null ) try { rs.close(); } catch( SQLException e ) {}
+			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
+			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
+		}
+		return lists;
 	}
 
 }

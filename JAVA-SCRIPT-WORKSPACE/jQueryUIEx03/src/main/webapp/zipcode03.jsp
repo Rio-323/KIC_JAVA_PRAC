@@ -73,31 +73,72 @@
 		   });
 		   
 		   $('#dong').selectmenu({
-			   width: 150,
-			   change: function() {
+			    width: 150,
+			    change: function() {
+			    }
+			});
+
+		   
+		   $('#btn').button().on('click', function() {
+			   $.ajax({
+				  
+				   url: './data/address.jsp',
+				   type: 'get',
+				   data: {
+					   sido: $('#sido').val(),
+					   gugun: $('#gugun').val(),
+					   dong: $('#dong').val()
+				   },
+				   dataType: 'xml',
+				   success: function (xml) {
+					   $('#result').empty();
+					    let result = '<table border="1" width="800">';
+					    result += '<tr><th>우편번호</th><th>시도</th><th>구군</th><th>동</th><th>리</th><th>번지</th></tr>';
+
+					    $(xml).find('address').each(function() {
+					        let zipcode = $(this).find('zipcode').text();
+					        let sido = $(this).find('sido').text();
+					        let gugun = $(this).find('gugun').text();
+					        let dong = $(this).find('dong').text();
+					        let ri = $(this).find('ri').text();
+					        let bunji = $(this).find('bunji').text();
+
+					        result += '<tr>';
+					        result += '<td>'+ zipcode +'</td>';
+					        result += '<td>'+ sido +'</td>';
+					        result += '<td>'+ gugun +'</td>';
+					        result += '<td>'+ dong +'</td>';
+					        result += '<td>'+ ri +'</td>';
+					        result += '<td>'+ bunji +'</td>';
+					        result += '</tr>';
+					    });
+
+					    result += '</table>';
+					    $('#result').html(result);
+					},
 				   
-			   }
+				   error: function (e) {
+					   alert('[Error] : ' + e.status);
+					}
+		   	   });
 		   });
 		   
-		   $('#btn').button();
 		   
 		   $.ajax({
-			  url: './data/sido.jsp',
-			  type: 'get',
-			  dataType: 'xml',
-			  success: function(xml) {
-				  $('#sido').html('<option disabled="disabled" selected="selected">시도 선택</option>');
-				  $(xml).find('sido').each(function() {
-					  $('#sido').append('<option>' + $(this).text() + '</option>');
-					 
-				  });
-			  },
-			  
-			  error: function(e) {
-				  alert('[Error] : ' + e.status);
-			  }
+			   url: './data/sido.jsp',
+			   type: 'get',
+			   dataType: 'xml',	
+			   success: function(xml) {
+				   $('#sido').html('<option disabled="disabled" selected="selected">시도 선택</option>');
+				   $(xml).find('sido').each(function() {
+					   $('#sido').append('<option>' + $(this).text() + '</option>'); 
+				   });
+			   },
+			   error: function(e) {
+				   alert('[Error] : ' + e.status);
+			   }
 		   });
-		});
+	   });
 		</script>
 	</head>
 	<body>
@@ -124,12 +165,12 @@
 		<div id="result">
 			<table border="1" width="800">
 				<tr>
-					<td>우편번호</td>
-					<td>시도</td>
-					<td>구군</td>
-					<td>동</td>
-					<td>리</td>
-					<td>번지</td>
+					<th>우편번호</th>
+					<th>시도</th>
+					<th>구군</th>
+					<th>동</th>
+					<th>리</th>
+					<th>번지</th>
 				</tr>
 			</table>
 		</div>
