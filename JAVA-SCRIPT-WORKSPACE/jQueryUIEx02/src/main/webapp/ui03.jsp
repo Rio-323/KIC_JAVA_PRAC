@@ -15,11 +15,18 @@
 		<script type="text/javascript">
 			/* 사용자 정의 */
 			$(document).ready(function() {
-				$('#btn1').button().on('click', function() {
-					alert('btn1 click');
+				$('#btn1').button({
+					icon:'ui-icon-gear'
+					/* 없음, top, bottom, end */
+					/* iconPosition:'end' */
 				});
 				
-				$('#btn2').button().on('click', function() {
+				// 메서드 체이닝
+				$('#btn2').button({
+					icon: 'ui-icon-flag',
+					/* 내용이 사라짐 */
+					showLabel: false
+				}).on('click', function() {
 					alert('btn2 click');
 				});
 			});
