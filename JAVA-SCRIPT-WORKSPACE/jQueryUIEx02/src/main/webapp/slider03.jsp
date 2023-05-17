@@ -13,33 +13,26 @@
 		<script type="text/javascript" src="./js/jquery-ui.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#progressbar').progressbar({
-					value : 50
+				$('#slider').slider({
+					range: true,
+					min: 0,
+					max: 500,
+					values: [75, 300],
+					slide : function(event, ui) {
+						// console.log(ui.values[0], ' / ', ui.values[1])
+						console.log($(this).slider('values', 0), ' / ', $(this).slider('values', 1));
+					}
 				});
 				
-				$('#btn1').button().on('click', function() {
-					const value = $('#progressbar').progressbar('value');
-					
-					
-					$('#progressbar').progressbar('value', value + 10);
-					
-					console.log(value);
-				});
-				
-				$('#btn2').button().on('click', function() {
-					const value = $('#progressbar').progressbar('value');
-					
-					$('#progressbar').progressbar('value', value - 10);
-					
-					console.log(value);
+				$('#btn').button().on('click', function() {
+					console.log($('#slider').slider('value'));
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<div id="progressbar"></div>
+		<div id="slider"></div>
 		<br><hr><br>
-		<button id="btn1">증가(+10)</button>
-		<button id="btn2">증가(-10)</button>
+		<button id="btn">값 확인</button>
 	</body>
 </html>
