@@ -16,14 +16,59 @@
 		   $('#sido').selectmenu({
 			   width: 150,
 			   change: function() {
-				   
+				   $.ajax({
+					  // url: './data/gugun.jsp?sido=' + $('#sido').val(),
+					  url: './data/gugun.jsp',
+					  type: 'get',
+					  data: {
+						  sido: $('#sido').val()
+					  },
+					  dataType: 'xml',
+					  success: function(xml) {
+						  $('#gugun').empty();
+						  
+						  $('#gugun').html('<option disabled="disabled" selected="selected">구군 선택</option>');
+						  $(xml).find('gugun').each(function() {
+							  $('#gugun').append('<option>' + $(this).text() + '</option>');
+						  });
+						  
+						  $('#gugun').selectmenu('refresh');
+					  },
+					  
+					  error: function(e) {
+						  alert('[Error] : ' + e.status);
+					  }
+				   });
 			   }
 		   });
 		   
 		   $('#gugun').selectmenu({
 			   width: 150,
 			   change: function() {
-				   
+				   $.ajax({
+					  // url: './data/gugun.jsp?sido=' + $('#sido').val(),
+					  url: './data/dong.jsp',
+					  type: 'get',
+					  data: {
+						  sido: $('#sido').val(),
+						  gugun: $('#gugun').val()
+					  },
+					  dataType: 'xml',
+					  success: function(xml) {
+						  $('#dong').empty();
+						  
+						  $('#dong').html('<option disabled="disabled" selected="selected">동 선택</option>');
+						  $(xml).find('dong').each(function() {
+							  $('#dong').append('<option>' + $(this).text() + '</option>');
+						  });
+						  
+						  $('#dong').selectmenu('refresh');
+					  },
+					  
+					  error: function(e) {
+						  alert('[Error] : ' + e.status);
+					  }
+				   });
 			   }
 		   });
 		   
@@ -44,7 +89,8 @@
 				  $('#sido').html('<option disabled="disabled" selected="selected">시도 선택</option>');
 				  $(xml).find('sido').each(function() {
 					  $('#sido').append('<option>' + $(this).text() + '</option>');
-				  }
+					 
+				  });
 			  },
 			  
 			  error: function(e) {
