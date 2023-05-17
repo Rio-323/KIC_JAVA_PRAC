@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
-		<link rel="stylesheet" href="./css/base/jquery-ui.css">
+		<link rel="stylesheet" href="./css/cupertino/jquery-ui.css">
 		<style type="text/css">
 			body {font-size: 80%;}
 		</style>
@@ -13,17 +13,13 @@
 		<script type="text/javascript" src="./js/jquery-ui.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('input[type="checkbox"]').checkboxradio();
+				$('#progressbar').progressbar({
+					value : 50
+				});
 			});
 		</script>
 	</head>
 	<body>
-		<fieldset>
-			<legend>Hotel Ratings</legend>
-			<label for="cb1">2 Star</label><input type="checkbox" id="cb1">
-			<label for="cb2">3 Star</label><input type="checkbox" id="cb2">
-			<label for="cb3">4 Star</label><input type="checkbox" id="cb3">
-			<label for="cb4">5 Star</label><input type="checkbox" id="cb4">
-		</fieldset>
+		<div id="progressbar"></div>
 	</body>
 </html>

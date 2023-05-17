@@ -13,17 +13,23 @@
 		<script type="text/javascript" src="./js/jquery-ui.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('input[type="checkbox"]').checkboxradio();
+				$('input[type="radio"]').checkboxradio({
+					/* toggle button */
+					icon: false
+				// }).on('click', function() {
+				 }).on('change', function() {
+					console.log('radio change');
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<fieldset>
 			<legend>Hotel Ratings</legend>
-			<label for="cb1">2 Star</label><input type="checkbox" id="cb1">
-			<label for="cb2">3 Star</label><input type="checkbox" id="cb2">
-			<label for="cb3">4 Star</label><input type="checkbox" id="cb3">
-			<label for="cb4">5 Star</label><input type="checkbox" id="cb4">
+			<label for="cb1">2 Star</label><input type="radio" name="r" id="cb1">
+			<label for="cb2">3 Star</label><input type="radio" name="r" id="cb2">
+			<label for="cb3">4 Star</label><input type="radio" name="r" id="cb3">
+			<label for="cb4">5 Star</label><input type="radio" name="r" id="cb4">
 		</fieldset>
 	</body>
 </html>
