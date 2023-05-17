@@ -13,7 +13,13 @@
 		<script type="text/javascript" src="./js/jquery-ui.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function() {
-		   $('#files').selectmenu();
+		   $('#files').selectmenu({
+			   width: 500,
+			   change: function() {
+				   console.log($(this).val());
+				   console.log($('option:selected', this).text());
+			   }
+		   });
 		});
 		</script>
 	</head>
