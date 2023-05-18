@@ -66,7 +66,23 @@
 					},
 					dataType: 'xml',
 					success: function(xml) {
-						console.log($(xml).find('flag').text());
+						// console.log($(xml).find('flag').text());
+						
+						if($(xml).find('flag').text() == 0) {
+							alert('입력 완료');
+							
+							listServer();
+							
+							$( '#w_name' ).val('');
+							$( '#w_password' ).val(''); 
+							$( '#w_email' ).val(''); 
+							$( '#w_address' ).val('');
+							
+							
+							$('#write-form').dialog('close');
+						} else {
+							alert("[Error] : " + $(xml).find('flag').text());
+						}
 					},
 					error: function(e) {
 						alert('[Error] : ' + e.status);
@@ -82,6 +98,8 @@
 					success: function(xml) {
 						let result = '';
 						//
+						$( '#users tbody' ).empty();
+						
 						$(xml).find('user').each(function() {
 							let seq = $(this).find('seq').text();
 							let name = $(this).find('name').text();
@@ -138,13 +156,13 @@
 		 	<form>
 				<fieldset>
 					<label for="w_name">Name</label>
-					<input type="text" id="w_name" value="홍길동" class="text ui-widget-content ui-corner-all" />
+					<input type="text" id="w_name" value="" class="text ui-widget-content ui-corner-all" />
 					<label for="w_password">Password</label>
-					<input type="password" id="w_password" value="1234" class="text ui-widget-content ui-corner-all" />
+					<input type="password" id="w_password" value="" class="text ui-widget-content ui-corner-all" />
 					<label for="w_email">Email</label>
-					<input type="text" id="w_email" value="test@test.com" class="text ui-widget-content ui-corner-all" />
+					<input type="text" id="w_email" value="" class="text ui-widget-content ui-corner-all" />
 					<label for="w_address">Address</label>
-					<input type="text" id="w_address" value="서울시 서초구" class="text ui-widget-content ui-corner-all" />
+					<input type="text" id="w_address" value="" class="text ui-widget-content ui-corner-all" />
 					<input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
 				</fieldset>
 			</form>
