@@ -112,8 +112,8 @@
 							result += '<td>' + email + '</td>';
 							result += '<td>' + address + '</td>';
 							result += '  <td>';
-							result += '  <button>수정</button>';
-							result += '	 <button>삭제</button>';
+							result += '  <button onclick="modifyBtn('+ $(this).find('seq'),text() + ')">수정</button>';
+							result += '	 <button onclick="deleteBtn('+ $(this).find('seq'),text() + ')">삭제</button>';
 							result += '  </td>';
 							result += '</tr>';
 					    });
