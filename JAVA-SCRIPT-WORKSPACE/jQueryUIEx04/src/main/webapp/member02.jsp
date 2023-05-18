@@ -167,6 +167,37 @@
 				</fieldset>
 			</form>
 		</div>
+		
+		<div id="delete-form" title="Delete user">
+		 	<form>
+				<fieldset>
+					<label for="d_seq">Seq</label>
+					<input type="text" id="d_seq" class="text ui-widget-content ui-corner-all" readonly="readonly" />
+					<label for="d_password">Password</label>
+					<input type="password" id="d_password" class="text ui-widget-content ui-corner-all" />
+					<input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="modify-form" title="Modify user">
+		 	<form>
+				<fieldset>
+					<label for="m_seq">Seq</label>
+					<input type="text" id="m_seq" class="text ui-widget-content ui-corner-all" readonly="readonly" />
+					<label for="m_name">Name</label>
+					<input type="text" id="m_name" class="text ui-widget-content ui-corner-all" readonly="readonly" />
+					<label for="m_password">Password</label>
+					<input type="password" id="m_password" class="text ui-widget-content ui-corner-all" />
+					<label for="m_email">Email</label>
+					<input type="text" id="m_email" class="text ui-widget-content ui-corner-all" />
+					<label for="m_address">Address</label>
+					<input type="text" id="m_address" class="text ui-widget-content ui-corner-all" />
+					<input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
+				</fieldset>
+			</form>
+		</div>
+		
 	
 	</body>
 </html>
