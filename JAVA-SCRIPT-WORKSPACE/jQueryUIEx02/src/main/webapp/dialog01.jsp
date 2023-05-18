@@ -23,7 +23,35 @@
 				
 				// $('#dialog').dialog();
 				$('#dialog').dialog({
-					autoOpen: false
+					autoOpen: false,
+					modal: true,
+					
+					width: 500,
+					height: 300,
+					
+					resizable: false,
+					
+					buttons: {
+						'취소' : function() {
+							// alert('취소');
+							$(this).dialog('close');
+						},
+						
+						'확인' : function() {
+							// alert('확인');
+							$(this).dialog('close');
+						}
+					},
+				
+					show: {
+						effect: 'blind',
+						duration: 1000
+					},
+					
+					hide: {
+						effect: 'explode',
+						duration: 1000
+					}
 				});
 				
 				$('#btn2').button().on('click', function() {
