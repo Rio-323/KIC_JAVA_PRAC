@@ -14,12 +14,21 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#datepicker1').datepicker();
+				$('#datepicker2').datepicker();
 			});
 		</script>
 	</head>
 	<body>
 		<div>
 			Date : <input type="text" id="datepicker1" readonly="readonly">
+		</div>
+		<br><br>
+		<div>
+			Date : <input type="date">
+		</div>
+		
+		<div>
+			Date : <div id="datepicker2"></div>
 		</div>
 	</body>
 </html>
