@@ -61,37 +61,37 @@ public class MemberDAO {
 		return lists;
 	}
 	
-//	public ArrayList<ZipcodeTO> gugunList(String strSido) {
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//	       
-//		ArrayList<ZipcodeTO> lists = new ArrayList<>();
-//	       
-//		try {
-//			conn = this.dataSource.getConnection();
-//	       
-//			String sql = "select distinct gugun from zipcode where sido=?";
-//			pstmt = conn.prepareStatement( sql );
-//			pstmt.setString( 1, strSido );
-//	           
-//			rs = pstmt.executeQuery();
-//			while( rs.next() ) {
-//				ZipcodeTO to = new ZipcodeTO();
-//				to.setGugun( rs.getString( "gugun" ) );
-//	               
-//				lists.add( to );
-//			}
-//		} catch( SQLException e ) {
-//			System.out.println( e.getMessage() );
-//		} finally {
-//			if( rs != null ) try { rs.close(); } catch( SQLException e ) {}
-//			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
-//			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
-//		}
-//		return lists;
-//	}
-//	
+	public int userWrite(MemberTO to) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		int flag = 1;
+	       
+		try {
+			conn = this.dataSource.getConnection();
+	       
+			String sql = "insert into users values (0, ?, ?, ?, ?, now())";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, to.getName() );
+			pstmt.setString( 2, to.getPassword() );
+			pstmt.setString( 3, to.getEmail() );
+			pstmt.setString( 4, to.getAddress() );
+	           
+			int result = pstmt.executeUpdate();
+			
+			if(result == 1) {
+				flag = 0;
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( e.getMessage() );
+		} finally {
+			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
+			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
+		}
+		return flag;
+	}
+	
 //	public ArrayList<ZipcodeTO> dongList(String strSido, String strGugun) {
 //		Connection conn = null;
 //		PreparedStatement pstmt = null;
