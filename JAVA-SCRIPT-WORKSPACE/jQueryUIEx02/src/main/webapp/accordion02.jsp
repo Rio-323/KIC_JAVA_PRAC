@@ -25,11 +25,17 @@
 					$('#accordion').append(html);
 					$('#accordion').accordion('refresh');
 				});
+				
+				$('#btn2').button().on('click', function() {
+					// console.log($('#accordion').accordion('option', 'active'));
+					$('#accordion').accordion('option', 'active', 2);
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<button id="btn1">데이터 추가</button>
+		<button id="btn2">데이터 선택</button>
 		<br><hr><br>
 	
 		<div id="accordion">
