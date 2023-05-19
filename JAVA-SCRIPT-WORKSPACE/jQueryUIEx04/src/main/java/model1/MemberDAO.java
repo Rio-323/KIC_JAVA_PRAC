@@ -101,12 +101,12 @@ public class MemberDAO {
 		try {
 			conn = this.dataSource.getConnection();
 	       
-			String sql = "update users set password = ?, email = ?, address = ? where seq = ?";
+			String sql = "update users set email = ?, address = ? where seq = ? and password = ?";
 			pstmt = conn.prepareStatement( sql );
-			pstmt.setString( 1, to.getPassword() );
-			pstmt.setString( 2, to.getEmail() );
-			pstmt.setString( 3, to.getAddress() );
-			pstmt.setString( 4, to.getSeq() );
+			pstmt.setString( 1, to.getEmail() );
+			pstmt.setString( 2, to.getAddress() );
+			pstmt.setString( 3, to.getSeq() );
+			pstmt.setString( 4, to.getPassword() );
 	           
 			int result = pstmt.executeUpdate();
 			
@@ -124,43 +124,36 @@ public class MemberDAO {
 		}
 		return flag;
 	}
-//
-//	public ArrayList<ZipcodeTO> addressList(String strSido, String strGugun, String strDong) {
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//	       
-//		ArrayList<ZipcodeTO> lists = new ArrayList<>();
-//	       
-//		try {
-//			conn = this.dataSource.getConnection();
-//	       
-//			String sql = "select zipcode, sido, gugun, dong, ri, bunji from zipcode where sido = ? and gugun = ? and dong = ?";
-//			pstmt = conn.prepareStatement( sql );
-//			pstmt.setString( 1, strSido );
-//			pstmt.setString( 2, strGugun );
-//			pstmt.setString( 3, strDong );
-//	           
-//			rs = pstmt.executeQuery();
-//			while( rs.next() ) {
-//				ZipcodeTO to = new ZipcodeTO();
-//				to.setZipcode( rs.getString( "zipcode" ) );
-//				to.setSido( rs.getString( "sido" ) );
-//				to.setGugun( rs.getString( "gugun" ) );
-//				to.setDong( rs.getString( "dong" ) );
-//				to.setRi( rs.getString( "ri" ) );
-//				to.setBunji( rs.getString( "bunji" ) );
-//	               
-//				lists.add( to );
-//			}
-//		} catch( SQLException e ) {
-//			System.out.println( e.getMessage() );
-//		} finally {
-//			if( rs != null ) try { rs.close(); } catch( SQLException e ) {}
-//			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
-//			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
-//		}
-//		return lists;
-//	}
+	
+	public int userDelete(MemberTO to) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		int flag = 2;
+	       
+		try {
+			conn = this.dataSource.getConnection();
+	       
+			String sql = "delete from users where seq = ? and password = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, to.getSeq() );
+			pstmt.setString( 2, to.getPassword() );
+	           
+			int result = pstmt.executeUpdate();
+			
+			if(result == 0) {
+				flag = 1;
+			} else if(result == 1) {
+				flag = 0;
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( e.getMessage() );
+		} finally {
+			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
+			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
+		}
+		return flag;
+	}
 
 }

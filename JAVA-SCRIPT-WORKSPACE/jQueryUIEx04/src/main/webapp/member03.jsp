@@ -55,7 +55,8 @@
 							$( this ).dialog( 'close' );
 						},
 						'삭제': function() {
-							
+							deleteServer($( '#d_seq' ).val(), 
+									$( '#d_password' ).val());
 						}
 					}
 				});
@@ -71,7 +72,10 @@
 							$( this ).dialog( 'close' );
 						},
 						'수정': function() {
-							
+							modifyServer($( '#m_email' ).val(), 
+									$( '#m_address' ).val(), 
+									$( '#m_seq' ).val(), 
+									$( '#m_password' ).val());
 						}
 					}
 				});
@@ -167,11 +171,52 @@
 				// name / email / address
 				// 1.서버
 				// 2. html 파싱
-				console.log($('tbody > tr > td:contains(1)').parent().children().eq(1).text());
-				console.log($('tbody > tr > td:contains(1)').parent().children().eq(2).text());
-				console.log($('tbody > tr > td:contains(1)').parent().children().eq(3).text());
+				
+				let name = $('tbody > tr > td:contains(' + seq + ')').parent().children().eq(1).text();
+				let email = $('tbody > tr > td:contains(' + seq + ')').parent().children().eq(2).text();
+				let address = $('tbody > tr > td:contains(' + seq + ')').parent().children().eq(3).text();
+				
+				$('#m_name').val(name);
+				$('#m_email').val(email);
+				$('#m_address').val(address);
 				
 				$('#modify-form').dialog('open');
+			};
+			
+			
+			const modifyServer = function(email, address, seq, password) {
+				$.ajax({
+					url:'./data/user_modify.jsp',
+					type: 'get',
+					data: {
+						email: email,
+						address: address,
+						seq: seq,
+						password: password
+					},
+					dataType: 'xml',
+					success: function(xml) {
+						// console.log($(xml).find('flag').text());
+						
+						if($(xml).find('flag').text() == 0) {
+							alert('수정 완료');
+							
+							listServer();
+							
+							
+							$( '#m_password' ).val(''); 
+							
+							$('#modify-form').dialog('close');
+						} else {
+							alert("[Error] : " + $(xml).find('flag').text());
+							$( '#m_password' ).val('');
+						}
+					},
+					error: function(e) {
+						alert('[Error] : ' + e.status);
+						$( '#m_password' ).val('');
+					}
+				});
 			};
 			
 			const deleteBtn = function(seq) {
@@ -180,6 +225,40 @@
 				$('#d_seq').val(seq);
 				$('#delete-form').dialog('open');
 			};
+			
+			const deleteServer = function(seq, password) {
+				$.ajax({
+					url:'./data/user_delete.jsp',
+					type: 'get',
+					data: {
+						seq: seq,
+						password: password
+					},
+					dataType: 'xml',
+					success: function(xml) {
+					
+						if($(xml).find('flag').text() == 0) {
+							alert('삭제 완료');
+							
+							listServer();
+						
+							$( '#d_password' ).val(''); 
+							console.log($( '#d_password' ).val());
+							
+							$('#delete-form').dialog('close');
+						} else {
+							alert("[Error] : " + $(xml).find('flag').text());
+							$( '#d_password' ).val('');
+						}
+					},
+					error: function(e) {
+						alert('[Error] : ' + e.status);
+						$( '#d_password' ).val('');
+					}
+				});
+			};
+			
+			
 		</script>
 		</head>
 	<body>
