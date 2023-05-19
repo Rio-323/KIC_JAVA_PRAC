@@ -8,16 +8,29 @@
 		<link rel="stylesheet" href="./css/base/jquery-ui.css">
 		<style type="text/css">
 			body {font-size: 80%;}
+			.ui-tabs{width: 80%;}
 		</style>
 		<script type="text/javascript" src="./js/jquery-3.7.0.js"></script>
 		<script type="text/javascript" src="./js/jquery-ui.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#tabs').tabs();
+				$('#tabs').tabs({
+					event: "mouseover"
+				});
+				$('#btn1').button().on('click', function() {
+					$('#tabs > ul').append('<li><a href="#tabs-4">etc</a></li>');
+					$('#tabs').append('<div id="tabs-4"><p>내용 구문</p></div');
+					
+					$('#tabs').tabs('refresh');
+				});
 			});
 		</script>
 	</head>
 	<body>
+	
+		<button id="btn1">추가</button>
+		<br><hr><br>
+		
 		<div id="tabs">
 		  <ul>
 		    <li><a href="#tabs-1">Nunc tincidunt</a></li>
