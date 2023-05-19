@@ -92,37 +92,38 @@ public class MemberDAO {
 		return flag;
 	}
 	
-//	public ArrayList<ZipcodeTO> dongList(String strSido, String strGugun) {
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//	       
-//		ArrayList<ZipcodeTO> lists = new ArrayList<>();
-//	       
-//		try {
-//			conn = this.dataSource.getConnection();
-//	       
-//			String sql = "select distinct dong from zipcode where sido = ? and gugun = ?";
-//			pstmt = conn.prepareStatement( sql );
-//			pstmt.setString( 1, strSido );
-//			pstmt.setString( 2, strGugun );
-//	           
-//			rs = pstmt.executeQuery();
-//			while( rs.next() ) {
-//				ZipcodeTO to = new ZipcodeTO();
-//				to.setDong( rs.getString( "dong" ) );
-//	               
-//				lists.add( to );
-//			}
-//		} catch( SQLException e ) {
-//			System.out.println( e.getMessage() );
-//		} finally {
-//			if( rs != null ) try { rs.close(); } catch( SQLException e ) {}
-//			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
-//			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
-//		}
-//		return lists;
-//	}
+	public int userModify(MemberTO to) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		int flag = 2;
+	       
+		try {
+			conn = this.dataSource.getConnection();
+	       
+			String sql = "update users set password = ?, email = ?, address = ? where seq = ?";
+			pstmt = conn.prepareStatement( sql );
+			pstmt.setString( 1, to.getPassword() );
+			pstmt.setString( 2, to.getEmail() );
+			pstmt.setString( 3, to.getAddress() );
+			pstmt.setString( 4, to.getSeq() );
+	           
+			int result = pstmt.executeUpdate();
+			
+			if(result == 0) {
+				flag = 1;
+			} else if(result == 1) {
+				flag = 0;
+			}
+			
+		} catch( SQLException e ) {
+			System.out.println( e.getMessage() );
+		} finally {
+			if( pstmt != null ) try { pstmt.close(); } catch( SQLException e ) {}
+			if( conn != null ) try { conn.close(); } catch( SQLException e ) {}
+		}
+		return flag;
+	}
 //
 //	public ArrayList<ZipcodeTO> addressList(String strSido, String strGugun, String strDong) {
 //		Connection conn = null;
