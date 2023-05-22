@@ -18,23 +18,9 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<!-- 균등 분할 -->
-				<div class="col-4" style="background-color: Lavender">.col</div>
-				<div class="col-4" style="background-color: orange">.col</div>
-				<div class="col-4" style="background-color: Lavender">.col</div>
-			</div>
-			
-			<div class="row">
-				<!-- 열 -> 행 --> 
-				<div class="col-sm-4" style="background-color: Lavender">.col</div>
-				<div class="col-sm-4" style="background-color: orange">.col</div>
-				<div class="col-sm-4" style="background-color: Lavender">.col</div>
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-3" style="background-color: Lavender">.col</div>
-				<div class="col-sm-9" style="background-color: orange">.col</div>
+				<div class="col-sm-3 col-md-6 col-lg-4" style="background-color: Lavender">.col</div>
+				<div class="col-sm-9 col-md-6 col-lg-8" style="background-color: orange">.col</div>
 			</div>
 			
 		</div>
