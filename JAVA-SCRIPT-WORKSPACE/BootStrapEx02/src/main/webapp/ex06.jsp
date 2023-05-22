@@ -17,12 +17,24 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row">
-				
-				<div class="col-sm-3 col-md-6 col-lg-4" style="background-color: Lavender">.col</div>
-				<div class="col-sm-9 col-md-6 col-lg-8 " style="background-color: orange">.col</div>
-			</div>
+			<h1>heading</h1>
+			<h2>heading</h2>
+			<h3>heading</h3>
+			<h4>heading</h4>
+			<h5>heading</h5>
+			<h6>heading</h6>
 			
+			<p class="h1">heading</p>
+			<p class="h2">heading</p>
+			<p class="h3">heading</p>
+			<p class="h4">heading</p>
+			
+			<h1 class="display-1">heading</h1>
+			<h1 class="display-2">heading</h1>
+			<h1 class="display-3">heading</h1>
+			
+			<p>heading</p>
+			<p class="small">heading</p>
 		</div>
 	</body>
 </html>
