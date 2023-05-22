@@ -17,6 +17,12 @@
 		<script type="text/javascript" src="./js/w2ui-2.0.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+				const data =  [
+						{recid: 1, title: '모던 웹을 위한 HTML5 + CSS3 입문', author: '유비', publisher: '삼국미디어', price: 3000},
+						{recid: 2, title: '모던 웹을 위한 JavaScript + JQuery 입문', author: '관우', publisher: '삼국미디어', price: 3000},
+						{recid: 3, title: '모던 웹을 위한 Node.js 프로그래밍 입문', author: '장비', publisher: '삼국미디어', price: 3000}
+					];
+				
 				$('#wrap').w2grid({
 					name: 'grid',
 					columns: [
@@ -25,9 +31,7 @@
 						{field: 'publisher', text: '출판사'},
 						{field: 'price', text: '가격'}
 					],
-					records: [
-						{recid: 1, title: '모던 웹을 위한 HTML5 + CSS3 입문', author: '유비', publisher: '삼국미디어', price: 3000}
-					]
+					records: data
 				});
 			});
 		</script>
