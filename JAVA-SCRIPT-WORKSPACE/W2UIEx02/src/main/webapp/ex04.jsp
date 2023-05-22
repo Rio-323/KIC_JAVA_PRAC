@@ -51,7 +51,15 @@
 						this.add(
 							{recid: this.total + 1, title: '모던 웹을 위한 HTML5 + CSS3 입문', author: '조자룡', publisher: '삼국미디어', price: 3000},
 						);
+					},
+					onDelete: function(target, event) {
+						 console.log('Delete Click');
+						 
+						 console.log(this.getSelection());
+						 
+						 event.preventDefault();
 					}
+					
 				});
 			});
 		</script>
