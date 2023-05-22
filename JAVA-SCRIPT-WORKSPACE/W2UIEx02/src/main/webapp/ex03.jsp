@@ -25,11 +25,23 @@
 				
 				$('#wrap').w2grid({
 					name: 'grid',
+					show: {
+						header: true,
+						toolbar: true,
+						footer: true,
+						
+						columnHeader: true,
+						lineNumbers: true,
+						
+						toolbarAdd: true,
+						toolbarDelete: true,
+						toolbarSave: true
+					},
 					columns: [
-						{field: 'title', text: '도서명', size: '40%', editable: {type: 'text'}},
-						{field: 'author', text: '저자', size: '30%', editable: {type: 'text'}},
-						{field: 'publisher', text: '출판사', size: '20%', editable: {type: 'text'}},
-						{field: 'price', text: '가격', size: '10%', editable: {type: 'text'}}
+						{field: 'title', text: '도서명', size: '40%'},
+						{field: 'author', text: '저자', size: '30%'},
+						{field: 'publisher', text: '출판사', size: '20%'},
+						{field: 'price', text: '가격', size: '10%'}
 					],
 					records: data
 				});
