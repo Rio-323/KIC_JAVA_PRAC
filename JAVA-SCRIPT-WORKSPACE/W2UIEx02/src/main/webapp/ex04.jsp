@@ -35,7 +35,11 @@
 						
 						toolbarAdd: true,
 						toolbarDelete: true,
-						toolbarSave: true
+						toolbarSave: true,
+						
+						// 기본 : true
+						// toolbarSearch: false,
+						// toolbarReload: false
 					},
 					columns: [
 						{field: 'title', text: '도서명', size: '40%'},
@@ -57,7 +61,14 @@
 						 
 						 console.log(this.getSelection());
 						 
-						 event.preventDefault();
+						 event.preventDefault(); // 기본적인 실행을 막아줌.
+					},
+					onSearch: function(target, event) {
+						 console.log('Search Click');
+						
+					},
+					onReload: function() {
+						 console.log('Reload Click');
 					}
 					
 				});
