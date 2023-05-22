@@ -1,0 +1,24 @@
+Inserts <span class="argument">tab</span> into DOM before tab with <span class="argument">id</span>
+
+<div class="definition">
+    animateInsert(id, tab)
+</div>
+
+<div class="arguments">
+    <table>
+    <tr>
+        <td>id</td>
+        <td><b>string</b>, id of the tab to insert before</td>
+    </tr>
+    <tr>
+        <td>tab</td>
+        <td><b>Object</b>, tab object</td>
+    </tr>
+    </table>
+</div>
+
+Returns <i>promise</i>.
+
+<h4>Description</h4>
+
+This method is called internally to insert tab into DOM. It only inserts it into DOM, it does not insert into <span class="argument">.tabs</span> array. It is an internal method, but you can overwrite it for custom functionality.

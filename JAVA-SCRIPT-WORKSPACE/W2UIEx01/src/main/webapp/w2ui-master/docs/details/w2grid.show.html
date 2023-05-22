@@ -1,0 +1,79 @@
+Map of indicators which elements of the grid are visible.
+
+<div class="definition">
+    Object, default - see below
+</div>
+
+Some grid elements are shown by default, for example column headers, but most of them are hidden. You can set them during
+the object creation:
+
+<textarea class="javascript">
+let grid = new w2grid({
+    name: 'grid',
+    show {
+        header  : true,
+        footer  : true,
+        toolbar : true
+    },
+    columns: [
+        { field: 'recid', text: 'ID', size: '50px' },
+        { field: 'lname', text: 'Last Name', size: '30%' },
+        { field: 'fname', text: 'First Name', size: '30%' },
+        { field: 'email', text: 'Email', size: '40%' },
+        { field: 'sdate', text: 'End Date', size: '120px' }
+    ],
+    records: [
+        { recid: 1, fname: 'John', lname: 'doe', email: 'vitali@gmail.com', sdate: '1/3/2012' },
+        { recid: 2, fname: 'Stuart', lname: 'Motzart', email: 'jdoe@gmail.com', sdate: '2/4/2012' },
+        { recid: 3, fname: 'Jin', lname: 'Franson', email: 'jdoe@gmail.com', sdate: '4/23/2012' },
+        { recid: 4, fname: 'Susan', lname: 'Ottie', email: 'jdoe@gmail.com', sdate: '5/3/2012' },
+        { recid: 5, fname: 'Kelly', lname: 'Silver', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+        { recid: 6, fname: 'Francis', lname: 'Gatos', email: 'vitali@gmail.com', sdate: '2/5/2012' }
+    ]
+});
+</textarea>
+
+Or any time during run-time. You will need to call <a class="argument" href="w2grid.refresh">.refresh()</a> method to refresh on the screen.
+<textarea class="javascript">
+w2ui.grid.show.header = false;
+w2ui.grid.refresh();
+</textarea>
+
+The map and its default values are:
+<textarea class="javascript">
+show = {
+    header           : false,  // show/hide header
+    toolbar          : false,  // show/hide toolbar
+    footer           : false,  // show/hide footer
+    columnMenu       : true,   // context menu on columns (to show/hide columns, etc)
+    columnHeaders    : true,   // show/hide columns
+    lineNumbers      : false,  // show/hide line numbers column
+    orderColumn      : false,  // show/hide order records column
+    expandColumn     : false,  // show/hide expand column
+    selectColumn     : false,  // show/hide select column
+    emptyRecords     : true,   // show/hide empty records
+    selectionBorder  : true,   // display border around selection (for selectType = 'cell')
+    recordTitles     : true,   // indicates if to define titles for records
+    searchAll        : true,   // indiccates if to enable search by all fields
+    searchHiddenMsg  : false,  // show tooltip message for search fields that are hidden or non-existant
+    searchLogic      : true,   // search logic drop down in advanced menu dialog
+    searchSave       : true,   // save search button (saved to local storage)
+    skipRecords      : true,   // indicates if skip records should be visible,
+    saveRestoreState : false,  // indicates if "Save/Restore" items are visible
+    toolbarReload    : true,   // show/hide toolbar reload button
+    toolbarColumns   : true,   // show/hide toolbar columns button
+    toolbarSearch    : true,   // show/hide toolbar search controls
+    toolbarInput     : true,   // show/hide to show
+    toolbarAdd       : true,   // show/hide toolbar add new button
+    toolbarEdit      : true,   // show/hide toolbar edit button
+    toolbarDelete    : true,   // show/hide toolbar delete button
+    toolbarSave      : true,   // show/hide toolbar save button
+    statusRange      : true,   // show selection range in status bar
+    statusBuffered   : false,  // show number of buffered records in status bar
+    statusRecordID   : true,   // show selected record id in status bar
+    statusSelection  : true,   // show selection in status bar
+    statusResponse   : true,   // show server response tiem in status bar
+    statusSort       : false,  // show sort time in status bar
+    statusSearch     : false,  // show search time in status bar
+}
+</textarea>

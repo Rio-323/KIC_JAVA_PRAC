@@ -1,0 +1,34 @@
+Array of tab objects.
+
+<div class="definition">
+    Array, default = []
+</div>
+
+This array contains all the tab objects. A tab object has the structure defined in <a class="argument" href="w2tabs.tab_template">.tab_template()</a>
+<div style="height: 10px"></div>
+
+You can defined tabs during object creation:
+<textarea class="javascript">
+let tabs = new w2tabs({
+    name: 'tabs',
+    tabs: [
+        { id: 'tab1', text: 'Tab 1' },
+        { id: 'tab2', text: 'Tab 2' },
+        { id: 'tab3', text: 'Tab 3' },
+        { id: 'tab4', text: 'Tab 4' }
+    ]
+});
+</textarea>
+
+Or any time during run-time:
+<textarea class="javascript">
+w2ui.tabs.tabs.push({ id: 'tab4', text: 'Tab 4' });
+w2ui.tabs.refresh();
+</textarea>
+
+If you change this array you will need to call <a class="argument" href="w2tabs.refresh">.refresh()</a> method to update tabs on the screen. To
+change tabs dynamically, you can also use
+<a class="argument" href="w2tabs.add">.add()</a>,
+<a class="argument" href="w2tabs.insert">.insert()</a>,
+<a class="argument" href="w2tabs.remove">.remove()</a>,
+<a class="argument" href="w2tabs.set">.set()</a> methods.

@@ -1,0 +1,31 @@
+Array of node objects.
+
+<div class="definition">
+    Array, default = []
+</div>
+
+This array contains all the node objects of the sidebar. Each node object may in turn contain other nodes thus allowing unlimited
+nestedness. A node object has the structure defined in <a href="w2sidebar.node_template" class="method">.node_template</a>
+<div style="height: 10px"></div>
+
+You can define nodes during object creation:
+<textarea class="javascript">
+let sidebar = new w2sidebar({
+    name : 'sidebar',
+    img  : 'icon-page',
+    nodes: [
+        { id: 'id-1', text: 'Level 1' },
+        { id: 'id-2', text: 'Level 2' },
+        { id: 'id-3', text: 'Level 3' }
+    ]
+});
+</textarea>
+
+You should not change nodes directly during run-time. If you do change them you will need to call <a class="method" href="w2sidebar.refresh">.refresh()</a>
+method to update it on the screen (you might also need to set <span class="property">parent</span>, <span class="property">sidebar</span>
+properties of the nodes).
+<div style="height: 10px;"></div>
+
+Use <a class="method" href="w2sidebar.add">.add()</a>, <a class="method" href="w2sidebar.insert">.insert()</a>,
+<a class="method" href="w2sidebar.set">.set()</a>, <a class="method" href="w2sidebar.remove">.remove()</a> methods to change
+nodes dynamically.

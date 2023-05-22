@@ -1,0 +1,91 @@
+<h3>Popup Overview</h3>
+The w2popup object allows you to create dialogs. A popup can be created in any of the following ways:
+
+<h4>1. JSON structure</h4>
+<textarea class="javascript">
+w2popup.open({
+    title: 'Popup Title HTML',
+    body: 'Body HTML',
+    actions: {
+        Ok(event) {
+           w2popup.close()
+        },
+        Cancel(event) {
+           w2popup.close()
+        }
+    }
+});
+</textarea>
+
+<h4>2. Load from an external file</h4>
+If there is a file "folder/popup.html", with
+<textarea class="html">
+<div id="popup" style="width: 600px; height: 400px; overflow: hidden">
+    <div rel="title">
+        Title
+    </div>
+    <div rel="body">
+        body ...
+    </div>
+    <div rel="buttons">
+        <input type="button" value="Switch to Popup 2" onclick="$('#popup2').w2popup()"/>
+    </div>
+</div>
+</textarea>
+Then
+<textarea class="javascript">
+w2popup.load('folder/popup.html');
+</textarea>
+
+<h4>3. HTML Template</h4>
+<textarea class="html">
+<div id="popup" style="width: 600px; height: 400px; overflow: hidden">
+    <div rel="title">
+        Title
+    </div>
+    <div rel="body">
+        body ...
+    </div>
+    <div rel="buttons">
+        <input type="button" value="Switch to Popup 2" onclick="$('#popup2').w2popup()"/>
+    </div>
+</div>
+<script>
+    $('#popup').w2popup(); // content taken from inner html of #popup
+</script>
+</textarea>
+
+<h3>Options</h3>
+
+You can pass a map of following properties to the constructor of the popup (none of them are required):
+<textarea class="javascript">
+options: {
+    title         : '',        // html for title - empty by default
+    body          : '',        // html for body - empty by default
+    buttons       : '',        // html for buttons - empty by default
+    url           : null,      // url to load content from (see load method)
+    actions       : {},        // object with actions (buttons on the bottom)
+    width         : 500,       // width of the popup
+    height        : 300,       // height of the popup
+    style         : '',        // additional styles
+    color         : '#000',    // color of the screen lock
+    opacity       : 0.4,       // opacity of the screen lock
+    speed         : 0.3,       // speed popup appears
+    modal         : false,     // if modal, it cannot be closed by clicking on the screen lock
+    maximized     : false,     // maximized state
+    keyboard      : true,      // will close popup on ESC if not modal
+    showClose     : true,      // show closed button by default
+    showMax       : false,     // do not show max button by default
+    transition    : null,      // no content transition by default
+    multiple      : false,     // if popup already open, opens as a message
+    openMaximized : false,     // opens the popup maximized
+    // events
+    onOpen        : null,      // event when dialog finished appearing
+    onClose       : null,      // event when closed
+    onMax         : null,      // event when maximized
+    onMin         : null,      // event when minimized
+    onToggle      : null,      // event when maximized/minimized
+    onKeydown     : null       // event when keyboard button is clicked
+    onMove        : null       // event when popup is moved
+}
+</textarea>

@@ -1,0 +1,177 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="../dist/w2ui.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../libs/font-awesome/css/font-awesome.css" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; style-src 'self' 'unsafe-inline';">
+<script type="text/javascript" src="../libs/jquery/jquery-3.5.1.min.js"></script>
+<script type="module" src="../src/w2compat.js?globals"></script>
+<script src="fields.js"></script>
+<body>
+    <div class="corners">
+        <div style="position: absolute; top: 5px; right: 5px; width: 80px; height: 24px; background-color: #efefef; padding: 5px;">
+            <input id="screen1" class="w2ui-input screen" style="width: 80px"/>
+            <input id="screen2" class="w2ui-input screenc" style="width: 80px"/>
+        </div>
+        <div style="position: absolute; bottom: 5px; right: 5px; width: 80px; height: 24px; background-color: #efefef; padding: 5px;">
+            <input id="screen2" class="w2ui-input screen" style="width: 80px"/>
+        </div>
+        <div style="position: absolute; bottom: 5px; left: 5px; width: 80px; height: 24px; background-color: #efefef; padding: 5px;">
+            <input id="screen3" class="w2ui-input screen" style="width: 80px"/>
+            <input id="screen4" class="w2ui-input screenc" style="width: 80px"/>
+        </div>
+    </div>
+    <div class="buttons" style="margin: 20px 0;">
+        <button class="w2ui-btn" data-click="1">Read Only</button>
+        <button class="w2ui-btn" data-click="2">Clear Readonly</button>
+        <button class="w2ui-btn" data-click="3">Disable</button>
+        <button class="w2ui-btn" data-click="4">Enable</button>
+        &#160;&#160;&#160;
+        <button class="w2ui-btn" data-click="5">Reset All</button>
+        &#160;&#160;&#160;
+        <button class="w2ui-btn" data-click="6">Show</button>
+        <button class="w2ui-btn" data-click="7">Hide</button>
+        &#160;&#160;&#160;
+        <button class="w2ui-btn" data-click="8">Show Tag</button>
+        <button class="w2ui-btn" data-click="9">Show Overlay</button>
+    </div>
+    <div id="extra" style="display: none">
+        <div style="border: 1px solid silver; background-color: #eee; width: 50%; padding: 20px; margin-top: 5px; border-radius: 2px">
+            <input id="resize_list" class="w2ui-input" style="width:100%"/>
+            <br/><br/>
+            <input id="resize_enum" class="w2ui-input" style="width:100%"/>
+            <br/><br/>
+            <input id="resize_file" class="w2ui-input" style="width:100%"/>
+        </div>
+        <br/>
+        <br/>
+    </div>
+    <div style="float: left; width: 700px; height: 500px; padding: 5px; border: 1px solid #efefef; background-color: #fff; border-radius: 2px;">
+        <div class="w2ui-field">
+            <label>date:</label>
+            <div>
+                <input class="w2ui-input date" type="text" size="20"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>datetime:</label>
+            <div>
+                <input class="w2ui-input datetime" type="text" size="20"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>date range:</label>
+            <div>
+                <input id="date1" class="w2ui-input"/> - <input id="date2" class="w2ui-input"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>date with blocked weekends:</label>
+            <div>
+                <input class="date-with-blocked-weekends" type="text" size="20"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>time:</label>
+            <div>
+                <input id="time" class="w2ui-input time" type="text" size="10"/>
+            </div>
+        </div>
+         <div class="w2ui-field">
+            <label>time w/o minutes:</label>
+            <div>
+                <input id="time_without_minutes" class="w2ui-input time_without_minutes" type="text" size="20"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>combo:</label>
+            <div>
+                <input id="combo" class="w2ui-input combo" type="text" style="width: 160px" onchange1="console.log('field change', jQuery(this).data('selected'));"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>list:</label>
+            <div>
+                <input id="list" class="w2ui-input list" type="text" style="width: 450px" onchange1="console.log('field change', jQuery(this).data('selected'));" placeholder="list placeholder"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>enum:</label>
+            <div>
+                <input id="enum" class="w2ui-input enum" type="text" style="width: 450px; min-height: 50px;" placeholder="enum placeholder"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>file:</label>
+            <div>
+                <input id="file" class="w2ui-input file" type="text" style="width: 450px; min-height: 50px;" placeholder="file placeholder"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>regular select:</label>
+            <div>
+                <select class="w2ui-input">
+                    <option>value 1</option>
+                    <option>value 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 720px; height: 500px; padding: 5px; border: 1px solid #efefef; background-color: #fff; border-radius: 2px;">
+        <div class="w2ui-field">
+            <label>text:</label>
+            <div>
+                <input type="text" class="w2ui-input" style="width: 300px;"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>color:</label>
+            <div>
+                <input class="w2ui-input color" type="text" style="width: 140px;"
+                    onchange1="console.log('field change: ', this.value)" value="d84"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>textarea:</label>
+            <div>
+                <textarea class="w2ui-input textarea" type="text" style="width: 400px; height: 40px;"></textarea>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>int:</label>
+            <div>
+                <input id="int" class="w2ui-input int" type="text" style="width: 100px;"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>float:</label>
+            <div>
+                <input id="float" class="w2ui-input float" type="text" style="width: 100px"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>percent:</label>
+            <div>
+                <input id="percent" class="w2ui-input percent" type="text" style="width: 100px"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>money:</label>
+            <div>
+                <input id="money" class="w2ui-input money" type="text" style="width: 100px"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>hex:</label>
+            <div>
+                <input id="hex" class="w2ui-input hex" type="text" style="width: 100px"/>
+            </div>
+        </div>
+        <div class="w2ui-field">
+            <label>alpha-numeric:</label>
+            <div>
+                <input id="alphanumeric" class="w2ui-input alphanumeric" type="text" style="width: 100px" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

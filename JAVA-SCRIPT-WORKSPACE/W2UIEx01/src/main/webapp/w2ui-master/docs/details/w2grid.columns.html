@@ -1,0 +1,241 @@
+Array of column objects.
+
+<div class="definition">
+    Array, default = []
+</div>
+
+This array should be defined during the object creation, but it can be changed anytime thereafter.
+If you change the columns array, you will need to call <a class="property" href="w2grid.refresh">.refresh()</a> method to refresh the grid.
+<div style="height: 10px"></div>
+
+During object creation:
+
+<textarea class="javascript">
+let grid = new w2grid({
+    name    : 'grid',
+    columns: [
+        { field: 'recid', text: 'ID', size: '50px' },
+        { field: 'lname', text: 'Last Name', size: '30%' },
+        { field: 'fname', text: 'First Name', size: '30%' },
+        { field: 'email', text: 'Email', size: '40%' },
+        { field: 'sdate', text: 'Start Date', size: '120px' },
+        { field: 'sdate', text: 'End Date', size: '120px' }
+    ]
+});
+</textarea>
+
+Each column is an object with properties listed below:
+<textarea class="javascript">
+column = {
+    text           : '',    // column text (can be a function)
+    field          : '',    // field name to map the column to a record
+    size           : null,  // size of column in px or %
+    min            : 20,    // minimum width of column in px
+    max            : null,  // maximum width of column in px
+    gridMinWidth   : null,  // minimum width of the grid when column is visible
+    sizeCorrected  : null,  // read only, corrected size (see explanation below)
+    sizeCalculated : null,  // read only, size in px (see explanation below)
+    sizeOriginal   : null,  // size as defined
+    sizeType       : null,  // px or %
+    hidden         : false, // indicates if column is hidden
+    sortable       : false, // indicates if column is sortable
+    sortMode       : null,  // sort mode ('default'|'natural'|'i18n') or custom compare function
+    searchable     : false, // bool/string: int,float,date,... or an object to create search field
+    resizable      : true,  // indicates if column is resizable
+    hideable       : true,  // indicates if column can be hidden
+    autoResize     : null,  // indicates if column can be auto-resized by double clicking on the resizer
+    attr           : '',    // string that will be inside the <td ... attr> tag
+    style          : '',    // additional style for the td tag
+    render         : null,  // string or render function
+    title          : null,  // string or function for the title property for the column cells
+    tooltip        : null,  // string for the title property for the column header
+    editable       : {},    // editable object (see explanation below)
+    frozen         : false, // indicates if the column is fixed to the left
+    info           : null,  // info bubble, can be bool/object
+    clipboardCopy  : false, // if true (or string or function), it will display clipboard copy icon
+}
+</textarea>
+
+<h4>Size</h4>
+The size of the column (width) can be in px or %. The size of 10 or the size of '10px' will define the same column width of 10px.
+The size of '10%' will define 10 percent width. You may define some columns in px and some in % for the same grid at the same time. When
+<a class="method" href="w2grid.refresh">.refresh()</a> method is called it will calculate size of all columns in px and store it in
+<span class="property">.sizeCalculated</span> property. First it assigns size to the columns that defined in px, then it will distribute
+the remaining width between the columns defined in %. If total sum of columns defined in percentage will be more then 100, it will correct its values
+and record new size in <span class="property">.sizeCorrected</span>.
+<div style="height: 10px"></div>
+
+<h4>SortMode</h4>
+If set to "natural", a compare function is used that will result in an order that feels more natural to humans. This can be useful for IP addresses,
+or when numbers are used in strings, so that "48" (as a string) comes after "9" (as a string) - whereas the default sorting would put it the other way round.
+<div style="height: 10px"></div>
+If set to "i18n", a compare function is used that takes into account diacritical marks. For example, the letter "ä" would be sorted after "z" in default sort mode,
+while in "i18n" sort mode, the letter "ä" would be sorted between "a" and "b".
+<div style="height: 10px"></div>
+You can also pass a compare function in the same way you would use it as argument for <span class="property">Array.prototype.sort()</span>.
+<div style="height: 10px"></div>
+
+<h4>Render</h4>
+The render <span class="property">function(record, extra)</span> can be used to format the column data.
+If the function is defined then it will be executed for each cell in the column and anything this function returns will be
+used instead of the original column data. The render function will receive two arguments, first is the current record add
+the second is extra information, which is following object.
+
+<textarea class="javascript">
+{
+    self,       // reference to the grid
+    value,      // value it thinks should be there (return from grid.getCellValue())
+    index,      // record index in grid.records array
+    colIndex    // column index in grid.columns array
+}
+</textarea>
+
+The render function can be bound to any object, is it not bound to grid by default. This allows to execute it in the
+diferent context, that is often useful. You will still have reference to the grid in extra.grid property.
+<div style="height: 10px"></div>
+
+The render function can return a primitive value or an object. If it is an object, it will be used for different portions
+of the generated markap. This object has following structure
+<textarea class="javascript">
+{
+    html,
+    attr,
+    style,
+    class,
+    divAttr
+})
+</textarea>
+
+<textarea class="javascript">
+let grid = new w2grid({
+    name    : 'grid',
+    columns: [
+        { field: 'recid', text: 'ID', size: '50px' },
+        { field: 'full-name', text: 'Full Name', size: '60%',
+            render: function (rec, extra) {
+                return '<div>' + rec.fname + ' ' + rec.lname + '</div>';
+            }
+        },
+        { field: 'email', text: 'Email', size: '40%' },
+        { field: 'sdate', text: 'Start Date', size: '120px' },
+        { field: 'sdate', text: 'End Date', size: '120px' }
+    ]
+});
+</textarea>
+
+If render function returns an object, it can be used to add a class and a style to the cell. For example:
+<textarea class="javascript">
+{ field: 'full-name', text: 'Full Name', size: '60%',
+    render: function (rec, extra) {
+        return {
+            html: '<div>' + rec.fname + ' ' + rec.lname + '</div>';
+            style: '1px solid red',
+            class: 'custom-class'
+        }
+    }
+}
+</textarea>
+
+If render property is a string, then it is a formatter function from <a class="argument" href="w2utils.formatters">w2utils.formatters</a>,
+you can add custom formatter functions. Below is the list of predefined formatters:
+<ul>
+    <li><b>age</b> - age in human readable format</li>
+    <li><b>currency</b> - money format</li>
+    <li><b>date:date_format</b> - date, see <a class="argument" href="w2utils.settings">w2utils.settings</a></li>
+    <li><b>datetime:date_format|time_format</b> - date & time, see <a class="argument" href="w2utils.settings">w2utils.settings</a></li>
+    <li><b>float:XX</b> - formatted number, where XX is number digits after comma</li>
+    <li><b>gmt</b> - time in GMT</li>
+    <li><b>int</b> - formatted integer, see <a class="argument" href="w2utils.settings">w2utils.settings</a></li>
+    <li><b>interval</b> - time interval in human readable format</li>
+    <li><b>money</b> - money format, see <a class="argument" href="w2utils.settings">w2utils.settings</a></li>
+    <li><b>number:XX</b>, - formatted number, where XX is number digits after comma</li>
+    <li><b>password</b> - password ****</li>
+    <li><b>percent</b> - formatted percent</li>
+    <li><b>size</b>, - file size in human readable format</li>
+    <li><b>time:time_format</b>, - time, see <a class="argument" href="w2utils.settings">w2utils.settings</a> </li>
+    <li><b>timestamp</b> - timestamp, see <a class="argument" href="w2utils.settings">w2utils.settings</a></li>
+    <li><b>toggle</b> - yes/no text</li>
+</ul>
+You can use them int he following way:
+<textarea class="javascript">
+let grid = new w2grid({
+    name    : 'grid',
+    columns: [
+        { field: 'recid', text: 'ID', size: '50px', render: 'float:2' },
+        { field: 'full-name', text: 'Last Name', size: '60%'    },
+        { field: 'email', text: 'Email', size: '40%' },
+        { field: 'sdate', text: 'Start Date', size: '120px', render: 'date:dd.mm.yyyy' },
+        { field: 'sdate', text: 'End Date', size: '120px', render: 'age' }
+    ]
+});
+</textarea>
+
+<h4>Editable</h4>
+The <i>editable</i> property indicates if column fields are editable.
+If this field is an object, then the record can be edited inline by the user.
+This object is of the following structure:
+<textarea class="javascript">
+editable = {
+    type  : 'text',  // type of the field (see below)
+    attr  : '',      // text that will be inside &gt;input ...&lt; tag
+    text  : '',      // text that will be outside &gt;input ...&lt; tag
+    style : '',
+    ...              // you can pass additional properties to w2field object (for date, enum, etc.)
+}
+</textarea>
+If the <i>editable</i> property is a function, it should return an object as described above. It will get same arguments as
+a render function would.
+<div style="height: 10px"></div>
+
+With this object you can supply other properties that will be passed to <span class="property">$('input').w2field(column.editable)</span> so you can
+use any field type supported by <span class="property">w2field</span> object. The type of the field can be one of the following:
+<ul>
+    <li>text</li>
+    <li>int</li>
+    <li>float</li>
+    <li>hex</li>
+    <li>money</li>
+    <li>currency</li>
+    <li>percent</li>
+    <li>alphanumeric</li>
+    <li>date</li>
+    <li>time</li>
+    <li>datetime</li>
+    <li>color</li>
+    <li>list</li>
+    <li>combo</li>
+    <li>check</li>
+    <li>checkbox</li>
+    <li>select</li>
+</ul>
+
+You can make some of the reocrds not editable, for example:
+<textarea class="javascript">
+{ recid: 1, ... w2ui: { editable: false } }
+</textarea>
+
+<div style="height: 10px"></div>
+See also,
+<ul>
+    <li><a class="argument" href="w2grid.getChanges">.getChanges()</a></li>
+    <li><a class="argument" href="w2grid.save">.save()</a></li>
+</ul>
+
+<h4>Info</h4>
+The <i>info</i> property can be either <i>true</i> or an object with the following structure:
+<textarea class="javascript">
+info = {
+    icon        : null,     // string|function|object, icon used in the cell, default: 'w2ui-icon-info'
+    style       : null,     // string|function|object, style applied to the icon
+    fields      : null,     // Array of field names, or a function that returns an array of field names,
+                            // or an object in the form { 'caption_1': 'field_1', ..., 'caption_N': 'field_N' }
+    render      : null,     // function to render the info bubble, gets passed (record, index, column_index)
+    showEmpty   : false,    // flag to indicate if fields with empty values should be part of the bubble
+    maxLength   : null,     // integer, max length of individual field values, after which they are cut off
+    showOn      : 'click',  // string, e.g. 'mouseover|mouseenter|...',
+    hideOn      : '',       // string, e.g. 'mouseout|mouseleave|...',
+    options     : {},       // options that are passed to the w2tag constructor, e.g. options.position = 'top'
+    ...                     // you can pass additional properties
+}
+</textarea>
+There can only ever be one info bubble visible at a time. By default, the bubble will only show when you click the icon and will hide when you click anywhere else.

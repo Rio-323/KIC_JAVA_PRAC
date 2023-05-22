@@ -1,0 +1,67 @@
+Loads content and renders it inside the panel.
+
+<div class="definition">
+    load(panel, url, [transition])
+</div>
+
+<div class="arguments">
+    <table>
+    <tr>
+        <td>panel</td>
+        <td><b>string</b>, name of the panel</td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td><b>string</b>, server url to load content from</td>
+    </tr>
+    <tr>
+        <td>transition</td>
+        <td><b>string</b>, name of the transition (<i>optional</i>)</td>
+    </tr>
+    </table>
+</div>
+
+Returns <i>promise</i> that is resolved when content is loaded.
+
+<h4>Description</h4>
+
+This method loads content for the panel from the <span class="argument">url</span>. The content should be Text or HTML and should not include JavaScript. The first argument <span class="argument">panel</span> is the name of the panel. It can be one of the following:
+<ul style="margin-left: 50px">
+    <li>top
+    <li>left
+    <li>main
+    <li>right
+    <li>preview
+    <li>bottom
+</ul>
+The second argument <span class="argument">url</span> is the location to load content from.
+You can optionally provide <span class="argument">transition</span> that defines visual transition to the new content.
+The transition is done using <a href="w2utils.transition">w2utils.transition()</a> method and it can be one of the following:
+<ul style="margin-left: 50px">
+    <li>slide-left
+    <li>slide-right
+    <li>slide-up
+    <li>slide-down
+    <li>flip-left
+    <li>flip-right
+    <li>flip-up
+    <li>flip-down
+    <li>pop-in
+    <li>pop-out
+</ul>
+
+Below is an example  how to set content to the layout panel:
+<textarea class="javascript">
+let layout = new w2layout({
+    name: 'layout',
+    panels: [
+        { type: 'top', size: 40 },
+        { type: 'main', html: 'This is main panel' },
+        { type: 'preview', size: 200 }
+    ]
+});
+
+// return current content
+w2ui.layout.load('main', 'http://domain.com/path/to/file', 'slide-left')
+    .then(() => { console.log('Content is loaded')})
+</textarea>

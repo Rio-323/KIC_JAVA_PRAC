@@ -1,0 +1,21 @@
+Calculated md5 hash
+
+<div class="definition">
+    sha256(str)
+</div>
+
+<div class="arguments">
+    <table>
+    <tr>
+        <td>str</td>
+        <td><b>string</b>, string to calculate hash</td>
+    </tr>
+    </table>
+</div>
+
+Returns sha256 hash. It uses browser's crypto modeul that is available in all modern browsers.
+
+<textarea class="javascript">
+var a = await w2utils.sha256('some text');
+console.log(a);
+</textarea>

@@ -1,0 +1,37 @@
+Defines a map of search type to operator type
+
+<div class="definition">
+    Object, default = {...} // see below
+</div>
+
+Each search type should define to one operator type form <span class="property">.opeartors</span> object
+
+<textarea class="javascript">
+operatorsMap = {
+    'text'         : 'text',
+    'int'          : 'number',
+    'float'        : 'number',
+    'money'        : 'number',
+    'currency'     : 'number',
+    'percent'      : 'number',
+    'hex'          : 'hex',
+    'alphanumeric' : 'text',
+    'color'        : 'color',
+    'date'         : 'date',
+    'time'         : 'date',
+    'datetime'     : 'date',
+    'list'         : 'list',
+    'combo'        : 'text',
+    'enum'         : 'enum',
+    'file'         : 'enum',
+    'select'       : 'list',
+    'radio'        : 'list',
+    'checkbox'     : 'list',
+    'toggle'       : 'list'
+}
+</textarea>
+
+<h4>See Also</h4>
+
+<a href="w2grid.operators">operators</a> - default operators for each search type<br>
+<a href="w2grid.defaultOperator">defaultOperator</a> - default operator for each search type<br>

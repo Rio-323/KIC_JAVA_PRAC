@@ -1,0 +1,62 @@
+Shows a context confirmation dialog for the panel
+
+<div class="definition">
+    confirm(panel, options)
+</div>
+
+<div class="arguments">
+    <table>
+    <tr>
+        <td>panel</td>
+        <td><b>string</b>, name of the panel</td>
+    </tr>
+    <tr>
+        <td>options</td>
+        <td><b>string|object</b>, text of the message or additional options</td>
+    </tr>
+    </table>
+</div>
+
+Returns <i>object</i>.
+
+This method displays a context confirmation dialog for the panel.
+<div style="height: 10px"></div>
+
+If you have following form:
+<textarea class="javascript">
+let layout = new w2layout({
+    name: 'layout',
+    panels: [
+        { type: 'top', size: 40 },
+        { type: 'main', html: 'This is main panel' },
+        { type: 'preview', size: 200, hidden: true }
+    ]
+});
+</textarea>
+
+You can
+<textarea class="javascript">
+w2ui.layout.confirm('main', 'Some message.')
+    .yes(event => {
+        console.log('yes', event)
+    })
+    .no(event => {
+        console.log('no', event)
+    })
+    .answer(event => {
+        console.log(event.answer event)
+    })
+    .then(event => {
+        console.log('confirm is ready', event)
+    })
+</textarea>
+
+Or
+<textarea class="javascript">
+w2ui.layout.confirm('main', {
+    width: 400,
+    height: 200,
+    body: 'Some message'
+})
+.yes(() => { console.log('yes') })
+</textarea>

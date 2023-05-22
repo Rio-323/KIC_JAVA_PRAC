@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W2UI Demo: combo-9</title>
+    <link rel="stylesheet" type="text/css" href="../dist/w2ui.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="module" src="../src/w2compat.js?globals"></script>
+</head>
+<body>
+
+    <div id="form" style="width: 750px; height: 300px"></div>
+    <br><br><br>
+    Click "Menu", then click on the list.
+
+<script type="module">
+
+$(function() {
+  $('#form').w2form({
+    name: 'form',
+    focus: -1,
+    fields: [
+        { field: 1, type: 'text', icon: 'icon-empty' },
+        {
+            field: 'field1',
+            type: 'list',
+            required: true,
+            options: {
+                items: [
+                    { id: 1, text: 'Item 1', icon: 'icon-empty' },
+                    { id: 2, text: 'Item 2', icon: 'icon-empty' },
+                    { id: 3, text: 'About 1', icon: 'icon-empty' },
+                    { id: 4, text: 'About 2', icon: 'icon-empty' },
+                    { id: 5, text: 'Some 1', icon: 'icon-empty' },
+                    { id: 6, text: 'Some 2', icon: 'icon-empty' },
+                ]
+            },
+            html: {
+                label: 'Last Name',
+                attr: ''
+            }
+        },
+        { field: 2, type: 'text', icon: 'icon-empty' },
+    ],
+    toolbar: {
+      items: [
+          {
+            type: 'menu',
+            id: 'item1',
+            text: 'Menu',
+            items: [
+                { text: 'Item 1', icon: 'icon-empty' },
+                { text: 'Item 2', icon: 'icon-empty' }
+            ]
+          },
+        ]
+    }
+  });
+});
+</script>
+
+</body>
+</html>

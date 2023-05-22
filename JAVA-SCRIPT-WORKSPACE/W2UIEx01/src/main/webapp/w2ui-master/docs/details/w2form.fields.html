@@ -1,0 +1,115 @@
+Array of field objects.
+
+<div class="definition">
+    Object, default = []
+</div>
+
+(<b>NEW in 2.0+</b>) more expressive way to define fields, see <a href="http://w2ui.com/web/demos/#/form/23" target="_blank">this demo</a>.
+<div style="height: 10px"></div>
+
+For each input or select control in the HTML template of the form, you need to define a corresponding object in the
+<span class="argument">fields</span> array. A field object has following structure:
+
+<textarea class="javascript">
+field: {
+    field  : '',              // id of field, must match name of input or select
+    type   : null,            // type of field (same types as for w2field object)
+    options: {
+        format: null,         // date/time format for data/time fields
+        minLength: null,      // min length for text field or min search for list/combo/enum fields
+        items: []             // list of items for checks/radio/select/enum/combo/list field types
+        selected: null        // item that is selected fro enum/combo/list types
+    },
+    required : false,         // required or not
+    hidden   : undefined,     // field hidden/visible
+    disabled : undefined,     // field disabled/enabled
+    html     : {              // info for auto generation (see generateHTML)
+        label  : '',          // caption for the field
+        attr   : '',          // attributes inside input/select control
+        style  : '',          // style for the whole field
+        text   : '',          // text to display on the right from the control
+        span   : undefined,   // number of span, will be added to class="w2ui-span{span}"
+        page   : undefined,   // page number if there are tabs in the form
+        column : undefined,   // column number, can be 'before' or 'after'
+        anchor : '',          // field anchor, to attach fields at the end of other fields
+        // group properties
+        group           : '',    // starts a new group with this title
+        groupTitleStyle : '',    // style for the group title
+        groupStyle      : '',    // style for the group's fields container
+        groupCollapsible: false, // flag to indicate if the group is collapsible
+        // for map and array types
+        key: {
+            attr: '',   // input field attrs for eeach key field
+            text: ''    // text after each key field
+        },
+        value: {
+            attr: '',   // input field attrs for eeach key field
+            text: ''    // text after each key field
+        }
+    }
+}
+</textarea>
+
+Note: <i>field.html.groupCollapsible</i> is misspelled <i>field.html.groupCollapsable</i> in w2ui 1.5.0
+<div style="height: 10px"></div>
+
+The form supports all types that $().w2field({}) supports and few more types in addition. The complete list of all types are:
+<ul>
+    <li><b>alphanumeric</b> - text field that only allows alpha numberic characters</li>
+    <li><b>array</b> - builds an array of key/value pairs, uses field.options.keys, field.options.values</li>
+    <li><b>check</b> - list of checkboxes, uses options.items</li>
+    <li><b>checks</b> - alias for check</li>
+    <li><b>checkbox</b> - single checkbox</li>
+    <li><b>color</b> - color picker</li>
+    <li><b>combo</b> - field with auto complete items, user field.options.items</li>
+    <li><b>currency</b> - alias for money</i></b></li>
+    <li><b>date</b> - date picker</li>
+    <li><b>datetime</b> - date and time picker</li>
+    <li><b>div</b> - div field, uses field.html.html (same as custom)</li>
+    <li><b>email</b> - email validated field</li>
+    <li><b>enum</b> - multi select element, uses field.options.items</li>
+    <li><b>file</b> - html file input</li>
+    <li><b>float</b> - float number only, uses field.options </li>
+    <li><b>group</b> - type = group is only supported in consturctor</li>
+    <li><b>hex</b> - hex number</li>
+    <li><b>html</b> - just some html instead of the field, uses field.html.html (same as empty) </li>
+    <li><b>int</b> - integer number</li>
+    <li><b>list</b> - drop down list, uses field.options.items</li>
+    <li><b>map</b> - builds a map of unique key/value pairs, uses field.options.keys, field.options.values</li>
+    <li><b>money</b> - number in money format, for international formats seee w2utils.settings </li>
+    <li><b>pass</b> - password field</li>
+    <li><b>password</b> - alias for pass</li>
+    <li><b>percent</b> - number as percenage</li>
+    <li><b>radio</b> - list of radio items, uses field.options.items</li>
+    <li><b>select</b> - html select element, uses field.options.items</li>
+    <li><b>text</b> - any text</li>
+    <li><b>textarea</b> - text area</li>
+    <li><b>time</b> - time picker</li>
+    <li><b>toggle</b> - toggle control, similar to checkbox</li>
+</ul>
+
+If you have a container:
+<textarea class="html">
+<div id="form" style="width: 500px; height: 300px;"></div>
+</textarea>
+
+The form definition will be:
+
+<textarea class="javascript">
+let form = new w2form({
+    name   : 'form',
+    fields : [
+        { field: 'first_name', type: 'text' },
+        { field: 'last_name', type: 'text' },
+        { field: 'field_textarea', type: 'text' }
+    ],
+    actions : {
+        "Reset": function () {
+            this.clear();
+        },
+        "Save": function () {
+            this.save();
+        }
+    }
+});
+</textarea>
