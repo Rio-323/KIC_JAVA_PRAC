@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 	
+	<!-- HelloBean1 helloBean1 = new HelloBean1(); -->
 	<bean name="helloBean1" class="com.exam.spring03.HelloBean1"></bean>
 	<bean name="helloBean2" class="com.exam.spring03.HelloBean2"></bean>
 </beans>
