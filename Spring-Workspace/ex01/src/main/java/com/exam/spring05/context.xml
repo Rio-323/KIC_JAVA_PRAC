@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 	
 	<!-- HelloBean1 helloBean1 = new HelloBean1(); -->
-	<bean name="helloBean1" class="com.exam.spring05.HelloBean1" scope="prototype"></bean>
-	<bean name="helloBean2" class="com.exam.spring05.HelloBean2" scope="prototype"></bean>
+	<!-- <bean name="helloBean1" class="com.exam.spring05.HelloBean1" scope="prototype"></bean>
+	<bean name="helloBean2" class="com.exam.spring05.HelloBean2" scope="prototype"></bean> -->
+	
+	<!-- singleton 생략가능 -->
+	<bean name="helloBean1" class="com.exam.spring05.HelloBean1" scope="singleton"></bean>
+	<bean name="helloBean2" class="com.exam.spring05.HelloBean2"></bean>
 </beans>
