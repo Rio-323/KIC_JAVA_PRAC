@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	
+	<bean name="to" class="com.exam.spring08.BoardTO" scope="prototype">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="English"></constructor-arg>
+	</bean>
+	<bean name="listAction1" class="com.exam.spring08.ListAction" scope="prototype">
+		<constructor-arg>
+			<ref bean="to"/>
+		</constructor-arg>
+	</bean>
+</beans>

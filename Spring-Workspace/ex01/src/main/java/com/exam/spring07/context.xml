@@ -9,4 +9,11 @@
 			<bean class="com.exam.spring07.BoardTO"></bean>
 		</constructor-arg>
 	</bean>
+	
+	<bean name="to" class="com.exam.spring07.BoardTO" scope="prototype"></bean>
+	<bean name="writeAction3" class="com.exam.spring07.WriteAction" scope="prototype">
+		<constructor-arg>
+			<ref bean="to"/>
+		</constructor-arg>
+	</bean>
 </beans>

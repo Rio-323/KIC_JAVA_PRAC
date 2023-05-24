@@ -10,8 +10,11 @@ public class App2 {
 		// WriteAction writeAction1 = (WriteAction)ctx.getBean("writeAction1");
 		// writeAction1.execute();
 		
-		WriteAction writeAction2 = (WriteAction)ctx.getBean("writeAction2");
-		writeAction2.execute();
+		// WriteAction writeAction2 = (WriteAction)ctx.getBean("writeAction2");
+		// writeAction2.execute();
+		
+		WriteAction writeAction3 = (WriteAction)ctx.getBean("writeAction3");
+		writeAction3.execute();
 		
 		ctx.close();
 	}
