@@ -53,6 +53,20 @@
 			</list>
 		</property>
 	</bean>
+	
+	
+	<bean id="mapTO" class="com.exam.spring04.BoardListTO">
+		<property name="userMaps">
+			<map>
+				<entry key="key1">
+					<value>홍길동</value>
+				</entry>
+				<entry key="key2">
+					<value>박문수</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
 
 
 </beans>
