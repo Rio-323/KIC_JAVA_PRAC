@@ -12,6 +12,11 @@ public class App2 {
 		System.out.println(to.getSeq());
 		System.out.println(to.getSubject());
 		
+		to.setSeq(2);
+		to.setSubject("제목2");
+		System.out.println(to.getSeq());
+		System.out.println(to.getSubject());
+		
 		ctx.close();
 	}
 

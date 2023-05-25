@@ -9,6 +9,7 @@ public class BoardTO {
 	}
 	
 	public void setSeq(int seq) {
+		System.out.println("setSeq(int seq) 호출");
 		this.seq = seq;
 	}
 	
@@ -17,6 +18,7 @@ public class BoardTO {
 	}
 	
 	public void setSubject(String subject) {
+		System.out.println("setSubject(String subject) 호출");
 		this.subject = subject;
 	}
 	
