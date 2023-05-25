@@ -14,6 +14,17 @@ public class App2 {
 			System.out.println(user);
 		}
 		
+		
+		for(BoardTO to : listTO.getBoardLists()) {
+			System.out.println(to.getSeq());
+			System.out.println(to.getSubject());
+		}
+		
+		BoardListTO listTO2 = (BoardListTO)ctx.getBean("listTO2");
+		for(BoardTO to : listTO2.getBoardLists()) {
+			System.out.println(to.getSeq());
+			System.out.println(to.getSubject());
+		}
 		ctx.close();
 	}
 }
