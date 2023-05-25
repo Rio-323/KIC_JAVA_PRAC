@@ -8,5 +8,31 @@
 		<property name="seq" value="1"></property>
 		<property name="subject" value="제목1"></property>
 	</bean>
+
+	<bean name="writeAction" class="com.exam.spring02.WriteAction" scope="prototype">
+		<constructor-arg ref="to"></constructor-arg>
+	</bean>
+	
+	<bean name="writeAction2" class="com.exam.spring02.WriteAction" scope="prototype">
+		<constructor-arg>
+			<bean class="com.exam.spring02.BoardTO" scope="prototype">
+				<property name="seq" value="2"></property>
+				<property name="subject" value="제목2"></property>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+	<bean name="listAction1" class="com.exam.spring02.ListAction" scope="prototype">
+		<property name="to" ref="to"></property>
+	</bean>
+	
+	<bean name="listAction2" class="com.exam.spring02.ListAction" scope="prototype">
+		<property name="to">
+			<bean class="com.exam.spring02.BoardTO" scope="prototype">
+				<property name="seq" value="2"></property>
+				<property name="subject" value="제목2"></property>
+			</bean>
+		</property>
+	</bean>
 	
 </beans>
