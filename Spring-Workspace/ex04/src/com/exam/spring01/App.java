@@ -2,10 +2,10 @@ package com.exam.spring01;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.exam.spring01.config.BeanConfig;
 import com.exam.spring01.model.Hello;
 import com.exam.spring01.model.HelloBean1;
 import com.exam.spring01.model.HelloBean2;
-import com.exam.spring02.config.BeanConfig;
 
 public class App {
 

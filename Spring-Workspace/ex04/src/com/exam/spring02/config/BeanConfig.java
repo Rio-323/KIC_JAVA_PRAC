@@ -4,34 +4,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import com.exam.spring01.model.Hello;
-import com.exam.spring01.model.HelloBean1;
-import com.exam.spring01.model.HelloBean2;
+import com.exam.spring02.model.HelloBean;
 
 @Configuration
+@Scope("prototype")
 public class BeanConfig {
 	
 	@Bean
-	@Scope("prototype")
-	public HelloBean1 helloBean1() {
-		System.out.println("helloBean1() 호출");
-		return new HelloBean1();
+	public HelloBean helloBean1() {
+		
+		return new HelloBean();
 	}
 	
-	@Bean("helloBean")
-	@Scope("prototype")
-	public HelloBean2 helloBean2() {
-		System.out.println("helloBean2() 호출");
-		return new HelloBean2();
-	}
-	
+	// 생성자 인젝션
 	@Bean
-	public Hello hello1() {
-		return new HelloBean1();
-	}
-	
-	@Bean
-	public Hello hello2() {
-		return new HelloBean2();
+	public HelloBean helloBean2() {
+		
+		return new HelloBean("박문수");
 	}
 }
