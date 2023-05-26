@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- AOP -->
+	<bean id="basciAdvice1" class="com.exam.spring.advice.BasicAdvice1"></bean>
+	<bean id="pointcutAdvice1" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice">
+			<ref bean="basciAdvice1"/>
+		</property>
+		<property name="pointcut">
+			<bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+				<property name="pattern" value=".*execute.*"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="pointcutAdvice2" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice">
+			<bean class="com.exam.spring.advice.BasicAdvice2"></bean>
+		</property>
+		<property name="pointcut">
+			<bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+				<property name="pattern" value=".*execute.*"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="action1" class="com.exam.spring.model.WriteAction" scope="prototype"/>
+	<bean id="action2" class="com.exam.spring.model.WriteAction" scope="prototype">
+		<property name="writer">
+			<value>홍길동</value>
+		</property>
+	</bean>
+	
+	<!-- AOP적용 -->
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="action1"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>pointcutAdvice1</value>
+				<value>pointcutAdvice2</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+</beans>
