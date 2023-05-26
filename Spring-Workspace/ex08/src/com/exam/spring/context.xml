@@ -21,6 +21,7 @@
 			<aop:pointcut id="pointCut" expression="execution(* execute*())"></aop:pointcut>
 			<!-- <aop:around method="logAround" pointcut-ref="pointCut"></aop:around> -->
 			<aop:before method="before" pointcut-ref="pointCut"/>
+			<aop:after method="after" pointcut-ref="pointCut"/>
 		</aop:aspect>
 		
 	

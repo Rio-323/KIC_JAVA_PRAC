@@ -17,4 +17,8 @@ public class BasicAdvice1 {
 	public void before() throws Throwable {
 		System.out.println("전처리 구간 1");
 	}
+	
+	public void after() throws Throwable {
+		System.out.println("후처리 구간 1");
+	}
 }
