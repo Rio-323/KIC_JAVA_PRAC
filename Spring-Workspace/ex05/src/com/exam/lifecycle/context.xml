@@ -5,9 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 	
 	
-	<bean id="action" class="com.exam.lifecycle.model.WriteAction" scope="prototype">
+	<bean id="action" class="com.exam.lifecycle.model.WriteAction" init-method="init_method" destroy-method="destroy_method">
 		<property name="writer">
 			<value>Hello Writer</value>
 		</property>
-	</bean>
+	</bean>	
+	
+	<bean class="com.exam.lifecycle.CustomBeanPostProcessor" />
 </beans>
