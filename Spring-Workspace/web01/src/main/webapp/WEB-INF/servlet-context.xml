@@ -3,4 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 	
+	
+	<!-- 
+		MVC model1
+			list1.do -> listview1.jsp
+			list2.do -> listview2.jsp
+	 -->
+	 
+	 <bean name="/list1.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	 	<property name="viewName" value="/listview1.jsp"></property>
+	 </bean>
+	 
+	 <bean name="/list2.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	 	<property name="viewName" value="/listview2.jsp"></property>
+	 </bean>
 </beans>

@@ -7,8 +7,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		Hello jsp<br>
-		<a href="list1.do">list1.do</a>
-		<a href="list2.do">list2.do</a>
+		listview1.jsp
 	</body>
 </html>
