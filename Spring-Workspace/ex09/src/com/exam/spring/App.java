@@ -12,6 +12,7 @@ public class App {
 		WriteAction action = (WriteAction)ctx.getBean("action1");
 		
 		action.execute1();
+		action.execute2();
 		
 		
 		ctx.close();
