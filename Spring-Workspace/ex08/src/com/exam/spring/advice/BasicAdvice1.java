@@ -13,4 +13,8 @@ public class BasicAdvice1 {
 		
 		return rtnObj;
 	}
+	
+	public void before() throws Throwable {
+		System.out.println("전처리 구간 1");
+	}
 }

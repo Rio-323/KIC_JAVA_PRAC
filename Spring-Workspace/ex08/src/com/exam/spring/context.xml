@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation=
+	"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+		
+	
+	<bean id="action1" class="com.exam.spring.model.WriteAction" scope="prototype"/>
+	<bean id="action2" class="com.exam.spring.model.WriteAction" scope="prototype">
+		<property name="writer">
+			<value>홍길동</value>
+		</property>
+	</bean>
+	
+	<bean id="basicAdvice1" class="com.exam.spring.advice.BasicAdvice1" scope="prototype"></bean>
+	<!-- AOP 설정 -->
+	<aop:config>
+		<aop:aspect ref="basicAdvice1">
+			<aop:pointcut id="pointCut" expression="execution(* execute*())"></aop:pointcut>
+			<!-- <aop:around method="logAround" pointcut-ref="pointCut"></aop:around> -->
+			<aop:before method="before" pointcut-ref="pointCut"/>
+		</aop:aspect>
+		
+	
+	</aop:config>
+	
+</beans>

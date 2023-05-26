@@ -12,7 +12,11 @@ public class WriteAction {
 	}
 	
 	// core concern (핵심 기능)
-	public void execute() {
-		System.out.println("execute() 호츌");
+	public void execute1() {
+		System.out.println("execute1() 호츌");
+	}
+	
+	public void execute2() {
+		System.out.println("execute2() 호츌");
 	}
 }
