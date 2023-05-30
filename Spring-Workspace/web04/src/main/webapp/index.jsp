@@ -14,5 +14,7 @@
 		
 		<a href="board/list1.do">board/list1.do</a><br>
 		<a href="board/list2.do">board/list2.do</a><br>
+		
+		<a href="form.do">form.do</a><br>
 	</body>
 </html>
