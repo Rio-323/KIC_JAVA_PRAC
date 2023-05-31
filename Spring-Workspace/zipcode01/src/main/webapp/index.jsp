@@ -7,7 +7,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<a href="write1.do">write1.do</a><br />
 		<a href="zipcode.do">zipcode.do</a><br />
 		<a href="zipcode_ok.do">zipcode_ok.do</a><br />
 	</body>

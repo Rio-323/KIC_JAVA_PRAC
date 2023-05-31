@@ -7,8 +7,11 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<a href="write1.do">write1.do</a><br />
-		<a href="zipcode.do">zipcode.do</a><br />
-		<a href="zipcode_ok.do">zipcode_ok.do</a><br />
+		zipcode.jsp
+		
+		<form action="zipcode_ok.do" method="post">
+			동이름 <input type="text" name="dong">
+			<input type="submit" value="동이름 검색">
+		</form>
 	</body>
 </html>
