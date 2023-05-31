@@ -92,11 +92,30 @@ public class ConfigController {
 	@RequestMapping("/write4.do")
 	public String write4() {
 		// 여러행 data
+		
+		/*
 		List<EmpTO> lists = jdbcTemplate.query("select * from emp where deptno = ? and job = ?", new BeanPropertyRowMapper<EmpTO>(EmpTO.class), "30", "salesman");
 		
 		for(EmpTO to : lists) {
 			System.out.println(to.getEmpno() + " / " + to.getEname() + " / " + to.getJob() + " / " + to.getMgr() + " / " + to.getHiredate() + " / " + to.getSal() + " / " + to.getComm() + " / " + to.getDeptno());
 		}
+		*/
+		
+		List<EmpTO> lists = jdbcTemplate.query("select * from emp where ename like ?", new BeanPropertyRowMapper<EmpTO>(EmpTO.class), "s%");
+		for(EmpTO to : lists) {
+			System.out.println(to.getEmpno() + " / " + to.getEname() + " / " + to.getJob() + " / " + to.getMgr() + " / " + to.getHiredate() + " / " + to.getSal() + " / " + to.getComm() + " / " + to.getDeptno());
+		}
+		
+		return "writeview1";
+	}
+	
+	@RequestMapping("/write5.do")
+	public String write5() {
+		
+		// int result = jdbcTemplate.update("insert into dept2 values(11, '연구부', '서울')");
+		int result = jdbcTemplate.update("insert into dept2 values(?, ?, ?)", "11", "연구부", "서울");
+		
+		System.out.println("결과 : " + result);
 		
 		return "writeview1";
 	}
