@@ -8,6 +8,8 @@
 	</head>
 	<body>
 		<a href="write1.do">write1.do</a><br />
-		
+		<a href="write2.do">write2.do</a><br />
+		<a href="write3.do">write3.do</a><br />
+		<a href="write4.do">write4.do</a><br />
 	</body>
 </html>
