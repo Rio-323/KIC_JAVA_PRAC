@@ -1,25 +1,21 @@
 package model1;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class ExampleDAO {
 	
 	@Autowired
-	private DataSource dataSource;
-	
-	public ExampleDAO() {
-		System.out.println("ExampleDAO() 호출 : " + dataSource);
-	}
+	private JdbcTemplate jdbcTemplate;
 	
 	public String selectNow() {
-		System.out.println("selectNow() : " + dataSource);
 		
+		String result = jdbcTemplate.queryForObject("select now() as now", String.class);
 		
+		// System.out.println("결과 : " + result);
 		
-		return "now";
+		return result;
 	}
 }
