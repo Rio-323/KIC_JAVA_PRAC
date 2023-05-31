@@ -6,6 +6,13 @@
 	"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
+	<!-- <bean name="/list1.do" class="controller.ListAction1">
+		<property name="shareClass" ref="shareClass"></property>
+	</bean>
+	<bean name="/list2.do" class="controller.ListAction2">
+		<property name="shareClass" ref="shareClass"></property>
+	</bean> -->
+	
 	<context:component-scan base-package="config"></context:component-scan>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

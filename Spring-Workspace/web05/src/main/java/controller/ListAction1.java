@@ -21,7 +21,9 @@ public class ListAction1 implements Controller {
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("ListAction1() 호출");
 		
-		System.out.println("shareData1 : " + shareClass.getShareData1());
+		System.out.println("shareClass : " + shareClass);
+		
+		// System.out.println("shareData1 : " + shareClass.getShareData1());
 		
 		
 		return new ModelAndView("listview1");
