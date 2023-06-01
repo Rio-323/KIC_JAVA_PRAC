@@ -15,7 +15,7 @@ public class ConfigController {
 	
 	@RequestMapping("/jdbc1.do")
 	public String jdbc1() {
-		// System.out.println("jdbc1() 호출 : " + mapper);
+		System.out.println("jdbc1() 호출 : " + dao.getMapper());
 		
 		String result = dao.selectNow();
 		System.out.println("결과 : " + result);
