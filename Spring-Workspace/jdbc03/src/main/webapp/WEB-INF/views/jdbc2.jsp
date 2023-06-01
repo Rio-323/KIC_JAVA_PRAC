@@ -7,7 +7,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<a href="jdbc1.do">jdbc1.do</a><br />
-		<a href="jdbc2.do">jdbc2.do</a><br />
+		jdbc2.jsp
 	</body>
 </html>
