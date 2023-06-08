@@ -1,10 +1,16 @@
 package com.example.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMessage.RecipientType;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +40,7 @@ public class MailController {
 		String subject = "테스트 제목";
 		String content = "테스트 내용";
 		
-		this.mailSender(toEmail, toName, subject, content);
+		this.mailSender1(toEmail, toName, subject, content);
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("mail_ok");
@@ -42,7 +48,7 @@ public class MailController {
 		return modelAndView;
 	}
 	
-	public void mailSender(String toEmail, String toName, String subject, String content) {
+	public void mailSender1(String toEmail, String toName, String subject, String content) {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
 		
 		simpleMailMessage.setTo(toEmail);
@@ -53,5 +59,25 @@ public class MailController {
 		javaMailSender.send(simpleMailMessage);
 		
 		System.out.println("전송 완료");
+	}
+	
+	public void mailSender2(String toEmail, String toName, String subject, String content) {
+		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+		
+		try {
+			mimeMessage.addRecipient(RecipientType.TO, new InternetAddress(toEmail, toName, "utf-8"));
+			mimeMessage.setSubject(subject, "utf-8");
+			mimeMessage.setText(content, "utf-8", "html");
+			mimeMessage.setSentDate(new Date());
+			
+			javaMailSender.send(mimeMessage);
+			System.out.println("전송 완료");
+		} catch (MailException e) {
+			System.out.println("전송 완료");
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("전송 완료");
+		} catch (MessagingException e) {
+			System.out.println("전송 완료");
+		}	
 	}
 }
