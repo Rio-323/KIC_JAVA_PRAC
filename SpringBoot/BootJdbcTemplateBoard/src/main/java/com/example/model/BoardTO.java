@@ -10,7 +10,7 @@ public class BoardTO {
 	private String subject;
 	private String writer;
 	private String mail;
-	private String pasword;
+	private String password;
 	private String content;
 	private String hit;
 	private String wip;
