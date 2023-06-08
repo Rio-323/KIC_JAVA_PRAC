@@ -6103,3 +6103,182 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-08 09:51:17.537
 !MESSAGE Using unsafe http transport to retrieve http://dl.bintray.com/testng-team/testng-p2-release/, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-06-08 11:55:13.515 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/ksy/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/ksy/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-08 11:55:13.983
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-08 11:55:14.588
+!MESSAGE Logback config file: /Users/ksy/Desktop/KIC_JAVA_PRAC/SpringBoot/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-08 11:55:15.596
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-08 11:55:15.596
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:16.848
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-08 11:55:16.853
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 13283
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.430
+!MESSAGE Boot project ADDED: BootJdbcTemplateBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.430
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.431
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.434
+!MESSAGE Boot project ADDED: ex01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.436
+!MESSAGE Boot project ADDED: ex02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.437
+!MESSAGE Boot project ADDED: ex03
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.438
+!MESSAGE Boot project ADDED: ex04
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.441
+!MESSAGE Boot project ADDED: ex05
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.442
+!MESSAGE Boot project ADDED: ex06
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.445
+!MESSAGE Boot project ADDED: ex07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 11:55:17.446
+!MESSAGE Boot project ADDED: web01
+!SESSION 2023-06-08 14:06:03.962 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/ksy/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/ksy/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-08 14:06:04.417
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-08 14:06:04.968
+!MESSAGE Logback config file: /Users/ksy/Desktop/KIC_JAVA_PRAC/SpringBoot/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-08 14:06:06.026
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-08 14:06:06.026
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.250
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-08 14:06:07.257
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 13385
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.828
+!MESSAGE Boot project ADDED: BootJdbcTemplateBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.828
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.829
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.831
+!MESSAGE Boot project ADDED: ex01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.832
+!MESSAGE Boot project ADDED: ex02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.834
+!MESSAGE Boot project ADDED: ex03
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.835
+!MESSAGE Boot project ADDED: ex04
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.836
+!MESSAGE Boot project ADDED: ex05
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.837
+!MESSAGE Boot project ADDED: ex06
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.838
+!MESSAGE Boot project ADDED: ex07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:06:07.841
+!MESSAGE Boot project ADDED: web01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:12:53.172
+!MESSAGE Classpath changed for project: BootMyBatisBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:12:53.416
+!MESSAGE Classpath changed for project: BootMyBatisBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:12:55.069
+!MESSAGE Classpath changed for project: BootMyBatisBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 14:12:55.070
+!MESSAGE Boot project ADDED: BootMyBatisBoard
+
+!ENTRY org.eclipse.jface 2 0 2023-06-08 14:13:34.169
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-08 14:13:34.169
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
