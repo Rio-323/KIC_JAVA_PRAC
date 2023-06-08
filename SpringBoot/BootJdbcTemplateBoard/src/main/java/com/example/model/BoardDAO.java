@@ -51,11 +51,32 @@ public class BoardDAO {
 	
 	public int boardModifyOk(BoardTO to) {
 		int flag = 2;
-		System.out.println(to.getPassword());
 		
 		String sql = "update board set subject=?, mail=?, content=? where seq=? and password=?";
 		int result = jdbcTemplate.update( sql, to.getSubject(), to.getMail(), to.getContent(), to.getSeq(), to.getPassword() );
-		System.out.println(to.getPassword());
+
+		if( result == 0 ) {
+			flag = 1;
+		} else if( result == 1 ) {
+			flag = 0;
+		}
+		
+		return flag;
+	}
+	
+	public BoardTO boardDelete(BoardTO to) {
+		String sql = "select seq, subject, writer from board where seq=?";
+		to = jdbcTemplate.queryForObject( sql, new BeanPropertyRowMapper<BoardTO>(BoardTO.class), to.getSeq() );
+		
+		return to;
+	}
+	
+	public int boardDeleteOk(BoardTO to) {
+		int flag = 2;
+		
+		String sql = "delete from board where seq=? and password=?";
+		int result = jdbcTemplate.update( sql, to.getSeq(), to.getPassword() );
+		
 		if( result == 0 ) {
 			flag = 1;
 		} else if( result == 1 ) {

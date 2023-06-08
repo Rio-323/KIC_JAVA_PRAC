@@ -106,7 +106,9 @@ public class BoardController {
 	public ModelAndView modify_ok(HttpServletRequest request) {
 		
 		BoardTO to = new BoardTO();
+		to.setSeq(request.getParameter("seq"));
 		to.setSubject( request.getParameter( "subject" ) );
+		to.setPassword(request.getParameter("password"));
 		to.setMail( "" ) ;
 		
 		if( !request.getParameter("mail1").equals("") 
@@ -119,6 +121,36 @@ public class BoardController {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("board_modify1_ok");
 		modelAndView.addObject("flag", flag);
+		request.setAttribute("seq", to.getSeq());
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping( "/delete.do" )
+	public ModelAndView delete(HttpServletRequest request) {
+		BoardTO to = new BoardTO();
+		to.setSeq( request.getParameter( "seq" ) );
+		
+		to = dao.boardDelete( to );
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName( "board_delete1" );
+		modelAndView.addObject( "to", to );
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping( "/delete_ok.do" )
+	public ModelAndView delete_ok(HttpServletRequest request) {
+		BoardTO to = new BoardTO();
+		to.setSeq( request.getParameter( "seq" ) );
+		to.setPassword(request.getParameter("password"));
+		
+		int flag = dao.boardDeleteOk( to );
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName( "board_delete1_ok" );
+		modelAndView.addObject( "flag", flag );
 		
 		return modelAndView;
 	}
