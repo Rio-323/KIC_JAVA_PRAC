@@ -32,4 +32,36 @@ public class BoardDAO {
 				
 		return flag;
 	}
+	
+	public BoardTO boardView(BoardTO to) {
+		
+		int result = jdbcTemplate.update("update board set hit = hit + 1 where seq = ?", to.getSeq());
+		
+		to = jdbcTemplate.queryForObject("select seq, subject, writer, mail, wip, wdate, hit, content from board where seq = ?", new BeanPropertyRowMapper<BoardTO>(BoardTO.class), to.getSeq());
+		
+		return to;
+	}
+	
+	public BoardTO boardModify(BoardTO to) {
+		String sql = "select seq, subject, writer, mail, content, password from board where seq=?";
+		to = jdbcTemplate.queryForObject( sql, new BeanPropertyRowMapper<BoardTO>(BoardTO.class), to.getSeq() );
+		
+		return to;
+	}
+	
+	public int boardModifyOk(BoardTO to) {
+		int flag = 2;
+		System.out.println(to.getPassword());
+		
+		String sql = "update board set subject=?, mail=?, content=? where seq=? and password=?";
+		int result = jdbcTemplate.update( sql, to.getSubject(), to.getMail(), to.getContent(), to.getSeq(), to.getPassword() );
+		System.out.println(to.getPassword());
+		if( result == 0 ) {
+			flag = 1;
+		} else if( result == 1 ) {
+			flag = 0;
+		}
+		
+		return flag;
+	}
 }

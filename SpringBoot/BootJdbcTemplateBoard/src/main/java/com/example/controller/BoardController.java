@@ -75,5 +75,51 @@ public class BoardController {
 		return modelAndView;
 	}
 	
+	@RequestMapping("/view.do")
+	public ModelAndView view(HttpServletRequest request) {
+		BoardTO to = new BoardTO();
+		to.setSeq(request.getParameter("seq"));
+		to = dao.boardView(to);
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("board_view1");
+		modelAndView.addObject("to", to);
+		
+		return modelAndView;
+	}
 	
+	@RequestMapping("/modify.do")
+	public ModelAndView modify(HttpServletRequest request) {
+		BoardTO to = new BoardTO();
+		to.setSeq(request.getParameter("seq"));
+		to = dao.boardView(to);
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("board_modify1");
+		modelAndView.addObject("to", to);
+		
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("/modify_ok.do")
+	public ModelAndView modify_ok(HttpServletRequest request) {
+		
+		BoardTO to = new BoardTO();
+		to.setSubject( request.getParameter( "subject" ) );
+		to.setMail( "" ) ;
+		
+		if( !request.getParameter("mail1").equals("") 
+				&& !request.getParameter("mail2").equals("") ) {
+			to.setMail( request.getParameter( "mail1" ) + "@" + request.getParameter( "mail2" ) );	
+		}
+		to.setContent( request.getParameter( "content" ) );
+		int flag = dao.boardModifyOk(to);
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("board_modify1_ok");
+		modelAndView.addObject("flag", flag);
+		
+		return modelAndView;
+	}
 }
