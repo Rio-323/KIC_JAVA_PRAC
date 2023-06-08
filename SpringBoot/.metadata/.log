@@ -4694,3 +4694,9 @@ Binding(COMMAND+SHIFT+T,
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 09:07:35.938
 !MESSAGE Boot project ADDED: web01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 09:21:01.915
+!MESSAGE Classpath changed for project: BootJdbcTemplateBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 09:21:01.915
+!MESSAGE Boot project ADDED: BootJdbcTemplateBoard
