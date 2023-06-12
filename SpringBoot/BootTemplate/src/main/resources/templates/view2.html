@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		view2.html<br><br>
+		<h3 th:text="${data1}"></h3>
+		<h3 th:text="${to.seq}"></h3>
+		<h3 th:text="${to.subject}"></h3>
+		
+		<table border="1">
+			<tr>
+				<th>seq</th>
+				<th>subject</th>				
+			</tr>
+			
+			<tr th:each="to : ${lists}">
+				<td th:text="${to.seq}"></td>
+				<td th:text="${to.subject}"></td>
+		</table>
+	</body>
+</html>

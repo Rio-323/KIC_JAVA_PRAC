@@ -8258,3 +8258,21 @@ Binding(COMMAND+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:11.524
+!MESSAGE Classpath changed for project: BootAlbumCmtBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:11.739
+!MESSAGE Classpath changed for project: BootAlbumCmtBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:12.126
+!MESSAGE Classpath changed for project: BootAlbumCmtBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:12.127
+!MESSAGE Boot project ADDED: BootAlbumCmtBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:12.152
+!MESSAGE Classpath changed for project: BootAlbumCmtBoard
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-12 16:11:12.233
+!MESSAGE Classpath changed for project: BootAlbumCmtBoard

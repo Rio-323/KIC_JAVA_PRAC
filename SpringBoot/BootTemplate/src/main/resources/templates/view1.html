@@ -10,8 +10,30 @@
 		<!-- 1. Hello : 변수에서 찾고 변수가 없으면 값으로 읽음 -->
 		<h3 th:text="Hello">Hello Thymeleaf</h3>
 		
-		<div th:with="value1=${'data1'}">
+		<div th:with="value1=${'data1'}, value2=${'data2'}">
 			<h3 th:text="${value1}"></h3>
+			<h3 th:text="${value2}"></h3>
+			<h3 th:text="${value3}">data3</h3>
+		</div>
+		
+		<div th:with="value=${'값'}">
+			<!-- 비교연산자 사용 가능 -->
+			<h3 th:text="${value == '' ? '빈 값' : value}"></h3>
+			
+			<h3 th:if="${value == ''}" th:text="1"></h3>
+			<h3 th:unless="${value == ''}" th:text="1"></h3>
+		</div>
+		
+		<div th:switch="10">
+			<h3 th:case="10">10</h3>
+			<h3 th:case="20">20</h3>
+			<h3 th:case="*">기타</h3>
+		</div>
+		
+		<div th:with="data=${10}" th:switch="${data}">
+			<h3 th:case="10">10</h3>
+			<h3 th:case="20">20</h3>
+			<h3 th:case="*">기타</h3>
 		</div>
 	</body>
 </html>
