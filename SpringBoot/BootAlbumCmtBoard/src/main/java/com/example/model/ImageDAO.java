@@ -2,6 +2,7 @@ package com.example.model;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.annotations.Update;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -18,6 +19,16 @@ public class ImageDAO {
 	public ArrayList<ImageTO> imageLatestList() {
 		ArrayList<ImageTO> imageLists = (ArrayList)mapper.imageLatestList();
 		return imageLists;
+	}
+	
+	public ImageTO getImage(int seq) {
+		ImageTO image = mapper.getImage(seq);
+		return image;
+	}
+	
+	public int updateImage(ImageTO imageTO) {
+		int result = mapper.updateImage(imageTO);
+		return result;
 	}
 
 	public ArrayList<ImageTO> imageAllList() {

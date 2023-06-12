@@ -25,15 +25,15 @@
 		String imageName = null;
 		long imageSize = 0;
 		
+		//SteamAPI
 		for( ImageTO imageTO : imageLists ) {
 			if( imageTO.getPseq().equals( seq ) ) {
-				imageName = "./upload/" + imageTO.getImageName();
+				imageName = "../upload/" + imageTO.getImageName();
 				imageSize = imageTO.getImageSize();
 			}
 		}
 		
-		sbHtml.append( "<tr>" );
-		sbHtml.append( "	<td class='last2'>" );
+		sbHtml.append( "	<td width='20%' class='last2'>" );
 		sbHtml.append( "		<div class='board'>" );
 		sbHtml.append( "			<table class='boardT'>" );
 		sbHtml.append( "			<tr>" );
@@ -65,7 +65,6 @@
 		sbHtml.append( "		</table>" );
 		sbHtml.append( "	</div>" );
 		sbHtml.append( "</td>" );
-		sbHtml.append( "</tr>" );
 	}
 %>
 
@@ -83,6 +82,7 @@
 	.board_pagetab a { text-decoration: none; font: 12px verdana; color: #000; padding: 0 3px 0 3px; }
 	.board_pagetab a:hover { text-decoration: underline; background-color:#f2f2f2; }
 	.on a { font-weight: bold; }
+	
 -->
 </style>
 </head>
@@ -92,18 +92,18 @@
 <div class="contents1"> 
 	<div class="con_title"> 
 		<p style="margin: 0px; text-align: right">
-			<img style="vertical-align: middle" alt="" src="./images/home_icon.gif" /> &gt; 커뮤니티 &gt; <strong>여행지리뷰</strong>
+			<img style="vertical-align: middle" alt="" src="./images/home_icon.gif" /> &gt; 커뮤니티 &gt; <strong>게시판</strong>
 		</p>
 	</div> 
 	<div class="contents_sub">	
 		<div class="board_top">
 			<div class="bold">
-				<p>총 <span class="txt_orange">1</span>건</p>
+<%-- 				<p>총 <span class="txt_orange"><%= blockRecord %></span>건</p> --%>
 			</div>
 		</div>	
 		
 		<!--게시판-->
-		<table class="board_list">
+		<table class="board_list">		
 		<%=sbHtml %>
 		</table>
 		<!--//게시판-->	
