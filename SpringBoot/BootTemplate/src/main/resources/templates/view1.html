@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		view1.html<br><br>
+		<h3>Hello Thymeleaf</h3>
+		<!-- 1. Hello : 변수에서 찾고 변수가 없으면 값으로 읽음 -->
+		<h3 th:text="Hello">Hello Thymeleaf</h3>
+		
+		<div th:with="value1=${'data1'}">
+			<h3 th:text="${value1}"></h3>
+		</div>
+	</body>
+</html>
